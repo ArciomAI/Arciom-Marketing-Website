@@ -69,6 +69,21 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%
 .theme-toggle button{background:transparent;border:none;cursor:pointer;width:30px;height:26px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:var(--faint)}
 .theme-toggle button.active{background:var(--peri);color:var(--peri-ink)}
 .theme-toggle svg{width:14px;height:14px}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--ink);padding:6px;margin-left:2px;border-radius:8px}
+.nav-toggle:hover{background:var(--panel)}
+.nav-toggle svg{width:22px;height:22px;display:block}
+.nav-toggle .icon-close{display:none}
+nav.menu-open .nav-toggle .icon-open{display:none}
+nav.menu-open .nav-toggle .icon-close{display:block}
+.mobile-menu{display:none}
+@media (max-width:900px){
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+  .mobile-menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 28px 18px;box-shadow:0 18px 40px -20px rgba(0,0,0,.45)}
+  nav.menu-open .mobile-menu{display:flex}
+  .mobile-menu a{padding:14px 0;border-bottom:1px solid var(--line-soft);font-size:15px;color:var(--muted);font-family:"Space Grotesk",sans-serif;font-weight:600}
+  .mobile-menu a:last-child{border-bottom:none}
+  .mobile-menu a.active{color:var(--peri)}
+}
 
 /* ---------- hero ---------- */
 .hero{border-top:none;padding:96px 0 72px;position:relative;overflow:hidden}
@@ -378,7 +393,17 @@ details:hover{border-color:var(--peri-line)}
         </button>
       </div>
       <a class="btn small" href="request-a-demo.html">Request a demo</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
     </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-page" href="why-arciom.html">Why Arciom</a>
+    <a class="nav-page" href="faq.html">FAQ</a>
+    <a class="nav-page" href="about.html">About</a>
   </div>
 </nav>
 
@@ -826,6 +851,28 @@ details:hover{border-color:var(--peri-line)}
   var saved = null;
   try { saved = localStorage.getItem('arciom-theme'); } catch(e){}
   setTheme(saved === 'light' ? 'light' : 'dark');
+})();
+
+(function(){
+  var nav = document.querySelector('nav');
+  var toggle = document.getElementById('nav-toggle');
+  if (!nav || !toggle) return;
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  window.addEventListener('resize', function(){
+    if (window.innerWidth > 900) {
+      nav.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 })();
 </script>
 
