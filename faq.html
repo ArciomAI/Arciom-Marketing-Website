@@ -78,10 +78,11 @@ nav.menu-open .nav-toggle .icon-close{display:block}
 .mobile-menu{display:none}
 @media (max-width:900px){
   .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
-  .mobile-menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 28px 18px;box-shadow:0 18px 40px -20px rgba(0,0,0,.45)}
+  .nav-links a.btn{display:none}
+  .mobile-menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 28px 20px;box-shadow:0 18px 40px -20px rgba(0,0,0,.45)}
   nav.menu-open .mobile-menu{display:flex}
   .mobile-menu a{padding:14px 0;border-bottom:1px solid var(--line-soft);font-size:15px;color:var(--muted);font-family:"Space Grotesk",sans-serif;font-weight:600}
-  .mobile-menu a:last-child{border-bottom:none}
+  .mobile-menu a.nav-page:last-of-type{border-bottom:none}
   .mobile-menu a.active{color:var(--peri)}
 }
 
@@ -393,7 +394,6 @@ section.alt > .wrap{position:relative;z-index:1}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
         </button>
       </div>
-      <a class="btn small" href="request-a-demo.html">Request a demo</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -405,6 +405,7 @@ section.alt > .wrap{position:relative;z-index:1}
     <a class="nav-page" href="why-arciom.html">Why Arciom</a>
     <a class="nav-page active" href="faq.html">FAQ</a>
     <a class="nav-page" href="about.html">About</a>
+    <a class="nav-page" href="request-a-demo.html">Request a demo</a>
   </div>
 </nav>
 
