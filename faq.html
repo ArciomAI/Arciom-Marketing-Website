@@ -72,7 +72,12 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%
 .btn>*{position:relative}
 .btn:hover{transform:translateY(-2px);border-color:var(--peri)}
 .btn.small{padding:9px 16px;font-size:13px}
-.theme-toggle{display:flex;align-items:center;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px;cursor:pointer}
+.btn-primary{background:var(--peri);border-color:var(--peri);color:var(--peri-ink)}
+.nav-links a.btn{min-width:132px;text-align:center;box-sizing:border-box}
+@keyframes acGlow{0%,100%{box-shadow:0 0 0 0 rgba(142,166,255,0.45),0 10px 34px rgba(142,166,255,0.32)}50%{box-shadow:0 0 0 10px rgba(142,166,255,0),0 12px 46px rgba(142,166,255,0.5)}}
+.nav-links a.nav-cta{animation:acGlow 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.nav-links a.nav-cta{animation:none;box-shadow:0 10px 34px rgba(142,166,255,0.32)}}
+.theme-toggle{position:fixed;bottom:20px;right:20px;z-index:60;display:flex;align-items:center;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px;cursor:pointer;box-shadow:0 10px 28px -10px rgba(0,0,0,.45)}
 .theme-toggle button{background:transparent;border:none;cursor:pointer;width:30px;height:26px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:var(--faint)}
 .theme-toggle button.active{background:var(--peri);color:var(--peri-ink)}
 .theme-toggle svg{width:14px;height:14px}
@@ -394,17 +399,10 @@ section.alt > .wrap{position:relative;z-index:1}
     </svg></a>
     <div class="nav-links">
       <a class="nav-page" href="why-arciom.html">Why Arciom</a>
-      <a class="nav-page active" href="faq.html">FAQ</a>
       <a class="nav-page" href="about.html">About</a>
-      <div class="theme-toggle" role="group" aria-label="Color theme">
-        <button id="btn-dark" aria-label="Dark theme" title="Dark">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
-        </button>
-        <button id="btn-light" aria-label="Light theme" title="Light">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
-        </button>
-      </div>
-      <a class="btn small" href="request-a-demo.html">Request a demo</a>
+      <a class="nav-page active" href="faq.html">FAQ</a>
+      <a class="nav-page" href="#">Login</a>
+      <a class="btn small nav-cta" href="request-a-demo.html">Request Demo</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -414,11 +412,21 @@ section.alt > .wrap{position:relative;z-index:1}
 
   <div class="mobile-menu" id="mobile-menu">
     <a class="nav-page" href="why-arciom.html">Why Arciom</a>
-    <a class="nav-page active" href="faq.html">FAQ</a>
     <a class="nav-page" href="about.html">About</a>
-    <a class="nav-page" href="request-a-demo.html">Request a demo</a>
+    <a class="nav-page active" href="faq.html">FAQ</a>
+    <a class="nav-page" href="#">Login</a>
+    <a class="nav-page" href="request-a-demo.html">Request Demo</a>
   </div>
 </nav>
+<div class="theme-toggle" role="group" aria-label="Color theme">
+  <button id="btn-dark" aria-label="Dark theme" title="Dark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+  </button>
+  <button id="btn-light" aria-label="Light theme" title="Light">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+  </button>
+</div>
+
 
 <header class="page-hero">
   <svg class="hero-vig" viewBox="0 0 400 250" aria-hidden="true">
@@ -457,7 +465,7 @@ section.alt > .wrap{position:relative;z-index:1}
 <section class="cta">
   <div class="wrap">
     <h2>Ready when you are.</h2>
-    <a class="btn" href="request-a-demo.html">Request a demo</a>
+    <a class="btn" href="request-a-demo.html">Request Demo</a>
     <p class="tagline">Proven judgment. Not just automation.</p>
   </div>
 </section>
@@ -481,7 +489,7 @@ section.alt > .wrap{position:relative;z-index:1}
         <a href="why-arciom.html">Why Arciom</a>
         <a href="faq.html">FAQ</a>
         <a href="about.html">About</a>
-        <a href="request-a-demo.html">Request a demo</a>
+        <a href="request-a-demo.html">Request Demo</a>
       </div>
       <div>
         <h4>Legal</h4>
@@ -490,7 +498,7 @@ section.alt > .wrap{position:relative;z-index:1}
       </div>
       <div>
         <h4>Connect</h4>
-        <a href="request-a-demo.html">Request a demo</a>
+        <a href="request-a-demo.html">Request Demo</a>
         <a href="mailto:hello@arciom.com">Contact Us</a>
       </div>
     </div>
