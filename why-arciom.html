@@ -20,6 +20,7 @@
   --ink:#eef2f8; --body:#c8d4e4; --muted:#9caabd; --faint:#627084;
   --peri:#8ea6ff; --peri-ink:#0a0d14; --peri-soft:rgba(142,166,255,.14); --peri-line:rgba(142,166,255,.35);
   --aqua:#74e0d4; --aqua-ink:#0c0d14;
+  --amber:#f4c273; --amber-ink:#0a0d14; --amber-soft:rgba(244,194,115,.14); --amber-line:rgba(244,194,115,.4);
   --line:rgba(156,170,189,.16); --line-soft:rgba(156,170,189,.10);
   --bar-track:rgba(255,255,255,.05); --bar-base:#5c6a80;
   --glow:rgba(142,166,255,.16); --amber-glow:rgba(244,194,115,.4);
@@ -29,6 +30,7 @@
   --ink:#12151f; --body:#3a4152; --muted:#5b6478; --faint:#8891a3;
   --peri:#4a5eda; --peri-ink:#ffffff; --peri-soft:rgba(74,94,218,.10); --peri-line:rgba(74,94,218,.35);
   --aqua:#0f9d8f; --aqua-ink:#ffffff;
+  --amber:#b57a1f; --amber-ink:#ffffff; --amber-soft:rgba(181,122,31,.10); --amber-line:rgba(181,122,31,.32);
   --line:#dde3ef; --line-soft:#e9edf5;
   --bar-track:rgba(18,21,31,.06); --bar-base:#8891a3;
   --glow:rgba(74,94,218,.10); --amber-glow:rgba(181,122,31,.32);
@@ -207,8 +209,8 @@ section.alt{background:var(--bg-alt)}
 /* ---------- cta ---------- */
 .cta{text-align:center;position:relative;overflow:hidden;padding:110px 0}
 .cta{box-shadow:inset 0 1px 0 var(--glass-top)}
-[data-theme="dark"]{--cta-aqua:rgba(116,224,212,.10);--cta-amber:rgba(244,194,115,.13)}
-[data-theme="light"]{--cta-aqua:rgba(15,157,143,.07);--cta-amber:rgba(181,122,31,.08)}
+[data-theme="dark"]{--cta-aqua:rgba(116,224,212,.16);--cta-amber:rgba(244,194,115,.19)}
+[data-theme="light"]{--cta-aqua:rgba(15,157,143,.11);--cta-amber:rgba(181,122,31,.12)}
 section.cta,section.cta.alt{background-image:
   radial-gradient(720px circle at 12% -10%, var(--cta-aqua), transparent 62%),
   radial-gradient(760px circle at 88% 110%, var(--glow), transparent 62%),
@@ -352,7 +354,7 @@ details:hover{border-color:var(--peri-line)}
 /* inner-page body sections: subtle upper-left ambient wash */
 section.alt{position:relative;overflow:hidden}
 section.alt::before{content:"";position:absolute;top:-665px;left:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, var(--glow), transparent 65%);pointer-events:none;opacity:.7}
-section.alt::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.13), transparent 65%);pointer-events:none;opacity:.7}
+section.alt::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.18), transparent 65%);pointer-events:none;opacity:.7}
 section.alt > .wrap{position:relative;z-index:1}
 
 
@@ -494,7 +496,7 @@ section.alt > .wrap{position:relative;z-index:1}
           <div><span class="rsum-num" style="color:#c8d4e4">27</span><span class="rsum-label">decisions tracked</span></div>
         </div>
         <p class="rmovers">Top movers</p>
-        <div class="decision"><span>Budget shift <em class="src">digital twin</em></span><span class="delta up">+6.2%</span></div>
+        <div class="decision"><span>Budget shift <em class="src">twin</em></span><span class="delta up">+6.2%</span></div>
         <div class="decision"><span>Bid strategy <em class="src">in-house</em></span><span class="delta up">+3.8%</span></div>
         <div class="decision"><span>LP swap <em class="src">in-house</em></span><span class="delta warn">flagged</span></div>
         <div class="rfoot">Every Monday · no dashboard</div>

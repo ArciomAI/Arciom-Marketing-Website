@@ -20,6 +20,8 @@
   --ink:#eef2f8; --body:#c8d4e4; --muted:#9caabd; --faint:#627084;
   --peri:#8ea6ff; --peri-ink:#0a0d14; --peri-soft:rgba(142,166,255,.14); --peri-line:rgba(142,166,255,.35);
   --aqua:#74e0d4; --aqua-ink:#0c0d14;
+  --amber:#f4c273; --amber-ink:#0a0d14; --amber-soft:rgba(244,194,115,.14); --amber-line:rgba(244,194,115,.4);
+  --red:#e2735e; --red-ink:#0a0d14; --red-line:rgba(226,115,94,.4);
   --line:rgba(156,170,189,.16); --line-soft:rgba(156,170,189,.10);
   --bar-track:rgba(255,255,255,.05); --bar-base:#5c6a80;
   --glow:rgba(142,166,255,.16); --amber-glow:rgba(244,194,115,.4);
@@ -29,6 +31,8 @@
   --ink:#12151f; --body:#3a4152; --muted:#5b6478; --faint:#8891a3;
   --peri:#4a5eda; --peri-ink:#ffffff; --peri-soft:rgba(74,94,218,.10); --peri-line:rgba(74,94,218,.35);
   --aqua:#0f9d8f; --aqua-ink:#ffffff;
+  --amber:#b57a1f; --amber-ink:#ffffff; --amber-soft:rgba(181,122,31,.10); --amber-line:rgba(181,122,31,.32);
+  --red:#c94a36; --red-ink:#ffffff; --red-line:rgba(201,74,54,.32);
   --line:#dde3ef; --line-soft:#e9edf5;
   --bar-track:rgba(18,21,31,.06); --bar-base:#8891a3;
   --glow:rgba(74,94,218,.10); --amber-glow:rgba(181,122,31,.32);
@@ -100,15 +104,28 @@ nav.menu-open .nav-toggle .icon-close{display:block}
 .hero p.lede{font-size:17px;max-width:480px;margin-bottom:32px}
 
 /* hero video container */
-.video-shell{position:relative;aspect-ratio:16/9;background:#0d1119;border:1px solid rgba(156,170,189,.22);border-radius:16px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(0,0,0,.5)}
+.hero .video-shell{position:relative;aspect-ratio:16/9;background:#0d1119;border:1px solid rgba(156,170,189,.22);border-radius:16px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(0,0,0,.5);cursor:pointer;animation:videoPulse 3s ease-in-out infinite}
+.hero .video-shell:focus-visible{outline:2px solid var(--peri);outline-offset:3px}
+@keyframes videoPulse{
+  0%,100%{box-shadow:0 0 0 1px var(--peri-line), 0 0 16px -2px var(--glow-strong), 0 24px 60px -24px rgba(0,0,0,.5)}
+  50%{box-shadow:0 0 0 1px var(--peri), 0 0 44px 6px var(--glow-strong), 0 24px 60px -24px rgba(0,0,0,.5)}
+}
+@media (prefers-reduced-motion:reduce){.hero .video-shell{animation:none;box-shadow:0 0 0 1px var(--peri-line),0 0 22px -2px var(--glow-strong),0 24px 60px -24px rgba(0,0,0,.5)}}
 .video-shell video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
 .video-shell.loaded video{display:block}
-.video-shell.loaded .video-ph{display:none}
-.video-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;cursor:default}
+.video-shell.loaded .video-ph .vlabel,.video-shell.loaded .video-ph .vnote{display:none}
+.video-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;pointer-events:none}
 .video-ph .play{width:64px;height:64px;border-radius:50%;background:var(--peri);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 0 var(--ping);animation:ping 2.4s cubic-bezier(0,0,.2,1) infinite}
 .video-ph .play svg{width:22px;height:22px;margin-left:3px}
 .video-ph .vlabel{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:#eef2f8}
 .video-ph .vnote{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#627084}
+/* video lightbox */
+.vlb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:40px;background:rgba(5,7,10,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.vlb.open{display:flex}
+.vlb-inner{position:relative;width:min(1100px,94vw);aspect-ratio:16/9;background:#000;border:1px solid var(--peri-line);border-radius:16px;overflow:hidden;box-shadow:0 0 60px -8px var(--glow-strong),0 30px 80px -20px rgba(0,0,0,.7)}
+.vlb-inner video{width:100%;height:100%;object-fit:contain;background:#000;display:block}
+.vlb-close{position:absolute;top:12px;right:12px;width:42px;height:42px;border-radius:50%;background:var(--peri);color:var(--peri-ink);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:24px;line-height:1;box-shadow:0 8px 22px rgba(0,0,0,.5);transition:transform .15s ease;z-index:2}
+.vlb-close:hover{transform:scale(1.08)}
 /* evidence panel — stays dark in both themes: it depicts the product */
 .evidence{background:#121722;border:1px solid rgba(156,170,189,.2);border-radius:16px;padding:22px 24px;box-shadow:0 24px 60px -24px rgba(0,0,0,.5);transform:rotate(1.2deg)}
 .evidence .row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
@@ -221,15 +238,16 @@ section.alt{background:var(--bg-alt)}
 .car-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--line);margin:0 4px;transition:background .2s}
 .car-dot.active{background:var(--peri)}
 @media (prefers-reduced-motion: reduce){.car-track{transition:none}}
-.testi-card{position:relative;border:1px dashed var(--line);border-radius:14px;padding:26px 22px 22px;font-size:13.5px;color:var(--muted);line-height:1.6;font-style:italic}
+.testi-card{position:relative;border:1px dashed var(--line);border-radius:14px;padding:26px 22px 22px;font-size:13.5px;color:var(--muted);line-height:1.6;font-style:italic;transition:border-color .2s ease, box-shadow .25s ease, transform .2s ease}
+.testi-card:hover{border-color:var(--peri-line);box-shadow:0 14px 34px -16px var(--glow-strong);transform:translateY(-2px)}
 .ph-tag{position:absolute;top:-9px;left:18px;font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);background:var(--bg);padding:0 8px}
 .testi-card .who{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:14px}
 
 /* ---------- cta ---------- */
 .cta{text-align:center;position:relative;overflow:hidden;padding:110px 0}
 .cta{box-shadow:inset 0 1px 0 var(--glass-top)}
-[data-theme="dark"]{--cta-aqua:rgba(116,224,212,.10);--cta-amber:rgba(244,194,115,.13)}
-[data-theme="light"]{--cta-aqua:rgba(15,157,143,.07);--cta-amber:rgba(181,122,31,.08)}
+[data-theme="dark"]{--cta-aqua:rgba(116,224,212,.16);--cta-amber:rgba(244,194,115,.19)}
+[data-theme="light"]{--cta-aqua:rgba(15,157,143,.11);--cta-amber:rgba(181,122,31,.12)}
 section.cta,section.cta.alt{background-image:
   radial-gradient(720px circle at 12% -10%, var(--cta-aqua), transparent 62%),
   radial-gradient(760px circle at 88% 110%, var(--glow), transparent 62%),
@@ -318,14 +336,14 @@ details:hover{border-color:var(--peri-line)}
 [data-theme="light"]{--glass-top:rgba(255,255,255,.85)}
 .proof{position:relative;overflow:hidden}
 .proof::before{content:"";position:absolute;top:-665px;left:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, var(--glow), transparent 65%);pointer-events:none}
-.proof::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.13), transparent 65%);pointer-events:none}
+.proof::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.18), transparent 65%);pointer-events:none}
 .proof .wrap{position:relative;z-index:1}
 .proof-card{background:var(--glass-bg);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border-color:var(--glass-brd);box-shadow:inset 0 1px 0 var(--glass-top)}
 .proof-card:hover{box-shadow:inset 0 1px 0 var(--glass-top),0 14px 34px -16px var(--glow-strong)}
 /* ladder: ambient glow + glass rungs */
 .ladder{position:relative;overflow:hidden}
 .ladder::before{content:"";position:absolute;top:-665px;left:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, var(--glow), transparent 65%);pointer-events:none}
-.ladder::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.13), transparent 65%);pointer-events:none}
+.ladder::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.18), transparent 65%);pointer-events:none}
 .ladder .wrap{position:relative;z-index:1}
 .rung{background:var(--glass-bg);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border-color:var(--glass-brd);box-shadow:inset 0 1px 0 var(--glass-top)}
 .rung:hover{box-shadow:inset 0 1px 0 var(--glass-top),0 14px 34px -16px var(--glow-strong)}
@@ -348,14 +366,63 @@ details:hover{border-color:var(--peri-line)}
 /* problem: ambient corner glows + glass (mirrors trust ladder) */
 .problem{position:relative;overflow:hidden}
 .problem::before{content:"";position:absolute;top:-665px;left:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, var(--glow), transparent 65%);pointer-events:none}
-.problem::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.13), transparent 65%);pointer-events:none}
+.problem::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.18), transparent 65%);pointer-events:none}
 .problem .wrap{position:relative;z-index:1}
 .fail-kick{box-shadow:inset 0 1px 0 var(--glass-top)}
 .fail-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media (max-width:900px){.fail-row{grid-template-columns:1fr}}
+
+/* glass surfaces (brand spec): aurora-lit frame + three tiers Frost/Smoke/Signal */
+.fail-row,.hood-row,.proof-grid{
+  position:relative;
+  gap:20px;
+  border:1px solid var(--gs-frame-brd);
+  border-radius:18px;
+  padding:44px 40px;
+  background:var(--gs-frame-bg);
+}
+@media (max-width:900px){.fail-row,.hood-row,.proof-grid{padding:22px 18px}}
+/* tier 1 · Frost (lightest) */
+.fail-row>.fail:nth-child(1),.hood-row>.hood:nth-child(1),.proof-grid>.proof-card:nth-child(1){
+  border-radius:16px;padding:26px 24px;
+  background:var(--gs-t1-bg);border:1px solid var(--gs-t1-brd);
+  -webkit-backdrop-filter:var(--gs-t1-blur);backdrop-filter:var(--gs-t1-blur);
+  box-shadow:var(--gs-t1-sh);
+}
+/* tier 2 · Smoke (mid) */
+.fail-row>.fail:nth-child(2),.hood-row>.hood:nth-child(2),.proof-grid>.proof-card:nth-child(2){
+  border-radius:16px;padding:26px 24px;
+  background:var(--gs-t2-bg);border:1px solid var(--gs-t2-brd);
+  -webkit-backdrop-filter:var(--gs-t2-blur);backdrop-filter:var(--gs-t2-blur);
+  box-shadow:var(--gs-t2-sh);
+}
+/* tier 3 · Signal tint (most tinted) */
+.fail-row>.fail:nth-child(3),.hood-row>.hood:nth-child(3),.proof-grid>.proof-card:nth-child(3){
+  border-radius:16px;padding:26px 24px;
+  background:var(--gs-t3-bg);border:1px solid var(--gs-t3-brd);
+  -webkit-backdrop-filter:var(--gs-t3-blur);backdrop-filter:var(--gs-t3-blur);
+  box-shadow:var(--gs-t3-sh);
+}
+[data-theme="dark"]{
+  --gs-frame-brd:rgba(142,166,255,0.2);
+  --gs-frame-bg:radial-gradient(circle at 18% 20%, rgba(142,166,255,0.22), transparent 42%), radial-gradient(circle at 88% 90%, rgba(116,224,212,0.16), transparent 46%), radial-gradient(circle at 60% 120%, rgba(244,194,115,0.1), transparent 44%), #0a0d14;
+  --gs-t1-bg:rgba(255,255,255,0.05);--gs-t1-brd:rgba(255,255,255,0.14);--gs-t1-blur:blur(14px) saturate(1.3);--gs-t1-sh:inset 0 1px 0 rgba(255,255,255,0.22), 0 22px 50px rgba(0,0,0,0.35);
+  --gs-t2-bg:rgba(10,13,20,0.42);--gs-t2-brd:rgba(156,170,189,0.2);--gs-t2-blur:blur(18px) saturate(1.2);--gs-t2-sh:inset 0 1px 0 rgba(255,255,255,0.14), 0 22px 50px rgba(0,0,0,0.4);
+  --gs-t3-bg:linear-gradient(160deg, rgba(142,166,255,0.16), rgba(142,166,255,0.04));--gs-t3-brd:rgba(142,166,255,0.32);--gs-t3-blur:blur(16px) saturate(1.4);--gs-t3-sh:inset 0 1px 0 rgba(255,255,255,0.24), 0 22px 54px rgba(142,166,255,0.16);
+}
+[data-theme="light"]{
+  --gs-frame-brd:rgba(18,21,31,0.12);
+  --gs-frame-bg:radial-gradient(circle at 18% 20%, rgba(74,94,218,0.06), transparent 42%), radial-gradient(circle at 88% 90%, rgba(15,157,143,0.05), transparent 46%), #f2f4fb;
+  --gs-t1-bg:#ffffff;--gs-t1-brd:rgba(18,21,31,0.10);--gs-t1-blur:none;--gs-t1-sh:0 1px 2px rgba(18,21,31,0.04);
+  --gs-t2-bg:#fbfbfd;--gs-t2-brd:rgba(18,21,31,0.14);--gs-t2-blur:none;--gs-t2-sh:0 2px 8px rgba(18,21,31,0.05);
+  --gs-t3-bg:rgba(74,94,218,0.07);--gs-t3-brd:rgba(74,94,218,0.28);--gs-t3-blur:none;--gs-t3-sh:0 6px 18px rgba(74,94,218,0.10);
+}
+.fail-row>.fail,.hood-row>.hood,.proof-grid>.proof-card{transition:transform .2s ease, box-shadow .2s ease}
+.fail-row>.fail:hover,.hood-row>.hood:hover,.proof-grid>.proof-card:hover{transform:translateY(-2px)}
 .fail{background:var(--glass-bg);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border:1px solid var(--glass-brd);border-radius:14px;padding:24px 22px;box-shadow:inset 0 1px 0 var(--glass-top);transition:box-shadow .2s}
 .fail:hover{box-shadow:inset 0 1px 0 var(--glass-top),0 14px 34px -16px var(--glow-strong)}
 .f-ic{width:44px;height:44px;border-radius:50%;border:1px solid var(--peri-line);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.fail-row .f-ic{border-color:var(--peri-line)}
 .f-ic svg{width:22px;height:22px}
 .fail h3{font-size:15.5px;margin-bottom:8px;color:var(--ink)}
 .fail p{font-size:13.5px;color:var(--muted);line-height:1.6}
@@ -423,8 +490,8 @@ details:hover{border-color:var(--peri-line)}
       <a class="btn" href="request-a-demo.html">Request a demo</a>
     </div>
     <div>
-      <div class="video-shell" id="hero-video">
-        <video controls preload="metadata" playsinline>
+      <div class="video-shell" id="hero-video" role="button" tabindex="0" aria-label="Play explainer video">
+        <video preload="metadata" playsinline muted>
           <source src="explainer.mp4" type="video/mp4">
         </video>
         <!-- To use a hosted video instead (YouTube/Vimeo), replace the <video> block above with the platform's <iframe> embed and remove the placeholder script below. -->
@@ -437,6 +504,15 @@ details:hover{border-color:var(--peri-line)}
     </div>
   </div>
 </header>
+
+<div class="vlb" id="video-lightbox" role="dialog" aria-modal="true" aria-label="Explainer video">
+  <div class="vlb-inner">
+    <button class="vlb-close" id="vlb-close" aria-label="Close video">&times;</button>
+    <video id="vlb-video" controls playsinline>
+      <source src="explainer.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
 
 <div class="logo-strip">
   <div class="wrap">
@@ -655,8 +731,8 @@ details:hover{border-color:var(--peri-line)}
     </div>
 
     <div class="kicker">
-      <p style="margin-bottom:10px">Your performance marketer doesn't get replaced by their digital twin. They get to spend less time on repetitive execution and more time on the judgment calls only they can make. <strong>You can stop the digital twin at any rung.</strong> Nothing advances without a track record behind it.</p>
-      <p>And you don't wait for the ladder to pay off: <strong>weekly governance summaries begin during incubation</strong>, before the digital twin ever makes its first recommendation.</p>
+      <p style="margin-bottom:10px">Your marketer isn't replaced by their digital twin, they just spend less time on repetitive execution and more on the judgment calls only they can make. <strong>Stop the digital twin at any rung;</strong> nothing advances without a track record behind it.</p>
+      <p>And you don't wait for the ladder to pay off: <strong>weekly governance summaries begin during incubation</strong>, before the digital twin's first recommendation.</p>
     </div>
   </div>
 </section>
@@ -681,9 +757,9 @@ details:hover{border-color:var(--peri-line)}
           <div><span class="rsum-num" style="color:#c8d4e4">27</span><span class="rsum-label">decisions tracked</span></div>
         </div>
         <p class="rmovers">Top movers</p>
-        <div class="decision"><span>Budget shifted to brand campaigns <em class="src">digital twin</em></span><span class="delta up">+6.2%</span></div>
+        <div class="decision"><span>Budget shifted to brand campaigns <em class="src">twin</em></span><span class="delta up">+6.2%</span></div>
         <div class="decision"><span>Bid strategy: target ROAS raised <em class="src">in-house</em></span><span class="delta up">+3.8%</span></div>
-        <div class="decision"><span>Paused underperforming ad group <em class="src">digital twin</em></span><span class="delta up">+0.6%</span></div>
+        <div class="decision"><span>Paused underperforming ad group <em class="src">twin</em></span><span class="delta up">+0.6%</span></div>
         <div class="decision"><span>Broad match test, 12 keywords <em class="src">agency</em></span><span class="delta flat">±0.0% monitoring</span></div>
         <div class="decision"><span>Landing page swap, promo LP <em class="src">in-house</em></span><span class="delta warn">−1.2% flagged</span></div>
         <div class="decision rmore"><span>+ 22 more in the full log</span></div>
@@ -714,8 +790,8 @@ details:hover{border-color:var(--peri-line)}
         <div class="big">+18.4%</div>
         <div class="label">ROAS lift from digital twin-assisted campaigns vs. the model alone, on matched live spend over 60 days.</div>
         <div class="cbar" aria-label="Comparison: model alone indexed at 1.00x versus digital twin-assisted at 1.18x">
-          <div class="brow"><span>Digital twin-assisted</span><span class="val" style="color:var(--peri)">1.18x</span></div>
-          <div class="track"><div class="fill" style="width:100%;background:var(--peri)"></div></div>
+          <div class="brow"><span>Digital twin-assisted</span><span class="val" style="color:var(--aqua)">1.18x</span></div>
+          <div class="track"><div class="fill" style="width:100%;background:var(--aqua)"></div></div>
           <div class="brow"><span>Model alone</span><span class="val">1.00x</span></div>
           <div class="track"><div class="fill" style="width:84.7%;background:var(--bar-base)"></div></div>
         </div>
@@ -725,8 +801,8 @@ details:hover{border-color:var(--peri-line)}
         <div class="big">14 hrs</div>
         <div class="label">Routine execution returned to the team each week once the digital twin reached Run and worked around the clock.</div>
         <div class="cbar" aria-label="Comparison: routine hours per week, team alone 19 versus with the digital twin 5">
-          <div class="brow"><span>With the digital twin</span><span class="val" style="color:var(--peri)">5 h/wk</span></div>
-          <div class="track"><div class="fill" style="width:26%;background:var(--peri)"></div></div>
+          <div class="brow"><span>With the digital twin</span><span class="val" style="color:var(--aqua)">5 h/wk</span></div>
+          <div class="track"><div class="fill" style="width:26%;background:var(--aqua)"></div></div>
           <div class="brow"><span>Team alone</span><span class="val">19 h/wk</span></div>
           <div class="track"><div class="fill" style="width:100%;background:var(--bar-base)"></div></div>
         </div>
@@ -838,10 +914,33 @@ details:hover{border-color:var(--peri-line)}
 
 (function(){
   var shell = document.getElementById('hero-video');
-  if (shell) {
-    var v = shell.querySelector('video');
-    v.addEventListener('loadedmetadata', function(){ shell.classList.add('loaded'); });
+  var lb = document.getElementById('video-lightbox');
+  var lbVideo = document.getElementById('vlb-video');
+  var lbClose = document.getElementById('vlb-close');
+  if (!shell) return;
+
+  var v = shell.querySelector('video');
+  if (v) v.addEventListener('loadedmetadata', function(){ shell.classList.add('loaded'); });
+
+  function openLb(){
+    if (!lb) return;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (lbVideo) { try { lbVideo.currentTime = 0; lbVideo.play(); } catch(e){} }
+    if (lbClose) lbClose.focus();
   }
+  function closeLb(){
+    if (!lb) return;
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    if (lbVideo) { lbVideo.pause(); }
+    shell.focus();
+  }
+  shell.addEventListener('click', openLb);
+  shell.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openLb(); } });
+  if (lbClose) lbClose.addEventListener('click', closeLb);
+  if (lb) lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && lb && lb.classList.contains('open')) closeLb(); });
 })();
 (function(){
   var root = document.documentElement;
