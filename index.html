@@ -360,8 +360,13 @@ details:hover{border-color:var(--peri-line)}
 .hood h3{font-size:15.5px;margin-bottom:8px;color:var(--ink)}
 .hood p{font-size:13.5px;color:var(--muted);line-height:1.6}
 /* executive outcome strip */
-.outcomes{border-top:1px solid var(--line-soft);padding:56px 0 64px}
-.outcomes .eyebrow::before{display:none}
+.outcomes{border-top:none;padding:0}
+.hero-tab{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);z-index:3;display:inline-flex;align-items:center;gap:9px;cursor:pointer;background:var(--panel);border:1px solid var(--peri-line);border-radius:999px;padding:10px 20px;color:var(--peri);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 12px 30px -14px rgba(0,0,0,.55), inset 0 1px 0 var(--glass-top);transition:box-shadow .2s ease, color .15s ease, transform .2s ease}
+.hero-tab:hover{color:var(--ink);transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -14px var(--glow-strong), inset 0 1px 0 var(--glass-top)}
+.hero-tab .chev{width:13px;height:13px;transition:transform .3s ease}
+.hero-tab[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.outcomes-panel{overflow:hidden;max-height:0;opacity:0;transition:max-height .45s ease, opacity .3s ease, padding .45s ease}
+.outcomes.open .outcomes-panel{max-height:1600px;opacity:1;padding:52px 0 64px}
 .outcomes .ogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
 .outcome{position:relative;padding:24px 20px;border-radius:13px;border:1px solid var(--peri-line);background:linear-gradient(165deg, var(--peri-soft), transparent);box-shadow:inset 0 1px 0 var(--glass-top);transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
 .outcome:hover{transform:translateY(-3px);border-color:var(--peri);box-shadow:0 16px 40px -18px var(--glow-strong)}
@@ -524,6 +529,7 @@ details:hover{border-color:var(--peri-line)}
       </div>
     </div>
   </div>
+  <button class="hero-tab" id="outcomes-toggle" aria-expanded="false" aria-controls="outcomes-panel">What you get<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
 </header>
 
 <div class="vlb" id="video-lightbox" role="dialog" aria-modal="true" aria-label="Explainer video">
@@ -537,28 +543,29 @@ details:hover{border-color:var(--peri-line)}
 
 <section class="outcomes">
   <div class="wrap">
-    <p class="eyebrow">What you get</p>
+    <div class="outcomes-panel" id="outcomes-panel">
     <div class="ogrid">
       <div class="outcome">
         <span class="o-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.3"/><path d="M12 7.3V21"/><path d="M6.5 12H17.5"/><path d="M4.5 14.5a7.5 7.5 0 0 0 15 0"/></svg></span>
         <h3>Expertise that stays</h3>
-        <p>Your team's best decision-making keeps working after they move on.</p>
+        <p>Your team's decision-making keeps working after they move&nbsp;on.</p>
       </div>
       <div class="outcome am">
         <span class="o-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2"/></svg></span>
         <h3>More time for experts</h3>
-        <p>Routine execution runs itself, so experts handle only the big calls.</p>
+        <p>Routine execution runs itself, so your experts handle only the biggest calls.</p>
       </div>
       <div class="outcome aq">
         <span class="o-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5.5-5.5 3.5 3.5L21 6"/><path d="M16 6h5v5"/></svg></span>
         <h3>Tied to real results</h3>
-        <p>Plain-language reports link each decision to the results it drove.</p>
+        <p>Plain-language reports link every decision to the real results it drove for you.</p>
       </div>
       <div class="outcome">
         <span class="o-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2.2 2.2L15 10"/></svg></span>
         <h3>Proven before it acts</h3>
-        <p>Every decision is tested against the best AI models before acting.</p>
+        <p>Every decision is tested against today's best AI models before it ever acts.</p>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -1067,6 +1074,16 @@ details:hover{border-color:var(--peri-line)}
     else if (!reduce && !raf && !shell.classList.contains('loaded')){ raf = requestAnimationFrame(loop); }
   });
   boot();
+})();
+(function(){
+  var sec = document.querySelector('.outcomes');
+  var btn = document.getElementById('outcomes-toggle');
+  if (!sec || !btn) return;
+  btn.addEventListener('click', function(){
+    var open = sec.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open){ setTimeout(function(){ sec.scrollIntoView({behavior:'smooth', block:'start'}); }, 80); }
+  });
 })();
 (function(){
   var root = document.documentElement;
