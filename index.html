@@ -145,9 +145,6 @@ nav.menu-open .nav-toggle .icon-close{display:block}
 .stylized-note{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:12px;text-align:center}
 
 /* ---------- logo strip ---------- */
-.logo-strip{border-top:1px solid var(--line-soft);padding:26px 0 34px}
-.logo-strip .slots{display:flex;gap:12px;margin-top:14px}
-.logo-slot{flex:1;height:38px;border:1px dashed var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--faint)}
 
 /* ---------- problem ---------- */
 .problem h2{font-size:clamp(26px,3.2vw,34px);max-width:640px;margin-bottom:22px}
@@ -286,8 +283,6 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px;font-size:13.5px}
   .foot-grid{grid-template-columns:1fr 1fr}
   section{padding:64px 0}
   .nav-links a.nav-page{display:none}
-  .logo-strip .slots{flex-wrap:wrap}
-  .logo-slot{min-width:44%}
 }
 </style>
 
@@ -364,6 +359,17 @@ details:hover{border-color:var(--peri-line)}
 .hood:hover{box-shadow:inset 0 1px 0 var(--glass-top),0 14px 34px -16px var(--glow-strong)}
 .hood h3{font-size:15.5px;margin-bottom:8px;color:var(--ink)}
 .hood p{font-size:13.5px;color:var(--muted);line-height:1.6}
+/* executive outcome strip */
+.outcomes{border-top:1px solid var(--line-soft);padding:56px 0 64px}
+.outcomes .eyebrow::before{display:none}
+.outcomes .ogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:start}
+.outcome{position:relative;padding-top:16px}
+.outcome::before{content:"";position:absolute;top:0;left:0;width:26px;height:2px;border-radius:2px;background:var(--peri)}
+.outcome.aq::before{background:var(--aqua)}
+.outcome h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;color:var(--ink);margin:0 0 6px;line-height:1.3}
+.outcome p{font-size:13px;color:var(--muted);line-height:1.55;margin:0}
+@media (max-width:900px){.outcomes .ogrid{grid-template-columns:1fr 1fr;gap:28px 24px}}
+@media (max-width:560px){.outcomes .ogrid{grid-template-columns:1fr}}
 /* problem: failure modes + why-now */
 
 /* problem: ambient corner glows + glass (mirrors trust ladder) */
@@ -522,17 +528,29 @@ details:hover{border-color:var(--peri-line)}
   </div>
 </div>
 
-<div class="logo-strip">
+<section class="outcomes">
   <div class="wrap">
-    <p class="eyebrow" style="margin-bottom:0">Trusted by</p>
-    <div class="slots">
-      <div class="logo-slot">client logo</div>
-      <div class="logo-slot">client logo</div>
-      <div class="logo-slot">client logo</div>
-      <div class="logo-slot">client logo</div>
+    <p class="eyebrow">What you get</p>
+    <div class="ogrid">
+      <div class="outcome">
+        <h3>Expertise that stays</h3>
+        <p>Your team's best decision-making keeps working after they move on.</p>
+      </div>
+      <div class="outcome aq">
+        <h3>More time for experts</h3>
+        <p>Routine execution runs itself, so experts handle only the big calls.</p>
+      </div>
+      <div class="outcome">
+        <h3>Tied to real results</h3>
+        <p>Plain-language reports link each decision to the results it drove.</p>
+      </div>
+      <div class="outcome aq">
+        <h3>Proven before it acts</h3>
+        <p>Every decision is tested against the best AI models before acting.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <section class="problem alt">
   <div class="wrap problem-grid">
