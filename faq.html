@@ -263,7 +263,7 @@ details .answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-hei
 details .answer p{margin-bottom:10px}
 .placeholder-a{border-left:3px solid var(--peri-line);padding-left:14px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--faint)}
 /* faq: jump nav, category icons, open-state */
-.faq-jump{position:sticky;top:77px;z-index:40;background:color-mix(in srgb, var(--bg) 82%, transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.faq-jump{position:sticky;top:calc(var(--nav-h, 69px) - 1px);z-index:40;background:color-mix(in srgb, var(--bg) 82%, transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .jump-row{display:flex;gap:10px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
 .jump-row a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 14px;transition:border-color .15s,color .15s}
 .jump-row a:hover{border-color:var(--peri-line);color:var(--ink)}
@@ -530,6 +530,15 @@ section.alt > .wrap{position:relative;z-index:1}
   var saved = null;
   try { saved = localStorage.getItem('arciom-theme'); } catch(e){}
   setTheme(saved === 'light' ? 'light' : 'dark');
+})();
+
+(function(){
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+  function setH(){ document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px'); }
+  setH();
+  window.addEventListener('resize', setH);
+  if (window.ResizeObserver) new ResizeObserver(setH).observe(nav);
 })();
 
 (function(){
