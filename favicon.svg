@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229.03 229.03" role="img" aria-label="Arciom">
+  <circle cx="114.52" cy="114.52" r="114.52" fill="#8ea6ff" opacity="0.18"/>
+  <circle cx="114.52" cy="114.52" r="72.58" fill="none" stroke="#8ea6ff" stroke-width="7">
+    <animate attributeName="r" values="72.58;112" dur="2.4s" repeatCount="indefinite"
+             calcMode="spline" keyTimes="0;1" keySplines="0 0 .2 1"/>
+    <animate attributeName="stroke-opacity" values=".55;0" dur="2.4s" repeatCount="indefinite"
+             calcMode="spline" keyTimes="0;1" keySplines="0 0 .2 1"/>
+  </circle>
+  <circle cx="114.52" cy="114.52" r="72.58" fill="#8ea6ff"/>
+</svg>

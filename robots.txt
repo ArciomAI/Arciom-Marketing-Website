@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# form + placeholder legal pages are noindex at the page level
+Disallow: /request-a-demo.html
+
+Sitemap: https://arciom.com/sitemap.xml

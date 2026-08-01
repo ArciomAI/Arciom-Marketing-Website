@@ -1,556 +1,1253 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why Arciom — Proven judgment. Not just automation.</title>
-<meta name="description" content="Five reasons teams choose Arciom: proven judgment, expert-in-the-loop, earned autonomy, judgment that survives turnover, and decision-level visibility for leadership.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2040%2040%22%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%2215%22%20fill=%22none%22%20stroke=%22%238ea6ff%22%20stroke-width=%223%22%20opacity=%220.55%22/%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%228%22%20fill=%22%238ea6ff%22/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="arciom-icon-180.png">
-<link rel="icon" type="image/png" sizes="512x512" href="arciom-icon-512.png">
+<title>Why Arciom — Every AI tool promises an edge. Only one proves it.</title>
+<meta name="description" content="Every AI agent runs on the same foundation models. Arciom keeps only the decisions where your experts beat them — and earns its autonomy rung by rung.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://arciom.com/why-arciom.html">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://arciom.com/why-arciom.html">
 <meta property="og:site_name" content="Arciom">
-<meta property="og:title" content="Arciom">
+<meta property="og:title" content="Why Arciom — Every AI tool promises an edge. Only one proves it.">
+<meta property="og:description" content="Every AI agent runs on the same foundation models. The only thing AI can't commoditize is your people's judgment. That's the only thing we capture.">
+<meta property="og:image" content="https://arciom.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0d14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Poppins:wght@600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 <style>
-:root, [data-theme="dark"]{
-  --bg:#0a0d14; --panel:#121722; --panel-2:#171d2b;
-  --ink:#eef2f8; --body:#c8d4e4; --muted:#9caabd; --faint:#627084;
-  --peri:#8ea6ff; --peri-ink:#0a0d14; --peri-soft:rgba(142,166,255,.14); --peri-line:rgba(142,166,255,.35);
-  --aqua:#74e0d4; --aqua-ink:#0c0d14;
-  --amber:#f4c273; --amber-ink:#0a0d14; --amber-soft:rgba(244,194,115,.14); --amber-line:rgba(244,194,115,.4);
-  --line:rgba(156,170,189,.16); --line-soft:rgba(156,170,189,.10);
-  --bar-track:rgba(255,255,255,.05); --bar-base:#5c6a80;
-  --glow:rgba(142,166,255,.16); --amber-glow:rgba(244,194,115,.4);
-}
-[data-theme="light"]{
-  --bg:#f6f7fb; --panel:#ffffff; --panel-2:#fbfbfd;
-  --ink:#12151f; --body:#3a4152; --muted:#5b6478; --faint:#8891a3;
-  --peri:#4a5eda; --peri-ink:#ffffff; --peri-soft:rgba(74,94,218,.10); --peri-line:rgba(74,94,218,.35);
-  --aqua:#0f9d8f; --aqua-ink:#ffffff;
-  --amber:#b57a1f; --amber-ink:#ffffff; --amber-soft:rgba(181,122,31,.10); --amber-line:rgba(181,122,31,.32);
-  --line:#dde3ef; --line-soft:#e9edf5;
-  --bar-track:rgba(18,21,31,.06); --bar-base:#8891a3;
-  --glow:rgba(74,94,218,.10); --amber-glow:rgba(181,122,31,.32);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *,*::before,*::after{animation:none!important;transition:none!important} }
-body{
-  background:var(--bg); color:var(--body);
-  font-family:'IBM Plex Sans',system-ui,sans-serif; font-size:16px; line-height:1.65;
-  transition:background .25s ease, color .25s ease;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
-h1,h2,h3{font-family:'Space Grotesk',sans-serif;color:var(--ink);letter-spacing:-0.02em;font-weight:600;line-height:1.12}
-.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
-.eyebrow.accent{color:var(--peri)}
-a{color:var(--peri);text-decoration:none}
-a:focus-visible,button:focus-visible{outline:2px solid var(--peri);outline-offset:3px;border-radius:4px}
-section{border-top:1px solid var(--line);padding:88px 0}
-.mono{font-family:'IBM Plex Mono',monospace}
-
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1080px;margin:0 auto}
-.logo img{height:26px;display:block}
-.logo .light-logo{display:none}
-[data-theme="light"] .logo .dark-logo{display:none}
-[data-theme="light"] .logo .light-logo{display:block}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{font-size:14px;color:var(--muted);transition:color .15s}
-.nav-links a.btn{color:var(--ink)}
-.nav-links a.btn:hover{color:var(--ink)}
-.nav-links a:hover{color:var(--ink)}
-.nav-links a.active{color:var(--peri)}
-.btn{position:relative;overflow:hidden;display:inline-block;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:var(--ink);background:var(--peri-soft);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:11px 22px;border-radius:9px;border:1px solid var(--peri-line);cursor:pointer;transition:transform .12s ease, border-color .2s, box-shadow .25s;box-shadow:inset 0 1px 0 var(--glass-top)}
-.btn::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(130px circle at var(--mx,50%) var(--my,50%), var(--amber-glow), transparent 65%);opacity:0;transition:opacity .25s;pointer-events:none}
-.btn:hover::before{opacity:1}
-.btn>*{position:relative}
-.btn:hover{transform:translateY(-2px);border-color:var(--peri)}
-.btn.small{padding:9px 16px;font-size:13px}
-.btn-primary{background:var(--peri);border-color:var(--peri);color:var(--peri-ink)}
-.nav-links a.btn{min-width:132px;text-align:center;box-sizing:border-box}
-.nav-links a.nav-cta{background:transparent;border:1px solid var(--peri);color:var(--peri);box-shadow:inset 0 1px 0 var(--glass-top)}
-.nav-links a.nav-cta:hover{background:var(--peri);border-color:var(--peri);color:var(--peri-ink);transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,0.4),0 14px 34px -10px var(--glow-strong)}
-.nav-links a.nav-cta:hover::before{opacity:0}
-.theme-toggle{position:fixed;bottom:20px;right:20px;z-index:60;display:flex;align-items:center;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px;cursor:pointer;box-shadow:0 10px 28px -10px rgba(0,0,0,.45)}
-.theme-toggle button{background:transparent;border:none;cursor:pointer;width:30px;height:26px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:var(--faint)}
-.theme-toggle button.active{background:var(--peri);color:var(--peri-ink)}
-.theme-toggle svg{width:14px;height:14px}
-.nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--ink);padding:6px;margin-left:2px;border-radius:8px}
-.nav-toggle:hover{background:var(--panel)}
-.nav-toggle svg{width:22px;height:22px;display:block}
-.nav-toggle .icon-close{display:none}
-nav.menu-open .nav-toggle .icon-open{display:none}
-nav.menu-open .nav-toggle .icon-close{display:block}
-.mobile-menu{display:none}
-@media (max-width:900px){
-  .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
-  .nav-links a.btn{display:none}
-  .mobile-menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 28px 20px;box-shadow:0 18px 40px -20px rgba(0,0,0,.45)}
-  nav.menu-open .mobile-menu{display:flex}
-  .mobile-menu a{padding:14px 0;border-bottom:1px solid var(--line-soft);font-size:15px;color:var(--muted);font-family:"Space Grotesk",sans-serif;font-weight:600}
-  .mobile-menu a.nav-page:last-of-type{border-bottom:none}
-  .mobile-menu a.active{color:var(--peri)}
-}
-
 /* ---------- hero ---------- */
-.hero{border-top:none;padding:96px 0 72px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;top:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, var(--glow), transparent 65%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative}
-.hero .tagline{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--peri);margin-bottom:18px}
-.hero h1{font-size:clamp(34px,4.6vw,52px);margin-bottom:20px}
-.hero p.lede{font-size:17px;max-width:480px;margin-bottom:32px}
-
-/* evidence panel — stays dark in both themes: it depicts the product */
-.evidence{background:#121722;border:1px solid rgba(156,170,189,.2);border-radius:16px;padding:22px 24px;box-shadow:0 24px 60px -24px rgba(0,0,0,.5);transform:rotate(1.2deg)}
-.evidence .row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.evidence .sess{display:flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9caabd}
-.dot{width:8px;height:8px;border-radius:50%;background:#8ea6ff;animation:pulse 2.4s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.badge{font-size:11px;font-weight:500;color:#0c0d14;background:#74e0d4;padding:3px 10px;border-radius:999px}
-.evidence .code{background:rgba(255,255,255,.04);border-radius:8px;padding:12px 14px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;margin-bottom:15px;color:#c8d4e4}
-.evidence .code .k{color:#7c8aa0}.evidence .code .arrow{color:#5c6a80}.evidence .code .v{color:#74e0d4}
-.evidence .note{font-size:13px;line-height:1.55;color:#c8d4e4;margin-bottom:14px}
-.evidence .foot{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid rgba(156,170,189,.14)}
-.evidence .foot .bds{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#627084}
-.evidence .conf{font-size:11px;font-weight:500;color:#c3d0ff;background:rgba(142,166,255,.14);border:1px solid rgba(142,166,255,.35);padding:3px 10px;border-radius:999px}
-.stylized-note{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:12px;text-align:center}
-
-/* ---------- logo strip ---------- */
-.logo-strip{border-top:1px solid var(--line-soft);padding:26px 0 34px}
-.logo-strip .slots{display:flex;gap:12px;margin-top:14px}
-.logo-slot{flex:1;height:38px;border:1px dashed var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--faint)}
-
-/* ---------- problem ---------- */
-.problem h2{font-size:clamp(26px,3.2vw,34px);max-width:640px;margin-bottom:22px}
-.problem p{max-width:600px;margin-bottom:14px;color:var(--muted)}
-
-/* ---------- journey ---------- */
-.journey h2{font-size:clamp(26px,3.2vw,34px);max-width:620px;margin-bottom:16px}
-.journey .sub{max-width:600px;color:var(--muted);margin-bottom:8px}
-.steps{list-style:none;margin:34px 0 10px;counter-reset:step}
-.steps li{position:relative;padding:0 0 30px 58px}
-.steps li::before{content:"";position:absolute;left:17px;top:38px;bottom:-4px;width:2px;background:var(--line)}
-.steps li:last-child::before{display:none}
-.step-icon{position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--panel);border:1.5px solid var(--peri);display:flex;align-items:center;justify-content:center}
-.step-icon.nascent{border-style:dotted;border-color:var(--faint)}
-.step-icon.dashed{border-style:dashed;border-color:var(--faint)}
-.step-icon.solid{background:var(--peri);border-color:var(--peri)}
-.step-icon svg{width:17px;height:17px}
-.steps h3{font-size:17px;margin-bottom:4px}
-.steps p{font-size:14.5px;color:var(--muted);max-width:560px}
-.phase-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);padding:0 0 16px 58px}
-.kicker{margin-top:26px;padding:20px 24px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-size:14.5px;color:var(--muted)}
-.journey .kicker{max-width:640px}
-.journey .kicker strong{color:var(--ink);font-weight:600}
-
-
-/* ---------- section rhythm ---------- */
-[data-theme="dark"] { --bg-alt:#0e131d; }
-[data-theme="light"] { --bg-alt:#ffffff; }
-section.alt{background:var(--bg-alt)}
-/* ---------- trust ladder rungs ---------- */
-.ladder h2{font-size:clamp(26px,3.2vw,34px);max-width:620px;margin-bottom:16px}
-.ladder .sub{max-width:620px;color:var(--muted);margin-bottom:38px}
-.rungs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:rung}
-.rung{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 22px;position:relative}
-.rung .rnum{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-bottom:14px}
-.rung .step-icon{position:static;margin-bottom:14px}
-.rung h3{font-size:16px;margin-bottom:6px}
-.rung p{font-size:13.5px;color:var(--muted);line-height:1.55}
-@media (max-width:900px){ .rungs{grid-template-columns:1fr 1fr} }
-@media (max-width:560px){ .rungs{grid-template-columns:1fr} }
-
-/* ---------- governance ---------- */
-.gov-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
-.gov h2{font-size:clamp(26px,3.2vw,34px);margin-bottom:20px}
-.gov p{color:var(--muted);margin-bottom:14px}
-.report{background:#121722;border:1px solid rgba(156,170,189,.2);border-radius:16px;padding:22px 24px;box-shadow:0 24px 60px -28px rgba(0,0,0,.45)}
-.report .rhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9caabd}
+.hero{padding:56px 0 40px;position:relative;color:#EEF2F8;overflow:hidden;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(142,166,255,0.22), transparent 42%),
+    radial-gradient(circle at 88% 90%, rgba(116,224,212,0.16), transparent 46%),
+    radial-gradient(circle at 60% 120%, rgba(244,194,115,0.1), transparent 44%),
+    #0a0d14;
+}
+.hero h1{font-size:clamp(46px,7.4vw,88px);font-weight:700;max-width:15ch;color:#EEF2F8}
+@media (max-width:640px){.cap-mid{display:none}}
+@media (prefers-reduced-motion:reduce){.twin-ring,.twin-core{animation:none}.particle{display:none}}
+@media (max-width:560px){.dd{left:auto;right:8px;width:172px}}
+@media (prefers-reduced-motion:reduce){
+  .cursor,.click-ring,.field-active,.dd-anim,.opt-hi,.ck-old,.ck-new,.v-old,.v-new,.toast,.toast .tck{animation:none}
+  .cursor,.click-ring,.dd,.toast,.v-new,.ck-new{opacity:0}
+  .toast .tck{transform:scale(1)}
+  .v-old,.ck-old{opacity:1}
+}
+@media (prefers-reduced-motion:reduce){.wave i{animation:none}}
+@media (max-width:860px){.trio{grid-template-columns:1fr}}
+@media (max-width:560px){.rungs4{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.rg,.rg::before,.gate{transition:none}}
+@media (max-width:860px){.day1{grid-template-columns:1fr}}
+.d1{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 14px 34px -20px rgba(16,20,43,.14);transition:transform .2s ease, box-shadow .2s ease}
+.d1 .tag{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+@media (max-width:820px){.cmp{grid-template-columns:1fr;gap:16px}}
+@media (max-width:820px){.cmp-vs{padding:4px 0}}
+@media (prefers-reduced-motion:reduce){
+  .bars i,.cmp-b .bars i.spike::after{transition:none}
+}
+@media (max-width:860px){.loss3{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  .pv-token,.cap-dot,.gw-sat{display:none}
+  .cap-line{animation:none;stroke-dashoffset:0}
+  .cap-rec,.gw-ripple,.gw-core,.kept-ring,.kept-tick,.kept-tray{animation:none}
+  .kept-ring{opacity:0}
+}
+@media (prefers-reduced-motion:reduce){.fill{transition:none}}
+@media (max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+/* ================= WHY ARCIOM ================= */
+.hero.short{min-height:auto;padding:100px 0 88px;display:block}
+.nav-links a.pg.current{color:var(--peri)}
+/* ---- premise ---- */
+/* copy left, the argument drawn on the right */
+.premise{display:grid;grid-template-columns:1fr 1.04fr;gap:54px;align-items:center;margin-top:8px}
+@media (max-width:980px){.premise{grid-template-columns:1fr;gap:36px}}
+.pm-copy .h2{max-width:none;font-size:clamp(28px,3.1vw,42px);margin-bottom:24px;text-wrap:balance}
+.pm-copy p{font-size:16px;line-height:1.72;color:var(--muted)}
+.pm-copy p + p{margin-top:18px}
+.pm-copy .lead{font-size:clamp(18px,1.8vw,21px);line-height:1.55;color:var(--ink);font-weight:500;
+  padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.pm-viz{border-radius:26px;border:1px solid var(--line);background:var(--surface);padding:28px 26px 24px}
+/* same title treatment as the mission chart on About */
+.ch-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17.5px;letter-spacing:-.015em;color:var(--ink)}
+.ch-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:5px;margin-bottom:14px}
+.pm-viz svg{width:100%;height:auto;display:block;overflow:visible}
+.sl-t{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.13em}
+.sl-c{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.17em;font-weight:600}
+/* the stack assembles from the shared base upward */
+.slab{transform-box:fill-box;transform-origin:bottom}
+.js .pm-viz .slab{opacity:0;transform:scaleY(.25)}
+.js .pm-viz.in .slab{opacity:1;transform:none;
+  transition:opacity .5s ease, transform .65s cubic-bezier(.2,.9,.3,1)}
+.js .pm-viz.in .s-base{transition-delay:.05s}
+.js .pm-viz.in .s-base2{transition-delay:.14s}
+.js .pm-viz.in .s-gen{transition-delay:.34s}
+.js .pm-viz.in .s-jud{transition-delay:.56s}
+.js .pm-viz .par,.js .pm-viz .edge{opacity:0}
+.js .pm-viz.in .par{opacity:1;transition:opacity .5s ease .95s}
+.js .pm-viz.in .edge{opacity:1;transition:opacity .5s ease 1.2s}
+@media (prefers-reduced-motion:reduce){
+  .js .pm-viz .slab,.js .pm-viz .par,.js .pm-viz .edge{opacity:1;transform:none;transition:none}
+}
+/* ---- the comparison: signature element ---- */
+.vsg{display:grid;grid-template-columns:.78fr 1fr 1fr;margin-top:52px;position:relative;
+  border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--surface)}
+.vsg-h{padding:24px 26px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--line)}
+.vsg-h.them{color:var(--muted)}
+.vsg-h.us{color:var(--peri);background:var(--peri-soft)}
+.vsg-l{padding:22px 26px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--line-soft);display:flex;align-items:center}
+.vsg-c{padding:22px 26px;font-size:14.5px;line-height:1.55;color:var(--muted);
+  border-bottom:1px solid var(--line-soft);display:flex;align-items:flex-start;gap:11px}
+.vsg-c.us{background:var(--peri-soft);color:var(--ink);font-weight:500}
+.vsg-row:last-child .vsg-l,.vsg-row:last-child .vsg-c{border-bottom:none}
+.vsg-row{display:contents}
+.vsg-c .mk{flex:none;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.vsg-c.them .mk{background:rgba(136,145,163,.2);color:var(--faint)}
+.vsg-c.us .mk{background:var(--aqua);color:#fff}
+.vsg-c .mk svg{width:10px;height:10px}
+.js .vsg-row .vsg-l,.js .vsg-row .vsg-c{opacity:0;transform:translateY(10px);
+  transition:opacity .5s ease,transform .5s cubic-bezier(.2,.8,.25,1)}
+.js .vsg.in .vsg-row .vsg-l,.js .vsg.in .vsg-row .vsg-c{opacity:1;transform:none}
+.vsg-row:nth-child(2) *{transition-delay:.06s}
+.vsg-row:nth-child(3) *{transition-delay:.14s}
+.vsg-row:nth-child(4) *{transition-delay:.22s}
+.vsg-row:nth-child(5) *{transition-delay:.30s}
+.vsg-row:nth-child(6) *{transition-delay:.38s}
+.vsg-row:nth-child(7) *{transition-delay:.46s}
+@media (max-width:820px){
+  .vsg{grid-template-columns:1fr;border-radius:20px}
+  .vsg-h{display:none}
+  .vsg-l{border-bottom:none;padding:22px 22px 8px;color:var(--peri)}
+  .vsg-c{padding:9px 22px;border-bottom:none}
+  .vsg-c:last-child{padding-bottom:22px;border-bottom:1px solid var(--line-soft)}
+  .vsg-c::before{content:attr(data-l);font-family:'IBM Plex Mono',monospace;font-size:10px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-right:2px;flex:none}
+}
+/* ---- reason blocks, alternating ---- */
+.reason{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}
+@media (max-width:920px){.reason{grid-template-columns:1fr;gap:34px}}
+.reason.flip .r-media{order:-1}
+@media (max-width:920px){.reason.flip .r-media{order:0}}
+.r-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--peri);margin-bottom:14px}
+.reason .h2{margin-bottom:16px}
+.reason p{font-size:15.5px;line-height:1.7;color:var(--muted)}
+.reason p + p{margin-top:14px}
+.r-link{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-family:'Space Grotesk',sans-serif;
+  font-weight:600;font-size:14.5px;color:var(--peri)}
+.r-link:hover{gap:11px}
+.r-media{border-radius:24px;padding:28px 26px 24px;background:var(--surface);border:1px solid var(--line);
+  display:flex;flex-direction:column;justify-content:center;min-height:280px}
+.r-media svg{width:100%;height:auto;max-width:420px;display:block;overflow:visible;margin:0 auto}
+/* expert <-> twin */
+.xt-node{transform-box:fill-box;transform-origin:center}
+.xt-pulse{animation:xtPulse 3s ease-in-out infinite}
+@keyframes xtPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.xt-ring{fill:none;transform-box:fill-box;transform-origin:center;animation:xtRing 3s ease-out infinite}
+@keyframes xtRing{0%{transform:scale(1);stroke-opacity:.5}100%{transform:scale(1.85);stroke-opacity:0}}
+.xt-lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;fill:var(--faint)}
+.xt-flow{fill:var(--peri)}
+.xt-back{fill:var(--amber)}
+/* judgment stays */
+.js-bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);
+  transition:transform .8s cubic-bezier(.2,.85,.25,1)}
+.js .stay.in .js-bar{transform:scaleY(1)}
+.js-person{transition:opacity .7s ease .9s,transform .7s ease .9s}
+.js .stay.in .js-person{opacity:.18;transform:translateX(-18px)}
+.js-lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em}
+/* the ladder is climbed, not shown: each rung lands, then its gate approves */
+.rg-k{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.16em;fill:#8891A3}
+.rg-n{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;font-weight:600;fill:#4A5EDA}
+.rg-f{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;fill:#B57A1F}
+.js .r-media .rg-step{opacity:0;transform:translateY(16px)}
+.js .r-media .rg-gate{opacity:0;transform:scale(.5)}
+.rg-step,.rg-gate{transform-box:fill-box;transform-origin:center}
+.js .ladder.in .rg-step{opacity:1;transform:none;transition:opacity .45s ease, transform .55s cubic-bezier(.2,.9,.3,1)}
+.js .ladder.in .rg-gate{opacity:1;transform:none;transition:opacity .35s ease, transform .45s cubic-bezier(.2,1.6,.4,1)}
+.js .ladder.in .r-1{transition-delay:.05s}
+.js .ladder.in .g-1{transition-delay:.42s}
+.js .ladder.in .r-2{transition-delay:.62s}
+.js .ladder.in .g-2{transition-delay:.99s}
+.js .ladder.in .r-3{transition-delay:1.19s}
+.js .ladder.in .g-3{transition-delay:1.56s}
+.js .ladder.in .r-4{transition-delay:1.76s}
+.rg-crown{transform-box:fill-box;transform-origin:center;opacity:0}
+.js .ladder.in .rg-crown{animation:rgCrown 1.4s ease-out 2.05s}
+@keyframes rgCrown{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+@media (prefers-reduced-motion:reduce){
+  .js .r-media .rg-step,.js .r-media .rg-gate{opacity:1;transform:none;transition:none}
+  .js .ladder.in .rg-crown{animation:none}
+}
+/* the kept box reacts the moment the proven decision lands (matches the Prove card) */
+.r1-ring{transform-box:fill-box;transform-origin:center;opacity:0;animation:r1Pop 6s ease-out infinite}
+@keyframes r1Pop{0%,90%{transform:scale(.68);opacity:0}92%{transform:scale(1);opacity:.85}99%,100%{transform:scale(1.95);opacity:0}}
+.r1-tick{animation:r1Tick 6s ease-out infinite}
+@keyframes r1Tick{0%,90%{stroke-opacity:.45}93%,97%{stroke-opacity:1}100%{stroke-opacity:.45}}
+.r1-box{animation:r1Box 6s ease-out infinite}
+@keyframes r1Box{0%,90%{stroke-opacity:.45}93%,97%{stroke-opacity:1}100%{stroke-opacity:.45}}
+@media (prefers-reduced-motion:reduce){.r1-ring,.r1-tick,.r1-box{animation:none}.r1-ring{opacity:0}}
+/* ---- governance report: compact card beside the copy (matches the old site) ---- */
+.gov-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;margin-top:8px}
+@media (max-width:980px){.gov-grid{grid-template-columns:1fr;gap:34px}}
+.gov-copy .h2{max-width:none;font-size:clamp(28px,3.1vw,42px);margin-bottom:22px;text-wrap:balance}
+.gov-copy p{font-size:15.5px;line-height:1.7;color:var(--muted)}
+.gov-copy p + p{margin-top:15px}
+.report{background:#0F1420;border:1px solid rgba(156,170,189,.2);border-radius:16px;padding:22px 24px;
+  box-shadow:0 24px 60px -28px rgba(16,20,43,.5)}
+.report .rhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9CAABD}
 .report .rhead .to{color:#627084;font-size:10.5px}
-.report .decision{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-top:1px solid rgba(156,170,189,.12);font-size:13px;color:#c8d4e4}
-.report .decision .delta{font-family:'IBM Plex Mono',monospace;font-size:12.5px}
-.delta.up{color:#74e0d4}.delta.flat{color:#627084}.delta.warn{color:#f4c273}
 .rsummary{display:flex;gap:28px;padding:12px 0 14px;border-top:1px solid rgba(156,170,189,.12)}
-.rsum-num{display:block;font-family:'IBM Plex Mono',monospace;font-size:19px;color:#74e0d4;line-height:1.1}
-.rsum-label{display:block;font-family:'IBM Plex Sans',sans-serif;font-size:10.5px;color:#627084;margin-top:2px}
-.report .src{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:#7c8aa0;border:1px solid rgba(156,170,189,.25);border-radius:4px;padding:1px 5px;margin-left:7px;vertical-align:1px}
-.rfoot{padding-top:13px;border-top:1px solid rgba(156,170,189,.12);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:#627084}
-.rmovers{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#627084;padding:10px 0 2px;border-top:1px solid rgba(156,170,189,.12)}
+.rsum-num{display:block;font-family:'IBM Plex Mono',monospace;font-size:19px;color:var(--aqua-bright);line-height:1.1}
+.rsum-label{display:block;font-size:10.5px;color:#627084;margin-top:3px}
+.rmovers{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:#627084;padding:10px 0 2px;border-top:1px solid rgba(156,170,189,.12)}
+.report .decision{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:11px 0;
+  border-top:1px solid rgba(156,170,189,.12);font-size:13px;color:#C8D4E4}
+.report .decision .delta{font-family:'IBM Plex Mono',monospace;font-size:12.5px;white-space:nowrap}
+.delta.up{color:var(--aqua-bright)}
+.delta.flat{color:#627084}
+.delta.warn{color:var(--amber-bright)}
+.report .src{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.06em;
+  text-transform:uppercase;color:#7C8AA0;border:1px solid rgba(156,170,189,.25);border-radius:4px;
+  padding:1px 5px;margin-left:7px;vertical-align:1px;white-space:nowrap}
 .decision.rmore span{color:#627084;font-family:'IBM Plex Mono',monospace;font-size:11.5px}
-.reason-report{max-width:300px;margin:0 auto}
-.audit-card{background:#121722;border:1px solid rgba(156,170,189,.2);border-radius:16px;padding:22px 24px;box-shadow:0 24px 60px -28px rgba(0,0,0,.45);max-width:300px;margin:0 auto}
-.audit-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9caabd}
-.audit-head .cert-badge{font-size:9.5px;letter-spacing:.1em;color:#8ea6ff;border:1px solid rgba(142,166,255,.4);border-radius:4px;padding:2px 6px}
-.audit-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-top:1px solid rgba(156,170,189,.12);font-size:13px;color:#c8d4e4}
-.audit-foot{padding-top:13px;margin-top:2px;border-top:1px solid rgba(156,170,189,.12);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:#627084}
-
-/* ---------- proof ---------- */
-.proof h2{font-size:clamp(26px,3.2vw,34px);margin-bottom:14px}
-.proof .sub{color:var(--muted);max-width:560px;margin-bottom:40px}
-.proof-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
-.proof-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 24px}
-.proof-card .big{font-family:'IBM Plex Mono',monospace;font-size:34px;color:var(--aqua);line-height:1;margin-bottom:8px}
-.proof-card .label{font-size:13px;color:var(--muted);line-height:1.5}
-.proof-card.placeholder{border-style:dashed}
-.proof-card.placeholder .big{color:var(--faint);font-size:22px}
-.cbar{margin-top:18px}
-.cbar .brow{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-bottom:5px}
-.cbar .brow .val{font-family:'IBM Plex Mono',monospace}
-.cbar .track{height:7px;background:var(--bar-track);border-radius:4px;overflow:hidden;margin-bottom:11px}
-.cbar .fill{height:100%;border-radius:4px}
-.fine{font-size:11px;color:var(--faint);margin-top:16px}
-
-/* ---------- testimonials ---------- */
-.testi-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:36px}
-.testi-card{border:1px dashed var(--line);border-radius:14px;padding:22px;font-size:12.5px;color:var(--faint);line-height:1.55}
-.testi-card .who{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:12px}
-
-/* ---------- cta ---------- */
-.cta{text-align:center;position:relative;overflow:hidden;padding:110px 0}
-.cta{box-shadow:inset 0 1px 0 var(--glass-top)}
-[data-theme="dark"]{--cta-aqua:rgba(116,224,212,.16);--cta-amber:rgba(244,194,115,.19)}
-[data-theme="light"]{--cta-aqua:rgba(15,157,143,.11);--cta-amber:rgba(181,122,31,.12)}
-section.cta,section.cta.alt{background-image:
-  radial-gradient(720px circle at 12% -10%, var(--cta-aqua), transparent 62%),
-  radial-gradient(760px circle at 88% 110%, var(--glow), transparent 62%),
-  radial-gradient(640px circle at 55% 120%, var(--cta-amber), transparent 60%)}
-.cta::after{content:none}
-.cta h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:16px}
-.cta p{max-width:560px;margin:0 auto 30px;color:var(--muted)}
-.cta .tagline{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:26px}
-
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);padding:52px 0 40px;font-size:13.5px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
-.foot-grid h4{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;font-weight:500}
-.foot-grid a{display:block;color:var(--muted);margin-bottom:9px;font-size:13.5px}
-.foot-grid a:hover{color:var(--ink)}
-.foot-brand img{height:22px;margin-bottom:14px;display:block}
-.foot-brand .light-logo{display:none}
-[data-theme="light"] .foot-brand .dark-logo{display:none}
-[data-theme="light"] .foot-brand .light-logo{display:block}
-.foot-brand p{color:var(--faint);font-size:12.5px;margin-bottom:6px}
-.foot-desc{color:var(--muted)!important;max-width:270px;line-height:1.6;margin-top:10px}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line-soft)}
-.copyright{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--faint)}
-.foot-social{display:flex;gap:14px}
-.foot-social a{color:var(--faint);display:inline-flex;transition:color .15s}
-.foot-social a:hover{color:var(--peri)}
-.foot-social svg{width:17px;height:17px;display:block}
-
-/* ---------- responsive ---------- */
-@media (max-width:900px){
-  .hero-grid,.gov-grid{grid-template-columns:1fr;gap:40px}
-  .proof-grid,.testi-grid{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr}
-  section{padding:64px 0}
-  .nav-links a.nav-page{display:none}
-  .logo-strip .slots{flex-wrap:wrap}
-  .logo-slot{min-width:44%}
+.rfoot{padding-top:13px;border-top:1px solid rgba(156,170,189,.12);font-family:'IBM Plex Mono',monospace;
+  font-size:10px;letter-spacing:.06em;color:#627084}
+.stylized-note{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);margin-top:12px;text-align:center}
+.js .report .decision,.js .report .rsummary>div{opacity:0;transform:translateY(6px)}
+.js .report.in .decision,.js .report.in .rsummary>div{opacity:1;transform:none;
+  transition:opacity .45s ease, transform .45s ease}
+.js .report.in .rsummary>div:nth-child(1){transition-delay:.06s}
+.js .report.in .rsummary>div:nth-child(2){transition-delay:.14s}
+.js .report.in .decision:nth-of-type(1){transition-delay:.24s}
+.js .report.in .decision:nth-of-type(2){transition-delay:.32s}
+.js .report.in .decision:nth-of-type(3){transition-delay:.40s}
+.js .report.in .decision:nth-of-type(4){transition-delay:.48s}
+.js .report.in .decision:nth-of-type(5){transition-delay:.56s}
+.js .report.in .decision:nth-of-type(6){transition-delay:.64s}
+/* ---- conversion audit: same compact card family ---- */
+.aud-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center;margin-top:8px}
+@media (max-width:980px){.aud-grid{grid-template-columns:1fr;gap:34px}.aud-copy{order:-1}}
+.aud-copy .h2{max-width:none;font-size:clamp(28px,3.1vw,42px);margin-bottom:22px;text-wrap:balance}
+.aud-copy p{font-size:15.5px;line-height:1.7;color:var(--muted)}
+.aud-copy p + p{margin-top:15px}
+.arow{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;
+  border-top:1px solid rgba(156,170,189,.12);font-size:13px;color:#C8D4E4}
+/* both states share one grid cell, so the pill sizes to the wider label and they cross-fade cleanly */
+.arow .st{display:grid;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;white-space:nowrap}
+.arow .st > span{grid-area:1/1;border-radius:5px;padding:3px 9px;display:flex;align-items:center;justify-content:center}
+.arow .was{color:#E0765E;border:1px solid rgba(214,84,61,.4);background:rgba(214,84,61,.12)}
+.arow .now{color:var(--aqua-bright);border:1px solid rgba(116,224,212,.45);background:rgba(116,224,212,.14);opacity:0}
+.js .arow .was,.js .arow .now{transition:opacity .4s ease}
+.js .audit.in .arow .now{opacity:1}
+.js .audit.in .arow .was{opacity:0}
+.js .audit.in .arow:nth-of-type(1) .now,.js .audit.in .arow:nth-of-type(1) .was{transition-delay:.45s}
+.js .audit.in .arow:nth-of-type(2) .now,.js .audit.in .arow:nth-of-type(2) .was{transition-delay:.70s}
+.js .audit.in .arow:nth-of-type(3) .now,.js .audit.in .arow:nth-of-type(3) .was{transition-delay:.95s}
+.js .audit.in .arow:nth-of-type(4) .now,.js .audit.in .arow:nth-of-type(4) .was{transition-delay:1.20s}
+@media (prefers-reduced-motion:reduce){
+  .js .report .decision,.js .report .rsummary>div,.js .arow .now{opacity:1;transform:none;transition:none}
+  .js .arow .was{opacity:0}
 }
-</style>
+/* ---- closing panel: the argument and the ask in one box, not two stacked ---- */
+.cta-panel.close{padding:74px 48px 78px}
+@media (max-width:600px){.cta-panel.close{padding:52px 26px 56px}}
+.cta-panel blockquote{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.03em;
+  line-height:1.18;font-size:clamp(24px,3vw,38px);color:var(--ink);max-width:26ch;margin:0 auto 34px;text-wrap:balance}
+.cta-panel blockquote .alt{color:var(--peri)}
+/* ============================================================
+   TYPE SCALE — one hierarchy across every page.
+   Appended last so it resolves cleanly over the shared sheet.
+   ============================================================ */
+/* h1 — hero. The homepage keeps the larger flagship size. */
+/* h3 — leads a block of body copy */
+.reason .h2{max-width:none;text-wrap:balance}
+.stp h4{font-size:15px}
+.qa summary{font-size:18px}
+/* graphic titles must beat .reason p / .premise p on specificity */
+.r-media .ch-title,.pm-viz .ch-title,.chart .ch-title{font-family:'Space Grotesk',sans-serif;font-weight:700;
+  font-size:17.5px;line-height:1.25;letter-spacing:-.015em;color:var(--ink)}
+/* inner-page hero: shorter measure so the headline doesn't run the full width */
 
-<style>
-.page-hero{border-top:none;padding:80px 0 64px;position:relative;overflow:hidden}
-.page-hero::after{content:"";position:absolute;top:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, var(--glow), transparent 65%);pointer-events:none}
-.page-hero h1{font-size:clamp(30px,4vw,44px);max-width:720px;margin-bottom:18px;position:relative}
-.page-hero p{max-width:620px;color:var(--muted);font-size:16.5px;position:relative}
-.reason{padding:64px 0}
-.reason h2{font-size:clamp(22px,2.8vw,30px);max-width:640px;margin-bottom:16px}
-.reason p{max-width:640px;color:var(--muted)}
-.reason .rnum{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--peri);margin-bottom:12px}
-.premise-quote{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(21px,2vw,27px);line-height:1.3;letter-spacing:-0.01em;color:var(--ink);max-width:460px;margin:0;padding:2px 0 2px 26px;border-left:3px solid var(--peri);position:relative}
-.premise-quote::before{content:"“";position:absolute;left:-2px;top:-32px;font-family:'Space Grotesk',sans-serif;font-size:56px;font-weight:600;color:var(--peri);opacity:.35;line-height:1}
-.premise-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-@media (max-width:900px){.premise-grid{grid-template-columns:1fr;gap:32px}}
-/* why: zig-zag reasons, ghost numerals, illustrations */
-.reason .wrap{position:relative}
-.reason-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.reason-grid.flip .r-illo{order:-1}
-.r-illo-svg{display:block;width:100%;max-width:360px;height:auto;margin:0 auto}
-.ghost-num{position:absolute;top:-34px;left:-14px;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:170px;line-height:1;color:var(--peri);opacity:0.05;pointer-events:none;user-select:none}
-.reason-grid.flip .ghost-num{left:auto;right:-14px}
-@media (max-width:900px){.reason-grid{grid-template-columns:1fr;gap:36px}.reason-grid.flip .r-illo{order:0}.ghost-num{font-size:110px;top:-20px}}
+/* ============================================================
+   Why Arciom hero: the digital twin's brain, forming from
+   proven decisions. Forms once, then drifts very slowly.
+   ============================================================ */
+/* centred in the column to the right of the copy, not hugging the edge */
+.hero-brain{position:absolute;top:50%;left:50%;
+  transform:translate(calc(-50% + min(258px,21vw)), -50%);
+  width:min(530px,42vw);height:auto;pointer-events:none;overflow:visible;z-index:1}
+@media (max-width:1140px){.hero-brain{display:none}}
+.cb-label{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.15em;opacity:.85}
 
-/* inner page hero: constellation fragment */
-.hero-dots{position:absolute;top:36px;right:28px;width:min(340px,30vw);height:auto;pointer-events:none;opacity:.7}
-@media (max-width:700px){.hero-dots{display:none}}
+/* no JS: everything simply sits in its finished state */
+.js .cb-node,.js .cb-label{opacity:0}
+.js .cb-node{transform:translate(var(--dx),var(--dy)) scale(.35)}
+.js .cb-edge{stroke-dasharray:1;stroke-dashoffset:1}
+.js .cb-drop{opacity:0}
 
-.faq-cat{padding:56px 0}
-.faq-cat h2{font-size:clamp(20px,2.4vw,26px);margin-bottom:26px}
-details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
-details summary{cursor:pointer;padding:18px 22px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15.5px;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
-details summary::-webkit-details-marker{display:none}
-details summary::after{content:"+";font-family:'IBM Plex Mono',monospace;font-size:18px;color:var(--peri);flex-shrink:0;transition:transform .18s}
-details[open] summary::after{transform:rotate(45deg)}
-details .answer{padding:0 22px 20px;font-size:14.5px;color:var(--muted);line-height:1.65;max-width:720px}
-details .answer p{margin-bottom:10px}
-.placeholder-a{border-left:3px solid var(--peri-line);padding-left:14px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--faint)}
-.people{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
-.person{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center}
-.person .avatar{width:76px;height:76px;border-radius:50%;border:1px dashed var(--line);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--faint)}
-.person h3{font-size:15.5px;margin-bottom:3px}
-.person .role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--peri);margin-bottom:12px}
-.person .bio{font-size:12.5px;color:var(--faint);line-height:1.55;border-top:1px dashed var(--line-soft);padding-top:12px}
-@media (max-width:900px){ .people{grid-template-columns:1fr 1fr} }
-@media (max-width:560px){ .people{grid-template-columns:1fr} }
-.form-wrap{max-width:560px}
-.field{margin-bottom:22px}
-.field label{display:block;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;color:var(--ink);margin-bottom:8px}
-.field label .opt{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--faint);font-weight:400;letter-spacing:.08em;text-transform:uppercase;margin-left:8px}
-.field input,.field select,.field textarea{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-family:'IBM Plex Sans',sans-serif;font-size:14.5px;color:var(--ink);transition:border-color .15s}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--peri)}
-.field textarea{min-height:110px;resize:vertical}
-.form-note{font-size:13px;color:var(--faint);margin-top:18px}
-.confirm{display:none;background:var(--panel);border:1px solid var(--peri-line);border-radius:14px;padding:28px;max-width:560px}
-.confirm h3{margin-bottom:10px}
-.confirm p{color:var(--muted);font-size:14.5px}
-</style>
+.js .cbrain.in .cb-node{opacity:1;transform:none;
+  transition:opacity .45s ease var(--d), transform .85s cubic-bezier(.18,.85,.25,1) var(--d)}
+.js .cbrain.in .cb-edge{stroke-dashoffset:0;transition:stroke-dashoffset .75s ease var(--d)}
+.js .cbrain.in .cb-label{opacity:.85;transition:opacity .5s ease var(--d)}
+/* the unproven ones drift in, then fall away */
+.js .cbrain.in .cb-drop{animation:cbDrop 2.1s ease var(--d) forwards}
+@keyframes cbDrop{
+  0%{opacity:0;transform:scale(.5)} 22%{opacity:.42;transform:none}
+  58%{opacity:.42;transform:none} 100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.6)}
+}
+50%{fill-opacity:calc(var(--o) * .3)}}
 
-
-<style id="aurora-fx">
-/* ===== Aurora effects layer: glass, signal pulse, glow rollovers ===== */
-[data-theme="dark"]{--glow-strong:rgba(142,166,255,.38);--ping:rgba(142,166,255,.5);--glass-bg:rgba(18,23,34,.6);--glass-brd:rgba(156,170,189,.22)}
-[data-theme="light"]{--glow-strong:rgba(74,94,218,.30);--ping:rgba(74,94,218,.45);--glass-bg:rgba(255,255,255,.55);--glass-brd:rgba(18,21,31,.10)}
-
-/* Buttons: glow + rollover + press */
-.btn{transition:transform .15s ease, box-shadow .25s ease, filter .15s ease}
-.btn:hover{transform:translateY(-2px);border-color:var(--peri);box-shadow:0 14px 38px -10px var(--glow-strong),inset 0 1px 0 var(--glass-top)}
-.btn:active{transform:translateY(0);box-shadow:0 4px 14px -8px var(--glow-strong),inset 0 1px 0 var(--glass-top)}
-
-/* Signal dot: expanding pulse ring */
-.dot{animation:pulse 2.4s ease-in-out infinite, ping 2.4s cubic-bezier(0,0,.2,1) infinite}
-@keyframes ping{0%{box-shadow:0 0 0 0 var(--ping)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
-
-/* Glass surfaces: nav (Frost) and kicker cards (Smoke) */
-nav{background:color-mix(in srgb, var(--bg) 78%, transparent);-webkit-backdrop-filter:blur(16px) saturate(1.35);backdrop-filter:blur(16px) saturate(1.35)}
-[data-theme="dark"] nav{background:radial-gradient(560px circle at 6% 0%, rgba(142,166,255,0.20), transparent 62%), radial-gradient(520px circle at 94% 120%, rgba(116,224,212,0.13), transparent 60%), radial-gradient(460px circle at 55% 160%, rgba(244,194,115,0.10), transparent 58%), color-mix(in srgb, var(--bg) 82%, transparent)}
-.kicker{background:var(--glass-bg);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-color:var(--glass-brd)}
-
-/* Card rollovers: rungs, proof cards, FAQ items (Signal-tint on focus) */
-.rung,.proof-card{transition:border-color .2s ease, transform .2s ease, box-shadow .25s ease}
-.rung:hover,.proof-card:hover{border-color:var(--peri-line);transform:translateY(-2px);box-shadow:0 14px 34px -16px var(--glow-strong)}
-details{transition:border-color .2s ease}
-details:hover{border-color:var(--peri-line)}
-.person{transition:border-color .2s ease, transform .2s ease, box-shadow .25s ease}
-.person:hover{border-color:var(--peri-line);transform:translateY(-2px);box-shadow:0 14px 34px -16px var(--glow-strong)}
-
-/* Reduced motion: kill the ring and lifts, keep static styles */
-@media (prefers-reduced-motion: reduce){
-  .dot{animation:none}
-  .btn:hover,.rung:hover,.proof-card:hover,.person:hover{transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .cb-node,.js .cb-label{opacity:1}
+  .js .cb-node{transform:none}
+  .js .cb-edge{stroke-dashoffset:0}
+  .js .cb-drop,.js .cbrain.in .cb-drop{opacity:0;animation:none}
 }
 
-/* ===== SVG wordmark ===== */
-.wordmark{overflow:visible;height:31px;width:auto;display:block}
-.foot-brand .wordmark{height:24px;margin-bottom:1px}
-.wm-ping{transform-box:fill-box;transform-origin:center;animation:wmping 2.4s cubic-bezier(0,0,.2,1) infinite}
-@keyframes wmping{0%{transform:scale(1);stroke-opacity:.55}70%{transform:scale(3.125);stroke-opacity:0}100%{transform:scale(3.125);stroke-opacity:0}}
-@media (prefers-reduced-motion: reduce){.wm-ping{animation:none;stroke-opacity:0}}
+/* no JS: everything simply sits in its finished state */
+.js .cb-node,.js .cb-label{opacity:0}
+.js .cb-node{transform:translate(var(--dx),var(--dy)) scale(.35)}
+.js .cb-edge{stroke-dasharray:1;stroke-dashoffset:1}
+.js .cb-drop{opacity:0}
 
-/* eyebrow dot: static echo of the mark */
-.eyebrow::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--peri);margin-right:9px;vertical-align:1px}
-
-/* inner-page body sections: subtle upper-left ambient wash */
-section.alt{position:relative;overflow:hidden}
-section.alt::before{content:"";position:absolute;top:-665px;left:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, var(--glow), transparent 65%);pointer-events:none;opacity:.7}
-section.alt::after{content:"";position:absolute;bottom:-665px;right:-665px;width:1330px;height:1330px;border-radius:50%;background:radial-gradient(circle, rgba(116,224,212,.18), transparent 65%);pointer-events:none;opacity:.7}
-section.alt > .wrap{position:relative;z-index:1}
-
-
-/* hero character vignette */
-.page-hero h1{max-width:540px}
-.page-hero .wrap p{max-width:520px}
-.hero-vig{position:absolute;top:50%;transform:translateY(-52%);left:calc(50% + 72px);right:auto;width:min(400px,34vw);height:auto;pointer-events:none}
-@media (max-width:1000px){.hero-vig{display:none}}
-@media (prefers-reduced-motion:reduce){.hero-vig *{animation:none!important}}
-.vg-p{filter:drop-shadow(0 0 5px var(--peri)) drop-shadow(0 0 16px var(--glow-strong))}
-.vg-t{filter:drop-shadow(0 0 5px var(--aqua))}
-.ring-ping{transform-box:fill-box;transform-origin:center;animation:vping 2.4s ease-out infinite}
-@keyframes vping{0%{transform:scale(1);opacity:.35}70%,100%{transform:scale(1.7);opacity:0}}
-
-@keyframes conveyor{0%{transform:translateX(0)}100%{transform:translateX(-68px)}}
-@keyframes whyMove{
-0%{transform:translate(0,0)}
-24%{transform:translate(-51px,0)}
-27%{transform:translate(-45px,4px) scale(1.14,.84)}
-33%{transform:translate(-98px,-48px) scale(.8,1.24) rotate(-9deg)}
-41%{transform:translate(-192px,-94px) scale(.85,1.18)}
-47%{transform:translate(-227px,-104px) scale(1.24,.78)}
-52%{transform:translate(-221px,-99px) scale(.94,1.08)}
-56%,100%{transform:translate(-224px,-101px) scale(1)}}
-@keyframes trailFade{0%,30%{opacity:0}48%{opacity:.65}70%,100%{opacity:0}}
-@keyframes vticks{0%,60%{opacity:0;transform:scale(.4)}65%{opacity:.95;transform:scale(1)}74%,100%{opacity:0;transform:scale(1.3)}}
-@keyframes ringHold{0%,50%{opacity:0}56%,86%{opacity:1}100%{opacity:0}}
-.why-conveyor{animation:conveyor 2.6s linear infinite}
-.why-hero{animation:whyMove 8s cubic-bezier(.45,0,.35,1) infinite;transform-origin:center}
-.why-trail{animation:trailFade 8s ease infinite}
-.why-ticks{animation:vticks 8s ease infinite;transform-origin:81px 91px}
-.why-ringwrap{animation:ringHold 8s ease infinite}
-.hero-vig{overflow:visible}
+.js .cbrain.in .cb-node{opacity:1;transform:none;
+  transition:opacity .45s ease var(--d), transform .85s cubic-bezier(.18,.85,.25,1) var(--d)}
+.js .cbrain.in .cb-edge{stroke-dashoffset:0;transition:stroke-dashoffset .75s ease var(--d)}
+.js .cbrain.in .cb-label{opacity:.85;transition:opacity .5s ease var(--d)}
+/* the unproven ones drift in, then fall away */
+.js .cbrain.in .cb-drop{animation:cbDrop 2.1s ease var(--d) forwards}
+@keyframes cbDrop{
+  0%  {opacity:0;transform:scale(.5)}
+  22% {opacity:.42;transform:none}
+  58% {opacity:.42;transform:none}
+  100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.6)}
+}
+/* once settled, a couple of nodes breathe very slowly. nothing else moves. */
+.js .cbrain.in .cb-amb{animation:cbAmb 9s ease-in-out 3s infinite}
+@keyframes cbAmb{0%,100%{fill-opacity:.92}50%{fill-opacity:.45}}
+@media (prefers-reduced-motion:reduce){
+  .js .cb-node,.js .cb-label{opacity:1}
+  .js .cb-node{transform:none}
+  .js .cb-edge{stroke-dashoffset:0}
+  .js .cb-drop,.js .cbrain.in .cb-drop{opacity:0;animation:none}
+  .js .cbrain.in .cb-amb{animation:none}
+}
 </style>
 </head>
 <body>
+<script>document.documentElement.className+=" js";try{var t=localStorage.getItem("arciom-theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<div class="aurora" aria-hidden="true"></div>
 
 <nav>
-  <div class="nav-inner">
-    <a class="logo" href="index.html" aria-label="Arciom home"><svg class="wordmark" viewBox="0 0 152.03 37.65" role="img" aria-label="Arciom">
-      <g fill="var(--ink)"><path d="M116,198.77a11.31,11.31,0,0,1-6.17-1.72,11.92,11.92,0,0,1-4.3-4.68,15.15,15.15,0,0,1,0-13.39,12,12,0,0,1,4.3-4.69,11.41,11.41,0,0,1,6.22-1.72,10.4,10.4,0,0,1,4.8,1.09,9,9,0,0,1,3.43,3,8.37,8.37,0,0,1,1.41,4.43v9.12a8.56,8.56,0,0,1-1.38,4.4,8.77,8.77,0,0,1-3.44,3.05A10.61,10.61,0,0,1,116,198.77Zm1.3-6.3a6,6,0,0,0,4.64-1.93,6.88,6.88,0,0,0,1.77-4.84,7.53,7.53,0,0,0-.83-3.55,6.17,6.17,0,0,0-2.24-2.42,6.31,6.31,0,0,0-3.34-.86,6.19,6.19,0,0,0-3.31.89,6.28,6.28,0,0,0-2.24,2.39,7.42,7.42,0,0,0-.8,3.49,7.53,7.53,0,0,0,.8,3.55,6.14,6.14,0,0,0,2.27,2.39A6.21,6.21,0,0,0,117.32,192.47Zm6,5.78v-6.77l1.14-6.15-1.14-6.09v-6.15h6.87v25.16Z" transform="translate(-103.99 -161.17)"/><path d="M134.05,198.25V173.09h6.82v25.16Zm6.82-13.86-2.65-1.82a13.18,13.18,0,0,1,2.71-7.32,7.92,7.92,0,0,1,6.46-2.68,8.45,8.45,0,0,1,3.3.6,7.19,7.19,0,0,1,2.63,2l-4.27,4.95a3.15,3.15,0,0,0-1.38-1,5.28,5.28,0,0,0-1.85-.29,4.89,4.89,0,0,0-3.57,1.35A5.7,5.7,0,0,0,140.87,184.39Z" transform="translate(-103.99 -161.17)"/><path d="M164.94,198.83a13.68,13.68,0,0,1-6.87-1.75,13.09,13.09,0,0,1,0-22.85,14.79,14.79,0,0,1,12.4-.65,12.52,12.52,0,0,1,4.37,3.16l-4.48,4.48A5.74,5.74,0,0,0,168,179.5a7.88,7.88,0,0,0-3-.58,6.56,6.56,0,0,0-3.36.86,6.07,6.07,0,0,0-2.32,2.37,7.69,7.69,0,0,0,0,7,6.19,6.19,0,0,0,2.32,2.39,6.39,6.39,0,0,0,3.36.89,7.51,7.51,0,0,0,3.07-.6,7.13,7.13,0,0,0,2.4-1.75l4.37,4.43a12.33,12.33,0,0,1-4.35,3.21A13.62,13.62,0,0,1,164.94,198.83Z" transform="translate(-103.99 -161.17)"/><path d="M177,198.25V173.09H184v25.16Z" transform="translate(-103.99 -161.17)"/><path d="M200.11,198.83a13.56,13.56,0,0,1-6.85-1.75,12.94,12.94,0,0,1-6.59-11.49,12.64,12.64,0,0,1,1.77-6.64,13.15,13.15,0,0,1,4.82-4.69,13.55,13.55,0,0,1,6.85-1.74,13.85,13.85,0,0,1,6.9,1.71,13.07,13.07,0,0,1,4.85,4.69,12.63,12.63,0,0,1,1.8,6.67A13,13,0,0,1,207,197.08,13.83,13.83,0,0,1,200.11,198.83Zm0-6.41a6.52,6.52,0,0,0,3.41-.89,6.14,6.14,0,0,0,2.3-2.39,7.43,7.43,0,0,0,.8-3.5,6.9,6.9,0,0,0-.86-3.49,6.66,6.66,0,0,0-9-2.37,6,6,0,0,0-2.27,2.37,7.95,7.95,0,0,0,0,7,6.13,6.13,0,0,0,2.27,2.39A6.28,6.28,0,0,0,200.11,192.42Z" transform="translate(-103.99 -161.17)"/><path d="M216.31,198.25V173.09h6.83v25.16Zm16.36,0V183.4a4.39,4.39,0,0,0-1.35-3.41,4.9,4.9,0,0,0-3.39-1.22,5.29,5.29,0,0,0-2.42.54,4.38,4.38,0,0,0-1.72,1.59,4.79,4.79,0,0,0-.65,2.56l-2.66-1.36a9.67,9.67,0,0,1,1.28-5,8.74,8.74,0,0,1,3.46-3.31,10.34,10.34,0,0,1,4.95-1.17,9.68,9.68,0,0,1,4.74,1.17A8.76,8.76,0,0,1,238.3,177a9.72,9.72,0,0,1,1.25,5v16.2Zm16.42,0V183.4a4.39,4.39,0,0,0-1.36-3.41,4.8,4.8,0,0,0-3.33-1.22,5.42,5.42,0,0,0-2.48.54,4.45,4.45,0,0,0-1.72,1.59,4.79,4.79,0,0,0-.65,2.56l-3.91-1a10.53,10.53,0,0,1,1.59-5.27,10.1,10.1,0,0,1,3.73-3.41,11.4,11.4,0,0,1,10.16,0,9,9,0,0,1,3.57,3.36,10,10,0,0,1,1.32,5.26v15.89Z" transform="translate(-103.99 -161.17)"/></g>
-      <circle cx="76.52" cy="3.95" r="3.95" fill="var(--peri)"/>
-      <circle class="wm-ping" cx="76.52" cy="3.95" r="3.95" fill="none" stroke="var(--peri)" stroke-width="1.1"/>
-    </svg></a>
+  <div class="nav-in">
+    <a href="index.html" aria-label="Arciom home">
+      <svg class="wordmark" viewBox="0 0 152.03 37.65" role="img" aria-label="Arciom"><g fill="#10142B"><path d="M116,198.77a11.31,11.31,0,0,1-6.17-1.72,11.92,11.92,0,0,1-4.3-4.68,15.15,15.15,0,0,1,0-13.39,12,12,0,0,1,4.3-4.69,11.41,11.41,0,0,1,6.22-1.72,10.4,10.4,0,0,1,4.8,1.09,9,9,0,0,1,3.43,3,8.37,8.37,0,0,1,1.41,4.43v9.12a8.56,8.56,0,0,1-1.38,4.4,8.77,8.77,0,0,1-3.44,3.05A10.61,10.61,0,0,1,116,198.77Zm1.3-6.3a6,6,0,0,0,4.64-1.93,6.88,6.88,0,0,0,1.77-4.84,7.53,7.53,0,0,0-.83-3.55,6.17,6.17,0,0,0-2.24-2.42,6.31,6.31,0,0,0-3.34-.86,6.19,6.19,0,0,0-3.31.89,6.28,6.28,0,0,0-2.24,2.39,7.42,7.42,0,0,0-.8,3.49,7.53,7.53,0,0,0,.8,3.55,6.14,6.14,0,0,0,2.27,2.39A6.21,6.21,0,0,0,117.32,192.47Zm6,5.78v-6.77l1.14-6.15-1.14-6.09v-6.15h6.87v25.16Z" transform="translate(-103.99 -161.17)"/><path d="M134.05,198.25V173.09h6.82v25.16Zm6.82-13.86-2.65-1.82a13.18,13.18,0,0,1,2.71-7.32,7.92,7.92,0,0,1,6.46-2.68,8.45,8.45,0,0,1,3.3.6,7.19,7.19,0,0,1,2.63,2l-4.27,4.95a3.15,3.15,0,0,0-1.38-1,5.28,5.28,0,0,0-1.85-.29,4.89,4.89,0,0,0-3.57,1.35A5.7,5.7,0,0,0,140.87,184.39Z" transform="translate(-103.99 -161.17)"/><path d="M164.94,198.83a13.68,13.68,0,0,1-6.87-1.75,13.09,13.09,0,0,1,0-22.85,14.79,14.79,0,0,1,12.4-.65,12.52,12.52,0,0,1,4.37,3.16l-4.48,4.48A5.74,5.74,0,0,0,168,179.5a7.88,7.88,0,0,0-3-.58,6.56,6.56,0,0,0-3.36.86,6.07,6.07,0,0,0-2.32,2.37,7.69,7.69,0,0,0,0,7,6.19,6.19,0,0,0,2.32,2.39,6.39,6.39,0,0,0,3.36.89,7.51,7.51,0,0,0,3.07-.6,7.13,7.13,0,0,0,2.4-1.75l4.37,4.43a12.33,12.33,0,0,1-4.35,3.21A13.62,13.62,0,0,1,164.94,198.83Z" transform="translate(-103.99 -161.17)"/><path d="M177,198.25V173.09H184v25.16Z" transform="translate(-103.99 -161.17)"/><path d="M200.11,198.83a13.56,13.56,0,0,1-6.85-1.75,12.94,12.94,0,0,1-6.59-11.49,12.64,12.64,0,0,1,1.77-6.64,13.15,13.15,0,0,1,4.82-4.69,13.55,13.55,0,0,1,6.85-1.74,13.85,13.85,0,0,1,6.9,1.71,13.07,13.07,0,0,1,4.85,4.69,12.63,12.63,0,0,1,1.8,6.67A13,13,0,0,1,207,197.08,13.83,13.83,0,0,1,200.11,198.83Zm0-6.41a6.52,6.52,0,0,0,3.41-.89,6.14,6.14,0,0,0,2.3-2.39,7.43,7.43,0,0,0,.8-3.5,6.9,6.9,0,0,0-.86-3.49,6.66,6.66,0,0,0-9-2.37,6,6,0,0,0-2.27,2.37,7.95,7.95,0,0,0,0,7,6.13,6.13,0,0,0,2.27,2.39A6.28,6.28,0,0,0,200.11,192.42Z" transform="translate(-103.99 -161.17)"/><path d="M216.31,198.25V173.09h6.83v25.16Zm16.36,0V183.4a4.39,4.39,0,0,0-1.35-3.41,4.9,4.9,0,0,0-3.39-1.22,5.29,5.29,0,0,0-2.42.54,4.38,4.38,0,0,0-1.72,1.59,4.79,4.79,0,0,0-.65,2.56l-2.66-1.36a9.67,9.67,0,0,1,1.28-5,8.74,8.74,0,0,1,3.46-3.31,10.34,10.34,0,0,1,4.95-1.17,9.68,9.68,0,0,1,4.74,1.17A8.76,8.76,0,0,1,238.3,177a9.72,9.72,0,0,1,1.25,5v16.2Zm16.42,0V183.4a4.39,4.39,0,0,0-1.36-3.41,4.8,4.8,0,0,0-3.33-1.22,5.42,5.42,0,0,0-2.48.54,4.45,4.45,0,0,0-1.72,1.59,4.79,4.79,0,0,0-.65,2.56l-3.91-1a10.53,10.53,0,0,1,1.59-5.27,10.1,10.1,0,0,1,3.73-3.41,11.4,11.4,0,0,1,10.16,0,9,9,0,0,1,3.57,3.36,10,10,0,0,1,1.32,5.26v15.89Z" transform="translate(-103.99 -161.17)"/></g><circle cx="76.52" cy="3.95" r="3.95" fill="#4A5EDA"/><circle class="wm-ping" cx="76.52" cy="3.95" r="3.95" fill="none" stroke="#4A5EDA" stroke-width="1.1"/></svg>
+    </a>
     <div class="nav-links">
-      <a class="nav-page active" href="why-arciom.html">Why Arciom</a>
-      <a class="nav-page" href="about.html">About</a>
-      <a class="nav-page" href="faq.html">FAQ</a>
-      <a class="nav-page" href="#">Login</a>
-      <a class="btn small nav-cta" href="request-a-demo.html">Request Demo</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
+      <a class="pg current" href="why-arciom.html" aria-current="page">Why Arciom</a>
+      <a class="pg" href="about.html">About</a>
+      <a class="pg" href="faq.html">FAQ</a>
+      <a class="pg" href="#">Login</a>
+      <a class="btn primary small" href="request-a-demo.html">Request Demo</a>
     </div>
-  </div>
-
-  <div class="mobile-menu" id="mobile-menu">
-    <a class="nav-page active" href="why-arciom.html">Why Arciom</a>
-    <a class="nav-page" href="about.html">About</a>
-    <a class="nav-page" href="faq.html">FAQ</a>
-    <a class="nav-page" href="#">Login</a>
-    <a class="nav-page" href="request-a-demo.html">Request Demo</a>
   </div>
 </nav>
-<div class="theme-toggle" role="group" aria-label="Color theme">
-  <button id="btn-dark" aria-label="Dark theme" title="Dark">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
-  </button>
-  <button id="btn-light" aria-label="Light theme" title="Light">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
-  </button>
-</div>
 
-
-<header class="page-hero">
-  <svg class="hero-vig" viewBox="0 0 400 250" aria-hidden="true">
-  <g class="why-conveyor" opacity="0.85">
-    <circle cx="48" cy="192" r="5" fill="var(--faint)"/><circle cx="116" cy="192" r="5" fill="var(--faint)"/><circle cx="184" cy="192" r="5" fill="var(--faint)"/><circle cx="252" cy="192" r="5" fill="var(--faint)"/><circle cx="320" cy="192" r="5" fill="var(--faint)"/><circle cx="388" cy="192" r="5" fill="var(--faint)"/><circle cx="456" cy="192" r="5" fill="var(--faint)"/>
-  </g>
-  <path class="why-trail" d="M254 192 Q 178 104 87 93" fill="none" stroke="var(--peri)" stroke-width="1.5" stroke-dasharray="1 7" stroke-linecap="round" opacity="0"/>
-  <g class="why-ringwrap" opacity="0">
-    <circle cx="81" cy="91" r="26" fill="none" stroke="var(--peri)" stroke-width="1.8" opacity="0.55"/>
-    <circle class="ring-ping" cx="81" cy="91" r="26" fill="none" stroke="var(--peri)" stroke-width="1.2"/>
-  </g>
-  <g class="why-ticks" opacity="0"><path d="M64 72 l-9 -9 M56 88 l-12 -3 M72 64 l-3 -11" stroke="var(--peri)" stroke-width="1.6" stroke-linecap="round" fill="none"/></g>
-  <g transform="translate(305,192)"><circle class="why-hero vg-p" r="10" fill="var(--peri)"/></g>
-</svg>
+<!-- ================= HERO ================= -->
+<header class="hero short cbrain" data-reveal>
+  <svg class="hero-brain" viewBox="0 0 540 430" role="img" aria-label="Clusters of proven decisions forming the digital twin’s brain, with unproven decisions falling away at the edges">
+    <g class="cb-cross">
+    <line class="cb-edge" pathLength="1" style="--d:1.5s" x1="160.3" y1="91.6" x2="282.2" y2="223.2" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.56s" x1="147.2" y1="115.8" x2="251.2" y2="196.0" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.29s" x1="105.6" y1="115.8" x2="254.9" y2="220.1" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.4s" x1="160.3" y1="91.6" x2="137.1" y2="314.6" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.44s" x1="160.3" y1="91.6" x2="467.9" y2="135.1" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.38s" x1="338.4" y1="70.7" x2="102.6" y2="295.0" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.56s" x1="390.3" y1="85.6" x2="438.1" y2="259.6" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.53s" x1="356.9" y1="76.6" x2="423.6" y2="257.8" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.56s" x1="254.9" y1="220.1" x2="307.5" y2="365.0" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.48s" x1="282.2" y1="223.2" x2="269.5" y2="366.8" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.4s" x1="245.2" y1="255.7" x2="279.9" y2="358.9" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.34s" x1="260.0" y1="238.8" x2="473.8" y2="164.5" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.58s" x1="226.8" y1="210.0" x2="461.9" y2="178.3" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.48s" x1="226.8" y1="210.0" x2="491.3" y2="156.5" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.42s" x1="113.1" y1="305.2" x2="365.3" y2="265.9" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.47s" x1="74.7" y1="304.7" x2="416.2" y2="294.7" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.27s" x1="94.2" y1="308.7" x2="278.6" y2="357.2" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.36s" x1="102.6" y1="295.0" x2="485.2" y2="147.2" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.57s" x1="123.5" y1="304.2" x2="492.8" y2="162.5" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.49s" x1="88.3" y1="266.8" x2="492.8" y2="162.5" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.31s" x1="385.8" y1="272.6" x2="285.1" y2="374.4" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.42s" x1="423.6" y1="257.8" x2="491.3" y2="156.5" stroke="#8EA6FF" stroke-opacity="0.1" stroke-width=".7"/>
+    </g><g class="cb-drops">
+    <circle class="cb-drop" style="--d:0.02s;--dx:18px;--dy:-11px" cx="38.9" cy="354.1" r="1.5" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.27s;--dx:-7px;--dy:-12px" cx="35.2" cy="154.1" r="2.2" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.06s;--dx:26px;--dy:-7px" cx="129.5" cy="403.3" r="1.5" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.27s;--dx:8px;--dy:5px" cx="191.1" cy="6.5" r="2.1" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.17s;--dx:15px;--dy:20px" cx="508.7" cy="65.2" r="2.0" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.46s;--dx:19px;--dy:-7px" cx="527.7" cy="224.4" r="2.0" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.26s;--dx:-21px;--dy:10px" cx="235.3" cy="11.3" r="2.0" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.14s;--dx:-9px;--dy:9px" cx="261.5" cy="414.8" r="2.2" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.09s;--dx:-7px;--dy:9px" cx="228.1" cy="405.1" r="2.3" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.13s;--dx:-19px;--dy:-12px" cx="433.9" cy="16.8" r="1.4" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.48s;--dx:13px;--dy:-6px" cx="398.1" cy="31.8" r="1.4" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.45s;--dx:-7px;--dy:19px" cx="361.1" cy="422.2" r="1.5" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.28s;--dx:-6px;--dy:21px" cx="310.0" cy="399.9" r="2.1" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.32s;--dx:11px;--dy:2px" cx="512.7" cy="90.3" r="2.2" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.14s;--dx:-15px;--dy:-14px" cx="35.9" cy="260.3" r="1.7" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.24s;--dx:-24px;--dy:12px" cx="20.0" cy="393.0" r="2.2" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.36s;--dx:16px;--dy:-10px" cx="38.7" cy="209.8" r="1.6" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.44s;--dx:-2px;--dy:22px" cx="528.6" cy="350.2" r="2.2" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.36s;--dx:-22px;--dy:9px" cx="12.8" cy="395.1" r="1.9" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.11s;--dx:-23px;--dy:15px" cx="83.9" cy="7.3" r="1.5" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.17s;--dx:20px;--dy:-3px" cx="507.6" cy="61.3" r="1.9" fill="#8891A3"/>
+    <circle class="cb-drop" style="--d:0.34s;--dx:-19px;--dy:-8px" cx="15.1" cy="236.3" r="1.7" fill="#8891A3"/>
+    </g>
+    <g class="cb-cl">
+    <line class="cb-edge" pathLength="1" style="--d:0.63s" x1="119.1" y1="121.8" x2="95.3" y2="142.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.57s" x1="149.7" y1="91.7" x2="114.4" y2="135.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.71s" x1="114.4" y1="135.7" x2="134.2" y2="124.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.57s" x1="147.2" y1="115.8" x2="89.9" y2="104.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.8s" x1="135.0" y1="127.5" x2="119.1" y2="121.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.67s" x1="160.3" y1="91.6" x2="100.5" y2="83.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.72s" x1="119.1" y1="121.8" x2="139.9" y2="74.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.82s" x1="90.3" y1="85.1" x2="95.3" y2="142.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.7s" x1="149.7" y1="91.7" x2="94.0" y2="142.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.56s" x1="88.1" y1="124.6" x2="83.5" y2="85.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.74s" x1="135.0" y1="127.5" x2="76.0" y2="93.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.74s" x1="138.4" y1="128.8" x2="142.9" y2="102.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.69s" x1="95.3" y1="142.8" x2="135.0" y2="127.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.79s" x1="133.3" y1="65.1" x2="139.9" y2="74.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.64s" x1="116.9" y1="77.6" x2="135.0" y2="127.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.63s" x1="116.9" y1="77.6" x2="149.7" y2="91.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.65s" x1="88.2" y1="137.9" x2="139.9" y2="74.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.8s" x1="116.9" y1="77.6" x2="149.7" y2="91.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.77s" x1="142.9" y1="102.5" x2="114.4" y2="135.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.68s" x1="83.5" y1="85.0" x2="149.7" y2="91.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.58s" x1="138.4" y1="128.8" x2="94.0" y2="142.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.65s" x1="105.6" y1="115.8" x2="138.4" y2="128.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.66s" x1="116.9" y1="77.6" x2="76.0" y2="93.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.84s" x1="134.2" y1="124.6" x2="119.1" y2="121.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.7s" x1="134.2" y1="124.6" x2="147.2" y2="115.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.73s" x1="116.9" y1="77.6" x2="105.6" y2="115.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.68s" x1="83.5" y1="85.0" x2="135.0" y2="127.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.76s" x1="100.5" y1="83.7" x2="76.0" y2="93.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.67s" x1="149.7" y1="91.7" x2="160.3" y2="91.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.78s" x1="94.0" y1="142.9" x2="134.2" y2="124.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.75s" x1="114.4" y1="135.7" x2="142.9" y2="102.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.82s" x1="116.9" y1="77.6" x2="94.0" y2="142.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.77s" x1="105.6" y1="115.8" x2="138.4" y2="128.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.65s" x1="88.2" y1="137.9" x2="160.3" y2="91.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.55s" x1="132.8" y1="140.5" x2="91.2" y2="121.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.7s" x1="76.0" y1="93.0" x2="114.4" y2="135.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.75s" x1="147.2" y1="115.8" x2="160.7" y2="121.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.78s" x1="94.0" y1="142.9" x2="100.5" y2="83.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.58s" x1="100.5" y1="83.7" x2="149.7" y2="91.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.58s" x1="139.9" y1="74.8" x2="149.7" y2="91.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.77s" x1="105.6" y1="115.8" x2="83.5" y2="85.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.66s" x1="147.2" y1="115.8" x2="119.1" y2="121.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.65s" x1="142.9" y1="102.5" x2="95.3" y2="142.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.56s" x1="90.3" y1="85.1" x2="139.9" y2="74.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.62s" x1="135.0" y1="127.5" x2="91.2" y2="121.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.67s" x1="94.0" y1="142.9" x2="83.5" y2="85.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.85s" x1="147.5" y1="96.6" x2="95.3" y2="142.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.56s" x1="83.5" y1="85.0" x2="94.0" y2="142.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.55s" x1="147.5" y1="96.6" x2="147.2" y2="115.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <circle class="cb-node" style="--d:0.24s;--dx:-60px;--dy:-21px" cx="76.0" cy="93.0" r="1.6" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.42s;--dx:-5px;--dy:37px" cx="114.4" cy="135.7" r="2.0" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.39s;--dx:19px;--dy:42px" cx="132.8" cy="140.5" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.19s;--dx:46px;--dy:53px" cx="135.0" cy="127.5" r="2.1" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="7.1s" begin="7.0s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.18s;--dx:-36px;--dy:20px" cx="88.1" cy="124.6" r="1.9" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="5.1s" begin="3.9s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.19s;--dx:36px;--dy:-14px" cx="147.5" cy="96.6" r="2.0" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.35s;--dx:-33px;--dy:49px" cx="94.0" cy="142.9" r="2.4" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.18s;--dx:48px;--dy:50px" cx="134.2" cy="124.6" r="1.9" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.45s;--dx:-31px;--dy:47px" cx="95.3" cy="142.8" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.32s;--dx:58px;--dy:-22px" cx="160.3" cy="91.6" r="1.7" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.3s;--dx:29px;--dy:29px" cx="138.4" cy="128.8" r="3.6" fill="#8EA6FF" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.26s;--dx:6px;--dy:77px" cx="119.1" cy="121.8" r="3.6" fill="#8EA6FF" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.26s;--dx:-57px;--dy:-8px" cx="89.9" cy="104.1" r="1.6" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.42s;--dx:23px;--dy:-34px" cx="139.9" cy="74.8" r="1.9" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.43s;--dx:-65px;--dy:41px" cx="105.6" cy="115.8" r="2.0" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.42s;--dx:-51px;--dy:25px" cx="91.2" cy="121.0" r="2.1" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="6.0s" begin="5.1s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.28s;--dx:36px;--dy:12px" cx="160.7" cy="121.9" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.4s;--dx:-52px;--dy:52px" cx="88.2" cy="137.9" r="1.9" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.31s;--dx:-34px;--dy:-23px" cx="83.5" cy="85.0" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.33s;--dx:42px;--dy:-22px" cx="149.7" cy="91.7" r="2.0" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="7.2s" begin="5.9s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.22s;--dx:23px;--dy:-64px" cx="133.3" cy="65.1" r="3.6" fill="#8EA6FF" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.39s;--dx:-1px;--dy:-40px" cx="116.9" cy="77.6" r="1.5" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.34s;--dx:-28px;--dy:-39px" cx="100.5" cy="83.7" r="2.0" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.24s;--dx:-48px;--dy:-40px" cx="90.3" cy="85.1" r="2.0" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.35s;--dx:71px;--dy:19px" cx="147.2" cy="115.8" r="1.8" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="7.3s" begin="8.5s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.4s;--dx:49px;--dy:-11px" cx="142.9" cy="102.5" r="2.0" fill="#8EA6FF" fill-opacity="0.6"/>
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0,0; 14,-2; -18,-3; 0,0" dur="20.2s" begin="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.67;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    </g>
+    <g class="cb-cl">
+    <line class="cb-edge" pathLength="1" style="--d:0.75s" x1="379.2" y1="115.3" x2="370.3" y2="57.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.77s" x1="350.3" y1="117.1" x2="350.4" y2="101.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.73s" x1="395.3" y1="96.7" x2="397.8" y2="80.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.86s" x1="358.5" y1="125.6" x2="390.3" y2="85.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.94s" x1="392.8" y1="101.8" x2="365.3" y2="106.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.95s" x1="350.4" y1="101.3" x2="374.5" y2="119.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.72s" x1="351.0" y1="97.4" x2="364.2" y2="82.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.83s" x1="379.2" y1="115.3" x2="350.4" y2="101.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.95s" x1="397.8" y1="80.5" x2="392.8" y2="101.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.78s" x1="364.7" y1="63.1" x2="374.5" y2="119.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.77s" x1="364.7" y1="63.1" x2="351.0" y2="97.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.92s" x1="356.7" y1="85.1" x2="374.5" y2="119.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.81s" x1="356.9" y1="76.6" x2="379.2" y2="115.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.94s" x1="351.0" y1="97.4" x2="358.5" y2="125.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.66s" x1="374.5" y1="119.9" x2="383.4" y2="105.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.73s" x1="399.9" y1="82.6" x2="350.3" y2="117.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.85s" x1="356.9" y1="76.6" x2="351.0" y2="97.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.86s" x1="338.4" y1="70.7" x2="356.9" y2="76.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.83s" x1="356.7" y1="85.1" x2="390.3" y2="85.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.8s" x1="358.5" y1="125.6" x2="401.7" y2="116.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.87s" x1="365.3" y1="106.3" x2="350.3" y2="117.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.91s" x1="364.7" y1="63.1" x2="364.2" y2="82.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.67s" x1="392.8" y1="101.8" x2="338.4" y2="70.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.79s" x1="395.3" y1="96.7" x2="367.4" y2="85.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.7s" x1="374.5" y1="119.9" x2="401.7" y2="116.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.9s" x1="364.7" y1="63.1" x2="350.4" y2="101.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.69s" x1="390.3" y1="85.6" x2="356.9" y2="76.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.92s" x1="390.3" y1="85.6" x2="383.4" y2="105.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.95s" x1="399.9" y1="82.6" x2="364.2" y2="82.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.93s" x1="370.3" y1="57.3" x2="358.5" y2="125.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.84s" x1="356.9" y1="76.6" x2="383.4" y2="105.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.89s" x1="364.2" y1="82.7" x2="390.3" y2="85.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.67s" x1="370.3" y1="57.3" x2="351.0" y2="97.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.67s" x1="364.2" y1="82.7" x2="358.5" y2="125.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.67s" x1="375.4" y1="59.0" x2="350.4" y2="101.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.91s" x1="397.8" y1="80.5" x2="370.3" y2="57.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.88s" x1="356.7" y1="85.1" x2="350.3" y2="117.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.86s" x1="356.9" y1="76.6" x2="401.7" y2="116.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.71s" x1="350.3" y1="117.1" x2="395.3" y2="96.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.7s" x1="350.3" y1="117.1" x2="351.0" y2="97.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.93s" x1="379.2" y1="115.3" x2="375.4" y2="59.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <circle class="cb-node" style="--d:0.39s;--dx:-61px;--dy:16px" cx="351.0" cy="97.4" r="2.4" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.45s;--dx:-3px;--dy:-68px" cx="370.3" cy="57.3" r="3.6" fill="#2FE0C9" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.36s;--dx:-47px;--dy:-30px" cx="338.4" cy="70.7" r="1.6" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.55s;--dx:44px;--dy:50px" cx="383.4" cy="105.0" r="2.0" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.56s;--dx:4px;--dy:42px" cx="374.5" cy="119.9" r="1.8" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.44s;--dx:-69px;--dy:-31px" cx="356.7" cy="85.1" r="1.9" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.3s;--dx:70px;--dy:33px" cx="392.8" cy="101.8" r="1.6" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.52s;--dx:-31px;--dy:-31px" cx="356.9" cy="76.6" r="2.2" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.41s;--dx:-42px;--dy:18px" cx="350.4" cy="101.3" r="1.8" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.39s;--dx:-27px;--dy:-32px" cx="364.2" cy="82.7" r="2.1" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.42s;--dx:36px;--dy:-12px" cx="399.9" cy="82.6" r="3.6" fill="#2FE0C9" fill-opacity="0.92"><animate attributeName="fill-opacity" values="0.92;0.2;0.92" dur="5.9s" begin="7.7s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.37s;--dx:64px;--dy:13px" cx="395.3" cy="96.7" r="1.5" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.32s;--dx:23px;--dy:73px" cx="379.2" cy="115.3" r="1.5" fill="#2FE0C9" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="4.5s" begin="3.1s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.51s;--dx:6px;--dy:-60px" cx="375.4" cy="59.0" r="2.1" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.47s;--dx:45px;--dy:-20px" cx="397.8" cy="80.5" r="2.4" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.52s;--dx:-23px;--dy:50px" cx="365.3" cy="106.3" r="1.6" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.51s;--dx:-10px;--dy:-39px" cx="364.7" cy="63.1" r="1.9" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.3s;--dx:-26px;--dy:64px" cx="358.5" cy="125.6" r="2.3" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.47s;--dx:-35px;--dy:-50px" cx="367.4" cy="85.5" r="1.8" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.52s;--dx:43px;--dy:36px" cx="401.7" cy="116.8" r="2.1" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.52s;--dx:52px;--dy:-18px" cx="390.3" cy="85.6" r="2.3" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.5s;--dx:-28px;--dy:32px" cx="350.3" cy="117.1" r="2.0" fill="#2FE0C9" fill-opacity="0.6"/>
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0,0; 16,10; 9,9; 0,0" dur="23.7s" begin="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.67;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    </g>
+    <g class="cb-cl">
+    <line class="cb-edge" pathLength="1" style="--d:0.83s" x1="239.6" y1="228.9" x2="226.0" y2="183.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.78s" x1="260.0" y1="238.8" x2="245.2" y2="255.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.88s" x1="239.6" y1="228.9" x2="234.9" y2="246.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.96s" x1="237.4" y1="203.0" x2="251.2" y2="196.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.83s" x1="249.2" y1="194.4" x2="246.5" y2="242.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.85s" x1="245.2" y1="255.7" x2="232.5" y2="178.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.92s" x1="226.2" y1="177.3" x2="261.1" y2="178.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.93s" x1="205.0" y1="227.4" x2="282.2" y2="223.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.02s" x1="226.0" y1="183.2" x2="220.5" y2="241.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.82s" x1="226.8" y1="210.0" x2="239.6" y2="228.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.02s" x1="240.8" y1="212.0" x2="261.3" y2="199.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.89s" x1="234.4" y1="247.5" x2="220.5" y2="241.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.01s" x1="232.5" y1="178.6" x2="261.3" y2="199.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.95s" x1="282.2" y1="223.2" x2="261.3" y2="199.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.97s" x1="282.2" y1="223.2" x2="220.8" y2="233.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.97s" x1="226.2" y1="177.3" x2="263.7" y2="204.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.01s" x1="232.5" y1="178.6" x2="220.8" y2="233.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.76s" x1="251.2" y1="196.0" x2="261.1" y2="178.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.94s" x1="234.9" y1="246.3" x2="224.8" y2="228.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.02s" x1="235.7" y1="242.1" x2="254.9" y2="220.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.79s" x1="249.2" y1="194.4" x2="261.3" y2="199.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.8s" x1="240.8" y1="212.0" x2="220.8" y2="233.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.01s" x1="237.4" y1="203.0" x2="234.9" y2="246.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.92s" x1="205.0" y1="227.4" x2="245.2" y2="255.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.84s" x1="220.8" y1="233.2" x2="237.4" y2="203.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.05s" x1="245.2" y1="255.7" x2="282.2" y2="223.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.03s" x1="224.8" y1="228.9" x2="246.5" y2="242.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.75s" x1="237.4" y1="203.0" x2="251.2" y2="196.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.75s" x1="240.8" y1="212.0" x2="261.3" y2="199.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.01s" x1="251.2" y1="196.0" x2="205.0" y2="227.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.9s" x1="251.2" y1="196.0" x2="205.0" y2="227.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.81s" x1="251.2" y1="196.0" x2="240.8" y2="212.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.04s" x1="237.4" y1="203.0" x2="226.2" y2="177.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.91s" x1="261.3" y1="199.2" x2="263.7" y2="204.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.95s" x1="239.6" y1="228.9" x2="237.4" y2="203.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.04s" x1="224.8" y1="228.9" x2="251.2" y2="196.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.84s" x1="239.6" y1="228.9" x2="245.2" y2="255.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.87s" x1="245.2" y1="255.7" x2="220.5" y2="241.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.02s" x1="282.2" y1="223.2" x2="263.7" y2="204.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.04s" x1="251.2" y1="196.0" x2="260.0" y2="238.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.98s" x1="234.4" y1="247.5" x2="220.5" y2="241.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.8s" x1="239.6" y1="228.9" x2="261.1" y2="178.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.96s" x1="263.7" y1="204.1" x2="261.3" y2="199.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.05s" x1="260.0" y1="238.8" x2="255.9" y2="241.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.05s" x1="234.9" y1="246.3" x2="251.2" y2="196.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.95s" x1="226.0" y1="183.2" x2="240.8" y2="212.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.0s" x1="220.5" y1="241.9" x2="261.3" y2="199.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <circle class="cb-node" style="--d:0.63s;--dx:25px;--dy:40px" cx="260.0" cy="238.8" r="2.1" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.61s;--dx:-15px;--dy:39px" cx="235.7" cy="242.1" r="2.2" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.5s;--dx:-57px;--dy:34px" cx="224.8" cy="228.9" r="3.6" fill="#8EA6FF" fill-opacity="0.92"><animate attributeName="fill-opacity" values="0.92;0.2;0.92" dur="6.7s" begin="8.7s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.42s;--dx:36px;--dy:-24px" cx="263.7" cy="204.1" r="1.5" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.54s;--dx:1px;--dy:51px" cx="246.5" cy="242.8" r="2.1" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.55s;--dx:-17px;--dy:-47px" cx="232.5" cy="178.6" r="1.6" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.67s;--dx:-18px;--dy:48px" cx="234.4" cy="247.5" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.57s;--dx:-35px;--dy:-58px" cx="226.0" cy="183.2" r="3.6" fill="#8EA6FF" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.5s;--dx:-62px;--dy:-20px" cx="226.8" cy="210.0" r="1.6" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.67s;--dx:15px;--dy:-57px" cx="251.2" cy="196.0" r="2.2" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="8.6s" begin="8.1s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.6s;--dx:14px;--dy:35px" cx="255.9" cy="241.3" r="1.9" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="6.6s" begin="4.2s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.57s;--dx:8px;--dy:-54px" cx="249.2" cy="194.4" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.67s;--dx:-1px;--dy:74px" cx="245.2" cy="255.7" r="2.3" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.62s;--dx:47px;--dy:22px" cx="254.9" cy="220.1" r="1.5" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.43s;--dx:-20px;--dy:-40px" cx="226.2" cy="177.3" r="1.7" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.42s;--dx:-12px;--dy:32px" cx="234.9" cy="246.3" r="3.6" fill="#8EA6FF" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.49s;--dx:44px;--dy:-48px" cx="261.3" cy="199.2" r="3.6" fill="#8EA6FF" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.41s;--dx:-32px;--dy:65px" cx="239.6" cy="228.9" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.42s;--dx:-38px;--dy:-58px" cx="237.4" cy="203.0" r="2.2" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.55s;--dx:-42px;--dy:29px" cx="220.8" cy="233.2" r="3.6" fill="#8EA6FF" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.61s;--dx:-27px;--dy:27px" cx="220.5" cy="241.9" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.62s;--dx:-37px;--dy:10px" cx="205.0" cy="227.4" r="3.6" fill="#8EA6FF" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.64s;--dx:-27px;--dy:-21px" cx="240.8" cy="212.0" r="1.5" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="7.5s" begin="7.0s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.47s;--dx:23px;--dy:-57px" cx="261.1" cy="178.9" r="1.6" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.44s;--dx:42px;--dy:8px" cx="282.2" cy="223.2" r="2.3" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="4.8s" begin="3.5s" repeatCount="indefinite"/></circle>
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0,0; -10,8; 13,8; 0,0" dur="26.9s" begin="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.67;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    </g>
+    <g class="cb-cl">
+    <line class="cb-edge" pathLength="1" style="--d:1.03s" x1="84.3" y1="293.7" x2="94.2" y2="308.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.02s" x1="83.0" y1="302.4" x2="81.2" y2="301.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.94s" x1="94.2" y1="308.7" x2="107.5" y2="272.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.99s" x1="107.5" y1="272.4" x2="88.3" y2="266.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.89s" x1="102.6" y1="295.0" x2="101.6" y2="273.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.11s" x1="116.0" y1="301.6" x2="102.6" y2="295.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.89s" x1="74.5" y1="289.6" x2="137.1" y2="314.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.14s" x1="129.7" y1="298.8" x2="116.0" y2="301.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.86s" x1="98.5" y1="321.8" x2="116.0" y2="301.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.99s" x1="107.5" y1="272.4" x2="123.5" y2="304.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.02s" x1="108.0" y1="285.2" x2="113.1" y2="305.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.09s" x1="98.5" y1="321.8" x2="123.5" y2="304.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.86s" x1="107.5" y1="272.4" x2="108.0" y2="285.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.88s" x1="101.6" y1="273.1" x2="84.3" y2="293.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.93s" x1="116.0" y1="301.6" x2="137.1" y2="314.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.87s" x1="74.7" y1="304.7" x2="102.6" y2="295.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.9s" x1="113.1" y1="305.2" x2="137.1" y2="314.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.12s" x1="74.7" y1="304.7" x2="74.8" y2="286.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.07s" x1="107.5" y1="272.4" x2="108.0" y2="285.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.03s" x1="137.1" y1="314.6" x2="129.7" y2="298.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.14s" x1="74.7" y1="304.7" x2="102.6" y2="295.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.09s" x1="108.0" y1="285.2" x2="81.2" y2="301.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.13s" x1="129.7" y1="298.8" x2="74.7" y2="304.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.1s" x1="74.8" y1="286.9" x2="84.3" y2="293.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.05s" x1="102.6" y1="295.0" x2="74.8" y2="286.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.06s" x1="102.6" y1="295.0" x2="83.0" y2="302.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.87s" x1="74.5" y1="289.6" x2="81.2" y2="301.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.86s" x1="102.6" y1="295.0" x2="84.3" y2="293.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.94s" x1="101.6" y1="273.1" x2="116.0" y2="301.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.13s" x1="137.1" y1="314.6" x2="123.5" y2="304.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.89s" x1="129.7" y1="298.8" x2="116.0" y2="301.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.12s" x1="88.3" y1="266.8" x2="121.4" y2="290.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.96s" x1="84.3" y1="293.7" x2="129.7" y2="298.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.93s" x1="84.3" y1="293.7" x2="88.3" y2="266.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.92s" x1="74.5" y1="289.6" x2="101.6" y2="273.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.89s" x1="101.6" y1="273.1" x2="81.2" y2="301.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.86s" x1="98.5" y1="321.8" x2="116.0" y2="301.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.94s" x1="113.1" y1="305.2" x2="74.8" y2="286.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <circle class="cb-node" style="--d:0.55s;--dx:-65px;--dy:8px" cx="83.0" cy="302.4" r="2.4" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.68s;--dx:-64px;--dy:4px" cx="81.2" cy="301.4" r="1.9" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.61s;--dx:8px;--dy:-65px" cx="107.5" cy="272.4" r="1.7" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.78s;--dx:-59px;--dy:-27px" cx="74.8" cy="286.9" r="2.2" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.75s;--dx:75px;--dy:10px" cx="116.0" cy="301.6" r="2.3" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.61s;--dx:-13px;--dy:52px" cx="98.5" cy="321.8" r="2.2" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.62s;--dx:-5px;--dy:-57px" cx="101.6" cy="273.1" r="1.6" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.62s;--dx:-49px;--dy:8px" cx="74.7" cy="304.7" r="1.6" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.6s;--dx:22px;--dy:67px" cx="111.2" cy="321.4" r="1.5" fill="#F4C273" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="5.0s" begin="4.4s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.67s;--dx:15px;--dy:-54px" cx="108.0" cy="285.2" r="2.2" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.71s;--dx:-14px;--dy:-49px" cx="102.6" cy="295.0" r="2.3" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.77s;--dx:39px;--dy:-21px" cx="121.4" cy="290.5" r="1.5" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.72s;--dx:69px;--dy:-3px" cx="129.7" cy="298.8" r="2.2" fill="#F4C273" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="5.9s" begin="5.3s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.74s;--dx:-36px;--dy:32px" cx="94.2" cy="308.7" r="3.6" fill="#F4C273" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.61s;--dx:-30px;--dy:-63px" cx="88.3" cy="266.8" r="1.9" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.78s;--dx:46px;--dy:26px" cx="113.1" cy="305.2" r="2.0" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.51s;--dx:-37px;--dy:-13px" cx="74.5" cy="289.6" r="3.6" fill="#F4C273" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.56s;--dx:-58px;--dy:-19px" cx="84.3" cy="293.7" r="1.7" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.51s;--dx:48px;--dy:21px" cx="137.1" cy="314.6" r="2.0" fill="#F4C273" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="8.0s" begin="6.9s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.74s;--dx:40px;--dy:9px" cx="123.5" cy="304.2" r="1.8" fill="#F4C273" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="8.7s" begin="6.3s" repeatCount="indefinite"/></circle>
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0,0; -5,-10; 9,9; 0,0" dur="19.7s" begin="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.67;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    </g>
+    <g class="cb-cl">
+    <line class="cb-edge" pathLength="1" style="--d:1.0s" x1="385.7" y1="244.4" x2="423.6" y2="257.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.2s" x1="409.5" y1="282.3" x2="391.9" y2="259.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.11s" x1="413.0" y1="257.3" x2="441.0" y2="277.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.09s" x1="391.1" y1="282.7" x2="385.7" y2="244.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.17s" x1="385.8" y1="272.6" x2="407.7" y2="269.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.96s" x1="438.1" y1="259.6" x2="407.7" y2="269.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.98s" x1="441.0" y1="277.3" x2="391.1" y2="282.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.1s" x1="365.3" y1="265.9" x2="402.5" y2="224.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.13s" x1="407.7" y1="269.8" x2="413.0" y2="257.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.0s" x1="402.5" y1="224.8" x2="407.7" y2="269.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.11s" x1="407.7" y1="269.8" x2="402.5" y2="224.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.97s" x1="409.5" y1="282.3" x2="365.3" y2="265.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.12s" x1="441.0" y1="277.3" x2="409.5" y2="282.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.17s" x1="392.8" y1="301.2" x2="407.7" y2="269.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.19s" x1="391.9" y1="259.2" x2="428.1" y2="248.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.13s" x1="382.5" y1="242.8" x2="441.0" y2="277.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.09s" x1="399.7" y1="251.9" x2="441.0" y2="277.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.03s" x1="391.1" y1="282.7" x2="398.1" y2="254.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.1s" x1="438.1" y1="259.6" x2="428.1" y2="248.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.95s" x1="416.2" y1="294.7" x2="391.9" y2="259.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.02s" x1="399.7" y1="251.9" x2="392.8" y2="301.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.07s" x1="385.7" y1="244.4" x2="419.6" y2="286.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.24s" x1="385.8" y1="272.6" x2="419.6" y2="286.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.04s" x1="428.1" y1="248.1" x2="382.5" y2="242.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.95s" x1="365.3" y1="265.9" x2="391.1" y2="282.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.23s" x1="391.9" y1="259.2" x2="438.1" y2="259.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.02s" x1="438.1" y1="259.6" x2="363.2" y2="263.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.1s" x1="428.1" y1="248.1" x2="409.5" y2="282.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.01s" x1="398.1" y1="254.3" x2="416.7" y2="231.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.98s" x1="416.2" y1="294.7" x2="424.4" y2="260.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.03s" x1="413.0" y1="257.3" x2="438.1" y2="259.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.14s" x1="441.0" y1="277.3" x2="423.6" y2="257.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.24s" x1="413.0" y1="257.3" x2="441.0" y2="277.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.25s" x1="416.2" y1="294.7" x2="441.0" y2="277.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.97s" x1="365.3" y1="265.9" x2="428.1" y2="248.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.25s" x1="407.7" y1="269.8" x2="423.6" y2="257.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.03s" x1="416.7" y1="231.0" x2="416.2" y2="294.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.05s" x1="438.1" y1="259.6" x2="391.9" y2="259.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.0s" x1="402.5" y1="224.8" x2="385.8" y2="272.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:0.98s" x1="424.4" y1="260.8" x2="385.8" y2="272.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.15s" x1="413.0" y1="257.3" x2="385.7" y2="244.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.17s" x1="399.7" y1="251.9" x2="423.6" y2="257.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.18s" x1="398.1" y1="254.3" x2="424.4" y2="260.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <circle class="cb-node" style="--d:0.81s;--dx:-67px;--dy:7px" cx="365.3" cy="265.9" r="2.0" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.7s;--dx:-12px;--dy:43px" cx="392.8" cy="301.2" r="2.3" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.82s;--dx:12px;--dy:45px" cx="409.5" cy="282.3" r="2.2" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.65s;--dx:74px;--dy:-16px" cx="423.6" cy="257.8" r="2.2" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.84s;--dx:21px;--dy:-52px" cx="416.7" cy="231.0" r="1.9" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.89s;--dx:60px;--dy:-3px" cx="424.4" cy="260.8" r="1.8" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.78s;--dx:38px;--dy:16px" cx="441.0" cy="277.3" r="2.2" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.89s;--dx:36px;--dy:-8px" cx="434.6" cy="255.3" r="1.6" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.83s;--dx:50px;--dy:-29px" cx="428.1" cy="248.1" r="2.3" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.71s;--dx:67px;--dy:-5px" cx="438.1" cy="259.6" r="3.6" fill="#2FE0C9" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.88s;--dx:-34px;--dy:-33px" cx="385.7" cy="244.4" r="2.3" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.8s;--dx:-3px;--dy:-75px" cx="402.5" cy="224.8" r="1.6" fill="#2FE0C9" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="5.3s" begin="8.0s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.72s;--dx:61px;--dy:-32px" cx="413.0" cy="257.3" r="2.1" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.86s;--dx:-29px;--dy:-26px" cx="382.5" cy="242.8" r="1.6" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.76s;--dx:-19px;--dy:30px" cx="391.1" cy="282.7" r="2.1" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.88s;--dx:41px;--dy:64px" cx="419.6" cy="286.5" r="2.4" fill="#2FE0C9" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="4.9s" begin="3.8s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.77s;--dx:-63px;--dy:-14px" cx="391.9" cy="259.2" r="1.7" fill="#2FE0C9" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="5.5s" begin="6.7s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.65s;--dx:27px;--dy:73px" cx="416.2" cy="294.7" r="1.9" fill="#2FE0C9" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="8.8s" begin="7.5s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.76s;--dx:-27px;--dy:-35px" cx="398.1" cy="254.3" r="2.3" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.74s;--dx:-43px;--dy:25px" cx="385.8" cy="272.6" r="1.8" fill="#2FE0C9" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.81s;--dx:20px;--dy:43px" cx="407.7" cy="269.8" r="1.9" fill="#2FE0C9" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="8.2s" begin="6.8s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.84s;--dx:-59px;--dy:1px" cx="363.2" cy="263.0" r="3.6" fill="#2FE0C9" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.87s;--dx:-28px;--dy:-67px" cx="399.7" cy="251.9" r="2.2" fill="#2FE0C9" fill-opacity="0.6"/>
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0,0; -13,-10; -14,11; 0,0" dur="26.9s" begin="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.67;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    </g>
+    <g class="cb-cl">
+    <line class="cb-edge" pathLength="1" style="--d:1.27s" x1="311.1" y1="345.3" x2="309.4" y2="351.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.06s" x1="309.4" y1="351.3" x2="278.6" y2="357.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.23s" x1="318.0" y1="374.8" x2="270.0" y2="356.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.1s" x1="323.7" y1="345.1" x2="279.9" y2="358.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.24s" x1="279.9" y1="358.9" x2="269.5" y2="366.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.3s" x1="304.0" y1="372.1" x2="279.9" y2="358.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.18s" x1="309.4" y1="351.3" x2="270.0" y2="356.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.1s" x1="278.6" y1="357.2" x2="285.1" y2="374.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.15s" x1="309.4" y1="351.3" x2="278.6" y2="357.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.33s" x1="269.5" y1="366.8" x2="309.0" y2="331.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.34s" x1="318.0" y1="374.8" x2="307.5" y2="365.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.06s" x1="276.4" y1="371.5" x2="304.0" y2="372.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.19s" x1="279.2" y1="381.4" x2="307.5" y2="365.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.26s" x1="309.8" y1="368.2" x2="269.5" y2="366.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.27s" x1="323.7" y1="345.1" x2="318.0" y2="374.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.21s" x1="279.9" y1="358.9" x2="309.0" y2="331.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.2s" x1="309.4" y1="351.3" x2="328.0" y2="379.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.3s" x1="279.2" y1="381.4" x2="279.9" y2="358.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.25s" x1="307.5" y1="365.0" x2="311.1" y2="345.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.27s" x1="269.5" y1="366.8" x2="270.0" y2="356.6" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.1s" x1="311.1" y1="345.3" x2="276.4" y2="371.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.28s" x1="307.5" y1="365.0" x2="304.0" y2="372.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.28s" x1="270.0" y1="356.6" x2="278.6" y2="357.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.32s" x1="269.5" y1="366.8" x2="279.9" y2="358.9" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.23s" x1="309.4" y1="351.3" x2="307.5" y2="365.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.27s" x1="328.0" y1="379.2" x2="307.5" y2="365.0" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.23s" x1="285.1" y1="374.4" x2="304.0" y2="372.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.17s" x1="276.4" y1="371.5" x2="279.2" y2="381.4" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.27s" x1="279.9" y1="358.9" x2="328.0" y2="379.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.29s" x1="309.4" y1="351.3" x2="318.0" y2="374.8" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <circle class="cb-node" style="--d:0.74s;--dx:32px;--dy:21px" cx="309.8" cy="368.2" r="2.1" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="5.4s" begin="8.7s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.78s;--dx:27px;--dy:-30px" cx="309.4" cy="351.3" r="1.7" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.74s;--dx:12px;--dy:-42px" cx="309.0" cy="331.0" r="1.8" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.79s;--dx:-70px;--dy:-13px" cx="270.0" cy="356.6" r="1.6" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.98s;--dx:58px;--dy:36px" cx="328.0" cy="379.2" r="1.5" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.75s;--dx:43px;--dy:31px" cx="318.0" cy="374.8" r="2.2" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.87s;--dx:71px;--dy:28px" cx="307.5" cy="365.0" r="1.7" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.92s;--dx:-50px;--dy:-8px" cx="279.9" cy="358.9" r="3.6" fill="#8EA6FF" fill-opacity="0.92"><animate attributeName="fill-opacity" values="0.92;0.2;0.92" dur="6.6s" begin="7.5s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.99s;--dx:-40px;--dy:37px" cx="279.2" cy="381.4" r="2.3" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.99s;--dx:-47px;--dy:19px" cx="276.4" cy="371.5" r="1.9" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.76s;--dx:44px;--dy:-31px" cx="323.7" cy="345.1" r="2.0" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.9s;--dx:16px;--dy:42px" cx="304.0" cy="372.1" r="1.9" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.81s;--dx:-49px;--dy:-11px" cx="278.6" cy="357.2" r="1.6" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.95s;--dx:-29px;--dy:24px" cx="285.1" cy="374.4" r="1.9" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.78s;--dx:22px;--dy:-33px" cx="311.1" cy="345.3" r="1.9" fill="#8EA6FF" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.81s;--dx:-69px;--dy:11px" cx="269.5" cy="366.8" r="1.5" fill="#8EA6FF" fill-opacity="0.6"/>
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0,0; -17,-1; 0,10; 0,0" dur="17.4s" begin="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.67;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    </g>
+    <g class="cb-cl">
+    <line class="cb-edge" pathLength="1" style="--d:1.37s" x1="484.6" y1="156.3" x2="464.7" y2="149.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.39s" x1="467.9" y1="135.1" x2="494.3" y2="157.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.41s" x1="491.3" y1="156.5" x2="492.8" y2="162.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.28s" x1="492.8" y1="162.5" x2="464.7" y2="149.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.39s" x1="491.3" y1="156.5" x2="467.9" y2="135.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.43s" x1="492.3" y1="141.2" x2="461.9" y2="178.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.3s" x1="492.3" y1="141.2" x2="492.8" y2="162.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.36s" x1="461.9" y1="178.3" x2="484.6" y2="156.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.22s" x1="461.9" y1="178.3" x2="485.2" y2="147.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.34s" x1="492.3" y1="141.2" x2="494.3" y2="157.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.2s" x1="492.3" y1="141.2" x2="494.3" y2="157.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.17s" x1="473.8" y1="164.5" x2="491.6" y2="144.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.35s" x1="485.2" y1="147.2" x2="461.9" y2="178.3" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.21s" x1="464.7" y1="149.7" x2="485.2" y2="147.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.19s" x1="485.2" y1="147.2" x2="492.3" y2="141.2" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.4s" x1="492.3" y1="141.2" x2="467.9" y2="135.1" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.24s" x1="492.8" y1="162.5" x2="464.7" y2="149.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.21s" x1="467.9" y1="135.1" x2="464.7" y2="149.7" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.27s" x1="491.3" y1="156.5" x2="491.6" y2="144.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <line class="cb-edge" pathLength="1" style="--d:1.29s" x1="492.3" y1="141.2" x2="491.3" y2="156.5" stroke="#8EA6FF" stroke-opacity="0.16" stroke-width=".7"/>
+    <circle class="cb-node" style="--d:1.0s;--dx:-24px;--dy:-68px" cx="467.9" cy="135.1" r="3.6" fill="#F4C273" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:1.0s;--dx:67px;--dy:-2px" cx="494.3" cy="157.5" r="3.6" fill="#F4C273" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.95s;--dx:29px;--dy:-30px" cx="492.3" cy="141.2" r="2.0" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.87s;--dx:40px;--dy:-34px" cx="491.6" cy="144.5" r="1.9" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.87s;--dx:42px;--dy:-49px" cx="485.2" cy="147.2" r="2.2" fill="#F4C273" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="7.2s" begin="7.9s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.91s;--dx:-21px;--dy:30px" cx="461.9" cy="178.3" r="2.1" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.86s;--dx:-59px;--dy:-43px" cx="464.7" cy="149.7" r="2.1" fill="#F4C273" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="5.7s" begin="6.1s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.92s;--dx:69px;--dy:-14px" cx="484.6" cy="156.3" r="2.1" fill="#F4C273" fill-opacity="0.6"/>
+    <circle class="cb-node" style="--d:0.97s;--dx:63px;--dy:17px" cx="492.8" cy="162.5" r="1.6" fill="#F4C273" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.6;0.13;0.6" dur="8.4s" begin="4.1s" repeatCount="indefinite"/></circle>
+    <circle class="cb-node" style="--d:0.91s;--dx:56px;--dy:-5px" cx="491.3" cy="156.5" r="3.6" fill="#F4C273" fill-opacity="0.92"/>
+    <circle class="cb-node" style="--d:0.91s;--dx:-12px;--dy:35px" cx="473.8" cy="164.5" r="2.4" fill="#F4C273" fill-opacity="0.6"/>
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0,0; -6,-9; 15,-11; 0,0" dur="23.3s" begin="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.67;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    </g>
+    <g class="cb-labels">
+    <text class="cb-label" style="--d:1.75s" x="173" y="111" text-anchor="start" fill="#8EA6FF">BID STRATEGY</text>
+    <text class="cb-label" style="--d:1.81s" x="421" y="95" text-anchor="start" fill="#2FE0C9">CREATIVE</text>
+    <text class="cb-label" style="--d:1.87s" x="299" y="219" text-anchor="start" fill="#8EA6FF">BUDGET TIMING</text>
+    <text class="cb-label" style="--d:1.93s" x="151" y="303" text-anchor="start" fill="#F4C273">GEO MIX</text>
+    <text class="cb-label" style="--d:1.99s" x="455" y="265" text-anchor="start" fill="#2FE0C9">AUDIENCE</text>
+    <text class="cb-label" style="--d:2.05s" x="342" y="365" text-anchor="start" fill="#8EA6FF">SEASONALITY</text>
+    <text class="cb-label" style="--d:2.11s" x="441" y="161" text-anchor="end" fill="#F4C273">NEGATIVES</text>
+    </g></svg>
   <div class="wrap">
-    <p class="eyebrow accent">Why Arciom</p>
-    <h1>Every AI tool promises your team an edge. Only one proves it.</h1>
+    <p class="hero-eyebrow">Why Arciom</p>
+    <h1><span class="ln">Every AI tool promises</span> <span class="ln">your team an edge.</span> <span class="ln alt">Only one proves it.</span></h1>
+    <p class="sub">The market is full of AI that generates ads, writes copy, and automates work. All of it runs on the same foundation models, which means all of it produces roughly the same output your competitors get.</p>
   </div>
 </header>
-<section class="reason alt">
-  <div class="wrap premise-grid">
-    <div>
-    <p class="eyebrow">The premise</p>
-    <p style="color:var(--muted)">The market is full of AI that generates ads, writes copy, and automates bids. All of it runs on the same foundation models, which means all of it produces roughly the same output your competitors get. Speed without an edge.</p>
-    <p style="color:var(--muted);margin-top:12px">Arciom is built on a different premise: the only thing AI can't commoditize is your people's judgment. So that's the only thing we capture — and it shows up as revenue: sharper judgment means better win rates, higher ROAS, and outcomes your competitors can't replicate.</p>
-    <p style="color:var(--muted);margin-top:12px">And timing matters. Every model release shrinks the knowledge advantage and sharpens the judgment advantage. Your digital twin is built from decisions as they happen: every month you wait to start capturing your team's judgment isn't just delay, it's revenue left on the table you'll never get back.</p>
-    </div>
-    <blockquote class="premise-quote">Every month you wait to start capturing your team's judgment isn't just delay, it's revenue left on the table you'll never get back.</blockquote>
-  </div>
-</section>
-<section class="reason"><div class="wrap reason-grid">
-    <span class="ghost-num" aria-hidden="true">01</span>
-    <div class="r-copy"><p class="rnum">Reason 01</p><h2>We only keep what's proven.</h2><p>Every decision your performance marketer makes gets tested against a frontier AI model, one of the most advanced AI systems available, and you choose which one (Claude, ChatGPT, Gemini, and more). If the model would have made the same call, we discard it; that knowledge is free everywhere. Only the decisions where your expert genuinely out-performs the AI are kept. Most tools store everything and can prove nothing. Arciom stores only measured advantage.</p></div>
-    <div class="r-illo"><svg class="r-illo-svg" viewBox="0 0 340 230" aria-hidden="true"><line x1="170" y1="20" x2="170" y2="210" stroke="var(--peri)" stroke-width="1.4" opacity="0.8"/><circle cx="18" cy="48" r="2.4" fill="var(--peri)" opacity="0.66"/><circle cx="109" cy="52" r="2.4" fill="var(--peri)" opacity="0.54"/><circle cx="48" cy="161" r="2.4" fill="var(--peri)" opacity="0.56"/><circle cx="117" cy="145" r="2.4" fill="var(--peri)" opacity="0.55"/><circle cx="89" cy="107" r="2.4" fill="var(--peri)" opacity="0.67"/><circle cx="152" cy="44" r="2.4" fill="var(--peri)" opacity="0.51"/><circle cx="144" cy="99" r="2.4" fill="var(--peri)" opacity="0.58"/><circle cx="61" cy="92" r="2.4" fill="var(--peri)" opacity="0.88"/><circle cx="45" cy="66" r="2.4" fill="var(--peri)" opacity="0.73"/><circle cx="90" cy="196" r="2.4" fill="var(--peri)" opacity="0.84"/><circle cx="64" cy="64" r="2.4" fill="var(--peri)" opacity="0.83"/><circle cx="151" cy="33" r="2.4" fill="var(--peri)" opacity="0.79"/><circle cx="134" cy="143" r="2.4" fill="var(--peri)" opacity="0.59"/><circle cx="124" cy="156" r="2.4" fill="var(--peri)" opacity="0.58"/><circle cx="103" cy="67" r="2.4" fill="var(--peri)" opacity="0.52"/><circle cx="62" cy="87" r="2.4" fill="var(--peri)" opacity="0.66"/><circle cx="104" cy="175" r="2.4" fill="var(--peri)" opacity="0.88"/><circle cx="149" cy="203" r="2.4" fill="var(--peri)" opacity="0.82"/><circle cx="58" cy="59" r="2.4" fill="var(--peri)" opacity="0.75"/><circle cx="90" cy="147" r="2.4" fill="var(--peri)" opacity="0.54"/><circle cx="42" cy="190" r="2.4" fill="var(--peri)" opacity="0.74"/><circle cx="111" cy="45" r="2.4" fill="var(--peri)" opacity="0.66"/><circle cx="140" cy="142" r="2.4" fill="var(--peri)" opacity="0.90"/><circle cx="43" cy="108" r="2.4" fill="var(--peri)" opacity="0.82"/><circle cx="76" cy="167" r="2.4" fill="var(--peri)" opacity="0.72"/><circle cx="32" cy="45" r="2.4" fill="var(--peri)" opacity="0.89"/><circle cx="32" cy="62" r="2.4" fill="var(--peri)" opacity="0.63"/><circle cx="113" cy="178" r="2.4" fill="var(--peri)" opacity="0.69"/><circle cx="84" cy="167" r="2.4" fill="var(--peri)" opacity="0.61"/><circle cx="67" cy="136" r="2.4" fill="var(--peri)" opacity="0.75"/><circle cx="21" cy="48" r="2.4" fill="var(--peri)" opacity="0.56"/><circle cx="115" cy="150" r="2.4" fill="var(--peri)" opacity="0.89"/><circle cx="120" cy="73" r="2.4" fill="var(--peri)" opacity="0.81"/><circle cx="150" cy="89" r="2.4" fill="var(--peri)" opacity="0.50"/><circle cx="239" cy="78" r="2.2" fill="var(--faint)" opacity="0.34"/><circle cx="194" cy="50" r="2.2" fill="var(--faint)" opacity="0.47"/><circle cx="195" cy="136" r="2.2" fill="var(--faint)" opacity="0.34"/><circle cx="214" cy="172" r="2.2" fill="var(--faint)" opacity="0.36"/><circle cx="213" cy="108" r="2.2" fill="var(--faint)" opacity="0.44"/><circle cx="259" cy="179" r="2.2" fill="var(--faint)" opacity="0.38"/><circle cx="259" cy="154" r="2.2" fill="var(--faint)" opacity="0.39"/><circle cx="286" cy="110" r="2.2" fill="var(--faint)" opacity="0.33"/><circle cx="205" cy="166" r="2.2" fill="var(--faint)" opacity="0.45"/><circle cx="316" cy="149" r="2.2" fill="var(--faint)" opacity="0.42"/><circle cx="211" cy="178" r="2.2" fill="var(--faint)" opacity="0.32"/><circle cx="246" cy="53" r="2.2" fill="var(--faint)" opacity="0.38"/><circle cx="230" cy="103" r="2.2" fill="var(--faint)" opacity="0.44"/><circle cx="262" cy="71" r="2.2" fill="var(--faint)" opacity="0.46"/><circle cx="214" cy="70" r="3.6" fill="var(--peri)"/><circle cx="214" cy="70" r="8" fill="none" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><circle cx="258" cy="120" r="3.6" fill="var(--peri)"/><circle cx="258" cy="120" r="8" fill="none" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><circle cx="296" cy="88" r="3.6" fill="var(--peri)"/><circle cx="296" cy="88" r="8" fill="none" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><circle cx="238" cy="170" r="3.6" fill="var(--peri)"/><circle cx="238" cy="170" r="8" fill="none" stroke="var(--peri)" stroke-width="1" opacity="0.5"/></svg></div>
-  </div></section>
-<section class="reason alt"><div class="wrap reason-grid flip">
-    <span class="ghost-num" aria-hidden="true">02</span>
-    <div class="r-copy"><p class="rnum">Reason 02</p><h2>Your expert stays in the loop, and in the credit.</h2><p>The digital twin is tied to the person it learned from. It doesn't replace them. It takes the repetitive execution off their plate and frees them for the calls only a human can make. And because every recommendation traces back to a real decision your expert made, the digital twin's work is their work, extended.</p></div>
-    <div class="r-illo"><svg class="r-illo-svg" viewBox="0 0 340 230" aria-hidden="true"><defs><radialGradient id="w2g" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--aqua)" stop-opacity="0.3"/><stop offset="100%" stop-color="var(--aqua)" stop-opacity="0"/></radialGradient></defs>
-<circle cx="110" cy="115" r="26" fill="none" stroke="var(--peri)" stroke-width="1.8"/>
-<circle cx="110" cy="115" r="7" fill="var(--peri)"/>
-<line x1="138" y1="115" x2="204" y2="115" stroke="var(--peri)" stroke-width="1.4" opacity="0.7"/>
-<circle cx="171" cy="115" r="2.4" fill="var(--peri)"/>
-<circle cx="232" cy="115" r="52" fill="url(#w2g)"/>
-<circle cx="232" cy="115" r="11" fill="var(--aqua)"/>
-<circle cx="232" cy="115" r="22" fill="none" stroke="var(--aqua)" stroke-width="1" opacity="0.45"/>
-<text x="110" y="168" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="1.5" fill="var(--muted)">EXPERT</text>
-<text x="232" y="168" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="1.5" fill="var(--aqua)">DIGITAL TWIN</text></svg></div>
-  </div></section>
-<section class="reason"><div class="wrap reason-grid">
-    <span class="ghost-num" aria-hidden="true">03</span>
-    <div class="r-copy"><p class="rnum">Reason 03</p><h2>Nothing runs until it's earned the right.</h2><p>The digital twin starts in incubation, watching the work, connecting decisions to outcomes, and asking your expert clarifying questions while its brain forms. Then it earns its way up: recommending changes, making changes with human approval, and only after a proven track record, handling routine work on its own. You can stop it at any rung. Autonomy at Arciom is earned by evidence, never assumed.</p></div>
-    <div class="r-illo"><svg class="r-illo-svg" viewBox="0 0 340 230" aria-hidden="true"><path d="M30 200 H105 V158 H180 V116 H255 V74 H330" fill="none" stroke="var(--line)" stroke-width="1.6"/><circle cx="67" cy="200" r="6" fill="none" stroke="var(--peri)" stroke-width="1.5" stroke-dasharray="2 3"/><circle cx="142" cy="158" r="6" fill="none" stroke="var(--peri)" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="217" cy="116" r="6" fill="none" stroke="var(--peri)" stroke-width="1.8"/><circle cx="292" cy="74" r="6.5" fill="var(--peri)"/></svg></div>
-  </div></section>
-<section class="reason alt"><div class="wrap reason-grid flip">
-    <span class="ghost-num" aria-hidden="true">04</span>
-    <div class="r-copy"><p class="rnum">Reason 04</p><h2>Judgment that survives turnover.</h2><p>When your best performance marketer retires, changes jobs, or gets promoted, their judgment normally walks out the door with them. With Arciom, it stays, and it doesn't just sit there. The digital twin keeps seeing the cause and effect of every decision, so the judgment keeps sharpening even as the account, the market, and the team change around it.</p></div>
-    <div class="r-illo"><svg class="r-illo-svg" viewBox="0 0 340 230" aria-hidden="true"><line x1="150" y1="115" x2="95" y2="70" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="150" y1="115" x2="205" y2="62" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="150" y1="115" x2="228" y2="130" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="150" y1="115" x2="178" y2="178" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="150" y1="115" x2="105" y2="165" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="150" y1="115" x2="70" y2="115" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="95" y1="70" x2="205" y2="62" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="205" y1="62" x2="228" y2="130" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="228" y1="130" x2="178" y2="178" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="178" y1="178" x2="105" y2="165" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="105" y1="165" x2="70" y2="115" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><line x1="70" y1="115" x2="95" y2="70" stroke="var(--peri)" stroke-width="1" opacity="0.5"/><circle cx="150" cy="115" r="5" fill="var(--peri)"/><circle cx="95" cy="70" r="4" fill="var(--peri)"/><circle cx="205" cy="62" r="4" fill="var(--peri)"/><circle cx="228" cy="130" r="4" fill="var(--peri)"/><circle cx="178" cy="178" r="4" fill="var(--peri)"/><circle cx="105" cy="165" r="4" fill="var(--peri)"/><circle cx="70" cy="115" r="4" fill="var(--peri)"/><circle cx="150" cy="115" r="5.5" fill="var(--aqua)"/><circle cx="296" cy="60" r="4" fill="var(--faint)" opacity="0.85"/><circle cx="276" cy="74" r="3" fill="var(--faint)" opacity="0.5"/><circle cx="258" cy="86" r="3" fill="var(--faint)" opacity="0.35"/><circle cx="242" cy="97" r="3" fill="var(--faint)" opacity="0.22"/><text x="296" y="42" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" letter-spacing="1" fill="var(--faint)">LEAVES</text><text x="150" y="212" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" letter-spacing="1" fill="var(--peri)">THE JUDGMENT STAYS</text></svg></div>
-  </div></section>
-<section class="reason"><div class="wrap reason-grid">
-    <span class="ghost-num" aria-hidden="true">05</span>
-    <div class="r-copy"><p class="rnum">Reason 05</p><h2>Leadership finally sees which decisions moved the number.</h2><p>Most heads of marketing and CEOs get one paid media update a month: a summary of results, long after the spend. Arciom's weekly governance summaries connect the dots leadership never gets to see: this decision was made, and here's what it did to ROI. That isn't estimation: Arciom detects each strategic change through your existing stack and tracks the results that follow, so every number traces to the decision that caused it. It works as oversight for an internal team, an outside agency, or a digital twin: the same decision-level accountability, regardless of who's doing the work.</p></div>
-    <div class="r-illo">
-      <div class="report reason-report" aria-label="Stylized example of a weekly governance summary">
-        <div class="rhead"><span>Week of Jul 13</span><span class="to">→ leadership</span></div>
-        <div class="rsummary">
-          <div><span class="rsum-num">+9.4%</span><span class="rsum-label">net ROI impact</span></div>
-          <div><span class="rsum-num" style="color:#c8d4e4">27</span><span class="rsum-label">decisions tracked</span></div>
-        </div>
-        <p class="rmovers">Top movers</p>
-        <div class="decision"><span>Budget shift <em class="src">twin</em></span><span class="delta up">+6.2%</span></div>
-        <div class="decision"><span>Bid strategy <em class="src">in-house</em></span><span class="delta up">+3.8%</span></div>
-        <div class="decision"><span>LP swap <em class="src">in-house</em></span><span class="delta warn">flagged</span></div>
-        <div class="rfoot">Every Monday · no dashboard</div>
-      </div>
-    </div>
-  </div></section>
 
-<section class="reason alt"><div class="wrap reason-grid flip">
-    <span class="ghost-num" aria-hidden="true">06</span>
-    <div class="r-copy"><p class="rnum">Reason 06</p><h2>We're certified to get the foundation right.</h2><p>A digital twin is only as good as the data it learns from. If your conversion tracking, tagging, or CRM configuration is broken or missing, every downstream number is suspect: attribution, governance summaries, even the digital twin's own proof metrics. So before capture begins, our certified team audits and repairs your Google Ads, Tag Manager, Analytics, and CRM setup. Not a guess: a credentialed fix.</p></div>
-    <div class="r-illo">
-      <div class="audit-card" aria-label="Stylized example of a conversion tracking audit checklist">
-        <div class="audit-head"><span>Conversion audit</span><span class="cert-badge">CERTIFIED</span></div>
-        <div class="audit-row"><span>Google Ads API</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#74e0d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="audit-row"><span>Tag Manager</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#74e0d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="audit-row"><span>Google Analytics</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#74e0d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="audit-row"><span>CRM integration</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#74e0d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="audit-foot">Verified before capture begins</div>
-      </div>
-    </div>
-  </div></section>
-
-<section class="cta">
+<!-- ================= THE PREMISE ================= -->
+<section>
   <div class="wrap">
-    <h2>The result: your team's edge, captured, proven, and compounding.</h2>
-    <a class="btn" href="request-a-demo.html">Request Demo</a>
-    <p class="tagline">Proven judgment. Not just automation.</p>
+    <div class="premise">
+      <div class="pm-copy">
+        <p class="eyebrow">The premise</p>
+        <h2 class="h2">Speed without an edge is <span class="alt">still just speed.</span></h2>
+        <p class="lead">Arciom is built on a different premise: the only thing AI can&rsquo;t commoditize is your people&rsquo;s judgment. So that&rsquo;s the only thing we capture.</p>
+        <p>And it shows up as revenue. Sharper judgment means better win rates, higher ROAS, and outcomes your competitors can&rsquo;t replicate &mdash; because they can&rsquo;t buy what your team knows.</p>
+        <p>Timing matters too. Every model release shrinks the knowledge advantage and sharpens the judgment advantage. Your digital twin is built from decisions as they happen.</p>
+      </div>
+      <div class="pm-viz" data-reveal>
+        <p class="ch-title">What sits on top of the model</p>
+        <p class="ch-sub">Same foundation &middot; different edge</p>
+          <svg viewBox="0 72 500 288" role="img" aria-label="Two stacks on the same foundation model: any AI agent adds a thin generic layer, while Arciom adds a much taller layer of your team's proven judgment. The difference is the edge.">
+            <defs>
+              <linearGradient id="jg" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#4A5EDA" stop-opacity=".9"/>
+                <stop offset="100%" stop-color="#0F9D8F" stop-opacity=".9"/>
+              </linearGradient>
+            </defs>
+            <line class="hairline" x1="24" y1="296" x2="476" y2="296" stroke="rgba(16,20,43,.16)" stroke-width="1.4"/>
+
+            <!-- the shared foundation -->
+            <g class="slab s-base">
+              <rect x="40" y="244" width="164" height="50" rx="7" fill="rgba(136,145,163,.16)" stroke="rgba(136,145,163,.45)" stroke-width="1.3"/>
+              <text x="122" y="274" text-anchor="middle" class="sl-t" fill="#5B6478">FRONTIER MODEL</text>
+            </g>
+            <g class="slab s-base2">
+              <rect x="256" y="244" width="164" height="50" rx="7" fill="rgba(136,145,163,.16)" stroke="rgba(136,145,163,.45)" stroke-width="1.3"/>
+              <text x="338" y="274" text-anchor="middle" class="sl-t" fill="#5B6478">FRONTIER MODEL</text>
+            </g>
+
+            <!-- what everyone else layers on -->
+            <g class="slab s-gen">
+              <rect x="40" y="206" width="164" height="34" rx="7" fill="rgba(136,145,163,.26)" stroke="rgba(136,145,163,.5)" stroke-width="1.3"/>
+              <text x="122" y="228" text-anchor="middle" class="sl-t" fill="#5B6478">GENERIC PLAYBOOK</text>
+            </g>
+
+            <!-- what you layer on -->
+            <g class="slab s-jud">
+              <rect x="256" y="104" width="164" height="136" rx="7" fill="url(#jg)" stroke="#4A5EDA" stroke-width="1.4"/>
+              <text x="338" y="166" text-anchor="middle" class="sl-t" fill="#fff">YOUR TEAM&#8217;S</text>
+              <text x="338" y="182" text-anchor="middle" class="sl-t" fill="#fff">PROVEN JUDGMENT</text>
+            </g>
+
+            <!-- everyone starts from the same line -->
+            <line class="par" x1="40" y1="204" x2="452" y2="204" stroke="#8891A3" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="5 5"/>
+
+            <!-- the delta -->
+            <g class="edge">
+              <path d="M440 204 h10 v-98 h-10" fill="none" stroke="#0F9D8F" stroke-width="1.6"/>
+              <text x="470" y="158" text-anchor="middle" class="sl-t" fill="#0F9D8F" transform="rotate(-90 470 158)">YOUR EDGE</text>
+            </g>
+
+            <text x="122" y="324" text-anchor="middle" class="sl-c" fill="#8891A3">ANY AI AGENT</text>
+            <text x="338" y="324" text-anchor="middle" class="sl-c" fill="#4A5EDA">ARCIOM</text>
+          </svg>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- ================= THE COMPARISON ================= -->
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">The difference</p>
+    <h2 class="h2">Same models. <span class="alt">Different teacher.</span></h2>
+    <p class="lede2" style="max-width:640px">Every AI agent on the market is built on the same handful of frontier models &mdash; your competitors&rsquo; included. What separates them is whose decisions they learned from.</p>
+    <div class="vsg" data-reveal>
+      <div class="vsg-row">
+        <div class="vsg-h"></div>
+        <div class="vsg-h them">Typical AI agent</div>
+        <div class="vsg-h us">Arciom</div>
+      </div>
+      <div class="vsg-row">
+        <div class="vsg-l">Learns from</div>
+        <div class="vsg-c them" data-l="Typical agent"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span>Public knowledge every model already has</span></div>
+        <div class="vsg-c us" data-l="Arciom"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span>Your experts&rsquo; recorded decisions</span></div>
+      </div>
+      <div class="vsg-row">
+        <div class="vsg-l">What it keeps</div>
+        <div class="vsg-c them" data-l="Typical agent"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span>Everything it&rsquo;s given, proven or not</span></div>
+        <div class="vsg-c us" data-l="Arciom"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span>Only the calls that beat the frontier model</span></div>
+      </div>
+      <div class="vsg-row">
+        <div class="vsg-l">How it improves</div>
+        <div class="vsg-c them" data-l="Typical agent"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span>By waiting for the next model release</span></div>
+        <div class="vsg-c us" data-l="Arciom"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span>By watching results and re-weighting judgment</span></div>
+      </div>
+      <div class="vsg-row">
+        <div class="vsg-l">Autonomy</div>
+        <div class="vsg-c them" data-l="Typical agent"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span>Assumed at setup</span></div>
+        <div class="vsg-c us" data-l="Arciom"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span>Earned rung by rung, revocable at any time</span></div>
+      </div>
+      <div class="vsg-row">
+        <div class="vsg-l">When your expert leaves</div>
+        <div class="vsg-c them" data-l="Typical agent"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span>Nothing changes &mdash; it never knew them</span></div>
+        <div class="vsg-c us" data-l="Arciom"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span>Their judgment stays, and keeps working</span></div>
+      </div>
+      <div class="vsg-row">
+        <div class="vsg-l">What leadership sees</div>
+        <div class="vsg-c them" data-l="Typical agent"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span>Another dashboard to log into</span></div>
+        <div class="vsg-c us" data-l="Arciom"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span>A weekly summary linking decisions to ROI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REASON 01 ================= -->
+<section>
+  <div class="wrap">
+    <div class="reason">
+      <div>
+        <p class="eyebrow">Reason 01</p>
+        <h2 class="h2">We only keep what&rsquo;s <span class="alt">proven.</span></h2>
+        <p>Every decision your performance marketer makes gets tested against a frontier model — and you choose which one. If the model would have made the same call, we discard it. That knowledge is free everywhere.</p>
+        <p>Only the decisions where your expert genuinely outperforms the AI are kept. Most tools store everything and can prove nothing. Arciom stores only measured advantage.</p>
+        <a class="r-link" href="index.html#how-it-works">See how the loop works &rarr;</a>
+      </div>
+      <div class="r-media">
+        <p class="ch-title">What survives the test</p>
+        <p class="ch-sub">Most discarded &middot; one kept</p>
+        <svg viewBox="0 0 420 250" role="img" aria-label="Most decisions are discarded at the test; only the rare proven one is kept">
+          <line x1="196" y1="46" x2="196" y2="206" stroke="#B57A1F" stroke-opacity=".45" stroke-width="1.6" stroke-dasharray="5 5"/>
+          <text class="xt-lbl" x="196" y="34" text-anchor="middle" fill="#B57A1F">VS FRONTIER MODEL</text>
+          <circle class="r1-ring" cx="351" cy="125" r="34" fill="none" stroke="#0F9D8F" stroke-width="2.4"/>
+          <rect class="r1-box" x="304" y="98" width="94" height="54" rx="12" fill="rgba(15,157,143,.12)" stroke="#0F9D8F" stroke-opacity=".45" stroke-width="1.5"/>
+          <path class="r1-tick" d="M338 124l8 8 16-16" stroke="#0F9D8F" stroke-opacity=".45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <text class="xt-lbl" x="351" y="174" text-anchor="middle" fill="#0F9D8F">KEPT</text>
+          <g opacity="0"><rect x="-22" y="-13" width="44" height="26" rx="7" fill="#F4C273"/>
+            <animateMotion dur="6s" repeatCount="indefinite" begin="0s" path="M40,125 L192,125" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.04;0.24;1"/>
+            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="0s" values="0;1;1;0;0" keyTimes="0;0.05;0.21;0.26;1"/></g>
+          <g opacity="0"><rect x="-22" y="-13" width="44" height="26" rx="7" fill="#F4C273"/>
+            <animateMotion dur="6s" repeatCount="indefinite" begin="1.2s" path="M40,125 L192,125" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.04;0.24;1"/>
+            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="1.2s" values="0;1;1;0;0" keyTimes="0;0.05;0.21;0.26;1"/></g>
+          <g opacity="0"><rect x="-22" y="-13" width="44" height="26" rx="7" fill="#F4C273"/>
+            <animateMotion dur="6s" repeatCount="indefinite" begin="2.4s" path="M40,125 L192,125" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.04;0.24;1"/>
+            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="2.4s" values="0;1;1;0;0" keyTimes="0;0.05;0.21;0.26;1"/></g>
+          <g opacity="0"><rect x="-22" y="-13" width="44" height="26" rx="7" fill="#F4C273"/>
+            <animateMotion dur="6s" repeatCount="indefinite" begin="4.6s" path="M40,125 L192,125" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.04;0.24;1"/>
+            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="4.6s" values="0;1;1;0;0" keyTimes="0;0.05;0.21;0.26;1"/></g>
+          <g opacity="0"><rect x="-22" y="-13" width="44" height="26" rx="7" fill="#F4C273">
+              <animate attributeName="fill" dur="6s" repeatCount="indefinite" begin="3.5s" values="#F4C273;#F4C273;#0F9D8F;#0F9D8F" keyTimes="0;0.19;0.26;1"/></rect>
+            <animateMotion dur="6s" repeatCount="indefinite" begin="3.5s" path="M40,125 L330,125" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.04;0.34;1"/>
+            <animate attributeName="opacity" dur="6s" repeatCount="indefinite" begin="3.5s" values="0;1;1;0;0" keyTimes="0;0.05;0.33;0.38;1"/></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REASON 02 ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="reason flip">
+      <div>
+        <p class="eyebrow">Reason 02</p>
+        <h2 class="h2">Your expert stays in the loop &mdash; and <span class="alt">in the credit.</span></h2>
+        <p>The digital twin is tied to the person it learned from. It doesn&rsquo;t replace them. It takes the repetitive execution off their plate and frees them for the calls only a human can make.</p>
+        <p>And because every recommendation traces back to a real decision your expert made, the digital twin&rsquo;s work is their work, extended. It can&rsquo;t exist without them, and it can&rsquo;t grow without them.</p>
+      </div>
+      <div class="r-media">
+        <p class="ch-title">How the two stay tied</p>
+        <p class="ch-sub">Judgment out &middot; credit back</p>
+        <svg viewBox="0 0 420 250" role="img" aria-label="The expert and the digital twin: judgment flows out, credit and results flow back">
+              <defs>
+                <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                  <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+                </marker>
+              </defs>
+              <path d="M120 100 C170 74, 250 74, 300 100" stroke="#4A5EDA" stroke-opacity=".3" stroke-width="1.5" fill="none"/>
+              <path d="M300 152 C250 178, 170 178, 120 152" stroke="#B57A1F" stroke-opacity=".3" stroke-width="1.5" fill="none"/>
+              <circle class="xt-flow" r="4"><animateMotion dur="3.2s" repeatCount="indefinite" path="M120,100 C170,74 250,74 300,100"/></circle>
+              <circle class="xt-flow" r="3"><animateMotion dur="3.2s" begin="1.1s" repeatCount="indefinite" path="M120,100 C170,74 250,74 300,100"/></circle>
+              <circle class="xt-back" r="4"><animateMotion dur="3.6s" begin=".6s" repeatCount="indefinite" path="M300,152 C250,178 170,178 120,152"/></circle>
+              <circle class="xt-back" r="3"><animateMotion dur="3.6s" begin="2.2s" repeatCount="indefinite" path="M300,152 C250,178 170,178 120,152"/></circle>
+              <text class="xt-lbl" x="210" y="66" text-anchor="middle" fill="#4A5EDA">JUDGMENT</text>
+              <text class="xt-lbl" x="210" y="198" text-anchor="middle" fill="#B57A1F">CREDIT &amp; RESULTS</text>
+              <circle class="xt-ring" cx="88" cy="126" r="42" stroke="#4A5EDA" stroke-width="1.6"/>
+              <g class="xt-node xt-pulse">
+                <circle cx="88" cy="126" r="40" fill="rgba(74,94,218,.1)" stroke="#4A5EDA" stroke-opacity=".55" stroke-width="1.6"/>
+                <circle cx="88" cy="117" r="10" fill="none" stroke="#4A5EDA" stroke-width="2"/>
+                <path d="M70 142c3.5-8 32.5-8 36 0" fill="none" stroke="#4A5EDA" stroke-width="2" stroke-linecap="round"/>
+              </g>
+              <text class="xt-lbl" x="88" y="190" text-anchor="middle">EXPERT</text>
+              <g class="xt-node xt-pulse" style="animation-delay:1.5s">
+                <circle cx="332" cy="126" r="40" fill="rgba(15,157,143,.1)" stroke="#0F9D8F" stroke-opacity=".55" stroke-width="1.6"/>
+                <circle cx="332" cy="126" r="13" fill="#0F9D8F" fill-opacity=".85"/>
+                <circle cx="332" cy="126" r="23" fill="none" stroke="#0F9D8F" stroke-opacity=".4" stroke-width="1.4"/>
+              </g>
+              <text class="xt-lbl" x="332" y="190" text-anchor="middle">DIGITAL TWIN</text>
+              <text class="xt-lbl" x="210" y="234" text-anchor="middle" fill="#8891A3">ONE CANNOT RUN WITHOUT THE OTHER</text>
+            </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REASON 03 ================= -->
+<section>
+  <div class="wrap">
+    <div class="reason ladder" data-reveal>
+      <div>
+        <p class="eyebrow">Reason 03</p>
+        <h2 class="h2">Nothing runs until it has <span class="alt">earned the right.</span></h2>
+        <p>The digital twin starts in incubation — watching the work, connecting decisions to outcomes, asking your expert clarifying questions while its brain forms. Then it earns its way up: recommending, then acting with human approval, and only after a proven track record, handling routine work on its own.</p>
+        <p>You can stop it at any rung. Autonomy at Arciom is earned by evidence, never assumed.</p>
+        <a class="r-link" href="index.html#how-it-works">See the trust ladder &rarr;</a>
+      </div>
+      <div class="r-media" style="padding:30px 26px">
+        <p class="ch-title">How autonomy is earned</p>
+        <p class="ch-sub">Four rungs &middot; three gates</p>
+        <svg viewBox="0 0 420 262" role="img" aria-label="Four rungs climbing left to right, each unlocked by a human approval before the next becomes available">
+          <line class="hairline" x1="14" y1="236" x2="406" y2="236" stroke="rgba(16,20,43,.12)" stroke-width="1.2"/>
+
+          <g class="rg-step r-1">
+            <rect x="18" y="180" width="88" height="50" rx="10" fill="rgba(142,166,255,.10)" stroke="#4A5EDA" stroke-opacity=".38" stroke-width="1.4"/>
+            <text x="62" y="203" text-anchor="middle" class="rg-k">RUNG 01</text>
+            <text x="62" y="219" text-anchor="middle" class="rg-n">INCUBATE</text>
+          </g>
+          <g class="rg-gate g-1">
+            <path d="M108 194h14" stroke="#B57A1F" stroke-opacity=".5" stroke-width="1.4"/>
+            <circle cx="115" cy="180" r="8.5" fill="rgba(244,194,115,.18)" stroke="#B57A1F" stroke-width="1.3"/>
+            <path d="M111.4 180l2.6 2.6 4.6-4.8" stroke="#B57A1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </g>
+
+          <g class="rg-step r-2">
+            <rect x="118" y="140" width="88" height="50" rx="10" fill="rgba(142,166,255,.15)" stroke="#4A5EDA" stroke-opacity=".48" stroke-width="1.4"/>
+            <text x="162" y="163" text-anchor="middle" class="rg-k">RUNG 02</text>
+            <text x="162" y="179" text-anchor="middle" class="rg-n">RECOMMEND</text>
+          </g>
+          <g class="rg-gate g-2">
+            <path d="M208 154h14" stroke="#B57A1F" stroke-opacity=".5" stroke-width="1.4"/>
+            <circle cx="215" cy="140" r="8.5" fill="rgba(244,194,115,.18)" stroke="#B57A1F" stroke-width="1.3"/>
+            <path d="M211.4 140l2.6 2.6 4.6-4.8" stroke="#B57A1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </g>
+
+          <g class="rg-step r-3">
+            <rect x="218" y="100" width="88" height="50" rx="10" fill="rgba(142,166,255,.21)" stroke="#4A5EDA" stroke-opacity=".58" stroke-width="1.4"/>
+            <text x="262" y="123" text-anchor="middle" class="rg-k">RUNG 03</text>
+            <text x="262" y="139" text-anchor="middle" class="rg-n">ASSIST</text>
+          </g>
+          <g class="rg-gate g-3">
+            <path d="M308 114h14" stroke="#B57A1F" stroke-opacity=".5" stroke-width="1.4"/>
+            <circle cx="315" cy="100" r="8.5" fill="rgba(244,194,115,.18)" stroke="#B57A1F" stroke-width="1.3"/>
+            <path d="M311.4 100l2.6 2.6 4.6-4.8" stroke="#B57A1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </g>
+
+          <g class="rg-step r-4">
+            <rect x="318" y="60" width="88" height="50" rx="10" fill="rgba(15,157,143,.16)" stroke="#0F9D8F" stroke-opacity=".72" stroke-width="1.6"/>
+            <text x="362" y="83" text-anchor="middle" class="rg-k" fill="#0F9D8F">RUNG 04</text>
+            <text x="362" y="99" text-anchor="middle" class="rg-n" fill="#0F9D8F">RUN</text>
+          </g>
+          <circle class="rg-crown" cx="362" cy="60" r="20" fill="none" stroke="#0F9D8F" stroke-width="2"/>
+
+          <text x="210" y="254" text-anchor="middle" class="rg-f">&#9211; &#160;A HUMAN GATE AT EVERY STEP &#8212; STOP IT ANYWHERE</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REASON 04 ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="reason flip stay" data-reveal>
+      <div>
+        <p class="eyebrow">Reason 04</p>
+        <h2 class="h2">Judgment that <span class="alt">survives turnover.</span></h2>
+        <p>When your best performance marketer retires, changes jobs, or gets promoted, their judgment normally walks out the door with them. With Arciom, it stays — and it doesn&rsquo;t just sit there.</p>
+        <p>The digital twin keeps seeing the cause and effect of every decision, so the judgment keeps sharpening even as the account, the market, and the team change around it.</p>
+      </div>
+      <div class="r-media">
+        <p class="ch-title">What happens when they leave</p>
+        <p class="ch-sub">The person goes &middot; the judgment stays</p>
+        <svg viewBox="0 0 420 250" role="img" aria-label="The expert departs, but the accumulated judgment stays and keeps compounding">
+              <line x1="30" y1="196" x2="396" y2="196" stroke="#10142B" stroke-opacity=".12" stroke-width="1.2"/>
+              <g class="js-person">
+                <circle cx="66" cy="112" r="30" fill="rgba(136,145,163,.1)" stroke="#8891A3" stroke-opacity=".5" stroke-width="1.5"/>
+                <circle cx="66" cy="105" r="8" fill="none" stroke="#8891A3" stroke-width="1.8"/>
+                <path d="M52 126c2.8-6.5 25.2-6.5 28 0" fill="none" stroke="#8891A3" stroke-width="1.8" stroke-linecap="round"/>
+                <text class="js-lbl" x="66" y="168" text-anchor="middle" fill="#8891A3">LEAVES</text>
+              </g>
+              <g>
+                <rect class="js-bar" x="138" y="150" width="26" height="46"  rx="5" fill="#8EA6FF" fill-opacity=".55" style="transition-delay:.05s"/>
+                <rect class="js-bar" x="176" y="128" width="26" height="68"  rx="5" fill="#8EA6FF" fill-opacity=".68" style="transition-delay:.18s"/>
+                <rect class="js-bar" x="214" y="106" width="26" height="90"  rx="5" fill="#6D82F0" fill-opacity=".8"  style="transition-delay:.31s"/>
+                <rect class="js-bar" x="252" y="80"  width="26" height="116" rx="5" fill="#4A5EDA" fill-opacity=".9"  style="transition-delay:.44s"/>
+                <rect class="js-bar" x="290" y="58"  width="26" height="138" rx="5" fill="#0F9D8F" fill-opacity=".85" style="transition-delay:.57s"/>
+                <rect class="js-bar" x="328" y="38"  width="26" height="158" rx="5" fill="#0F9D8F" style="transition-delay:.70s"/>
+              </g>
+              <text class="js-lbl" x="246" y="222" text-anchor="middle" fill="#0F9D8F">THE JUDGMENT STAYS &#8212; AND KEEPS COMPOUNDING</text>
+            </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GOVERNANCE ================= -->
+<section>
+  <div class="wrap">
+    <div class="gov-grid">
+      <div class="gov-copy">
+        <p class="eyebrow">Reason 05 &middot; for leadership</p>
+        <h2 class="h2">Finally see which decisions <span class="alt">moved the number.</span></h2>
+        <p>Most executives get a paid media update once a month, after the money is gone. Arciom sends a weekly governance summary straight to leadership: which decisions were made, which ones moved ROI, and which didn&rsquo;t.</p>
+        <p>It&rsquo;s not another dashboard to log into. It&rsquo;s a short, plain-language report that lets a head of marketing or CEO see the connection between decisions and outcomes &mdash; whether the work is done by an internal team, an outside agency, or a digital twin.</p>
+        <p>Decision-level reporting is possible because of the attribution built into the loop: every strategic change is detected as it happens, and results are tracked back to the decision that caused it.</p>
+      </div>
+      <div>
+        <div class="report" data-reveal aria-label="Stylized example of a weekly governance summary">
+          <div class="rhead">
+            <span>Week of Jul 13</span>
+            <span class="to">&rarr; sent to leadership</span>
+          </div>
+          <div class="rsummary">
+            <div><span class="rsum-num">+9.4%</span><span class="rsum-label">net ROI impact</span></div>
+            <div><span class="rsum-num" style="color:#C8D4E4">27</span><span class="rsum-label">decisions tracked</span></div>
+          </div>
+          <p class="rmovers">Top movers</p>
+          <div class="decision"><span>Budget shifted to brand campaigns <em class="src">twin</em></span><span class="delta up">+6.2%</span></div>
+          <div class="decision"><span>Bid strategy: target ROAS raised <em class="src">in-house</em></span><span class="delta up">+3.8%</span></div>
+          <div class="decision"><span>Paused underperforming ad group <em class="src">twin</em></span><span class="delta up">+0.6%</span></div>
+          <div class="decision"><span>Broad match test, 12 keywords <em class="src">agency</em></span><span class="delta flat">&plusmn;0.0% monitoring</span></div>
+          <div class="decision"><span>Landing page swap, promo LP <em class="src">in-house</em></span><span class="delta warn">&minus;1.2% flagged</span></div>
+          <div class="decision rmore"><span>+ 22 more in the full log</span></div>
+          <div class="rfoot">Delivered every Monday &middot; no dashboard required</div>
+        </div>
+        <p class="stylized-note">Stylized representation &middot; not a literal screenshot</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOUNDATION ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="aud-grid">
+      <div>
+        <div class="report audit" data-reveal aria-label="Stylized example of a conversion tracking audit">
+          <div class="rhead">
+            <span>Conversion audit</span>
+            <span class="to">&rarr; before capture begins</span>
+          </div>
+          <div class="arow"><span>Google Ads conversions</span><span class="st"><span class="was">Misfiring</span><span class="now">Repaired</span></span></div>
+          <div class="arow"><span>Tag Manager container</span><span class="st"><span class="was">Duplicated</span><span class="now">Cleaned</span></span></div>
+          <div class="arow"><span>Analytics goals</span><span class="st"><span class="was">Incomplete</span><span class="now">Configured</span></span></div>
+          <div class="arow"><span>CRM revenue sync</span><span class="st"><span class="was">Not connected</span><span class="now">Connected</span></span></div>
+          <div class="rfoot" style="margin-top:14px">Audited and repaired by a certified team &middot; then capture starts</div>
+        </div>
+        <p class="stylized-note">Stylized representation &middot; not a literal screenshot</p>
+      </div>
+      <div class="aud-copy">
+        <p class="eyebrow">Reason 06</p>
+        <h2 class="h2">We fix the foundation <span class="alt">before we connect to it.</span></h2>
+        <p>A digital twin is only as good as the data it learns from. If your conversion tracking, tagging, or CRM configuration is broken or missing, every downstream number is suspect &mdash; attribution, governance summaries, even the digital twin&rsquo;s own proof metrics.</p>
+        <p>So before capture begins, our certified team audits and repairs your setup. Not a guess &mdash; a credentialed fix. Misconfigured tracking is one of the most common things we see, and it is never a reason to wait.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSE ================= -->
+<section class="cta-fin">
+  <div class="wrap">
+    <div class="cta-panel close">
+      <blockquote>Every month you wait to capture your team&rsquo;s judgment isn&rsquo;t just delay. <span class="alt">It&rsquo;s revenue you&rsquo;ll never get back.</span></blockquote>
+      <a class="btn primary" href="request-a-demo.html">Request Demo</a>
+      <p class="cta-scope">Available today for Google Search &middot; more channels on the way</p>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <svg class="wordmark" viewBox="0 0 152.03 37.65" role="img" aria-label="Arciom">
-      <g fill="var(--ink)"><path d="M116,198.77a11.31,11.31,0,0,1-6.17-1.72,11.92,11.92,0,0,1-4.3-4.68,15.15,15.15,0,0,1,0-13.39,12,12,0,0,1,4.3-4.69,11.41,11.41,0,0,1,6.22-1.72,10.4,10.4,0,0,1,4.8,1.09,9,9,0,0,1,3.43,3,8.37,8.37,0,0,1,1.41,4.43v9.12a8.56,8.56,0,0,1-1.38,4.4,8.77,8.77,0,0,1-3.44,3.05A10.61,10.61,0,0,1,116,198.77Zm1.3-6.3a6,6,0,0,0,4.64-1.93,6.88,6.88,0,0,0,1.77-4.84,7.53,7.53,0,0,0-.83-3.55,6.17,6.17,0,0,0-2.24-2.42,6.31,6.31,0,0,0-3.34-.86,6.19,6.19,0,0,0-3.31.89,6.28,6.28,0,0,0-2.24,2.39,7.42,7.42,0,0,0-.8,3.49,7.53,7.53,0,0,0,.8,3.55,6.14,6.14,0,0,0,2.27,2.39A6.21,6.21,0,0,0,117.32,192.47Zm6,5.78v-6.77l1.14-6.15-1.14-6.09v-6.15h6.87v25.16Z" transform="translate(-103.99 -161.17)"/><path d="M134.05,198.25V173.09h6.82v25.16Zm6.82-13.86-2.65-1.82a13.18,13.18,0,0,1,2.71-7.32,7.92,7.92,0,0,1,6.46-2.68,8.45,8.45,0,0,1,3.3.6,7.19,7.19,0,0,1,2.63,2l-4.27,4.95a3.15,3.15,0,0,0-1.38-1,5.28,5.28,0,0,0-1.85-.29,4.89,4.89,0,0,0-3.57,1.35A5.7,5.7,0,0,0,140.87,184.39Z" transform="translate(-103.99 -161.17)"/><path d="M164.94,198.83a13.68,13.68,0,0,1-6.87-1.75,13.09,13.09,0,0,1,0-22.85,14.79,14.79,0,0,1,12.4-.65,12.52,12.52,0,0,1,4.37,3.16l-4.48,4.48A5.74,5.74,0,0,0,168,179.5a7.88,7.88,0,0,0-3-.58,6.56,6.56,0,0,0-3.36.86,6.07,6.07,0,0,0-2.32,2.37,7.69,7.69,0,0,0,0,7,6.19,6.19,0,0,0,2.32,2.39,6.39,6.39,0,0,0,3.36.89,7.51,7.51,0,0,0,3.07-.6,7.13,7.13,0,0,0,2.4-1.75l4.37,4.43a12.33,12.33,0,0,1-4.35,3.21A13.62,13.62,0,0,1,164.94,198.83Z" transform="translate(-103.99 -161.17)"/><path d="M177,198.25V173.09H184v25.16Z" transform="translate(-103.99 -161.17)"/><path d="M200.11,198.83a13.56,13.56,0,0,1-6.85-1.75,12.94,12.94,0,0,1-6.59-11.49,12.64,12.64,0,0,1,1.77-6.64,13.15,13.15,0,0,1,4.82-4.69,13.55,13.55,0,0,1,6.85-1.74,13.85,13.85,0,0,1,6.9,1.71,13.07,13.07,0,0,1,4.85,4.69,12.63,12.63,0,0,1,1.8,6.67A13,13,0,0,1,207,197.08,13.83,13.83,0,0,1,200.11,198.83Zm0-6.41a6.52,6.52,0,0,0,3.41-.89,6.14,6.14,0,0,0,2.3-2.39,7.43,7.43,0,0,0,.8-3.5,6.9,6.9,0,0,0-.86-3.49,6.66,6.66,0,0,0-9-2.37,6,6,0,0,0-2.27,2.37,7.95,7.95,0,0,0,0,7,6.13,6.13,0,0,0,2.27,2.39A6.28,6.28,0,0,0,200.11,192.42Z" transform="translate(-103.99 -161.17)"/><path d="M216.31,198.25V173.09h6.83v25.16Zm16.36,0V183.4a4.39,4.39,0,0,0-1.35-3.41,4.9,4.9,0,0,0-3.39-1.22,5.29,5.29,0,0,0-2.42.54,4.38,4.38,0,0,0-1.72,1.59,4.79,4.79,0,0,0-.65,2.56l-2.66-1.36a9.67,9.67,0,0,1,1.28-5,8.74,8.74,0,0,1,3.46-3.31,10.34,10.34,0,0,1,4.95-1.17,9.68,9.68,0,0,1,4.74,1.17A8.76,8.76,0,0,1,238.3,177a9.72,9.72,0,0,1,1.25,5v16.2Zm16.42,0V183.4a4.39,4.39,0,0,0-1.36-3.41,4.8,4.8,0,0,0-3.33-1.22,5.42,5.42,0,0,0-2.48.54,4.45,4.45,0,0,0-1.72,1.59,4.79,4.79,0,0,0-.65,2.56l-3.91-1a10.53,10.53,0,0,1,1.59-5.27,10.1,10.1,0,0,1,3.73-3.41,11.4,11.4,0,0,1,10.16,0,9,9,0,0,1,3.57,3.36,10,10,0,0,1,1.32,5.26v15.89Z" transform="translate(-103.99 -161.17)"/></g>
-      <circle cx="76.52" cy="3.95" r="3.95" fill="var(--peri)"/>
-      <circle class="wm-ping" cx="76.52" cy="3.95" r="3.95" fill="none" stroke="var(--peri)" stroke-width="1.1"/>
-    </svg>
+        <svg class="wordmark" viewBox="0 0 152.03 37.65" role="img" aria-label="Arciom"><g fill="#EEF2F8"><path d="M116,198.77a11.31,11.31,0,0,1-6.17-1.72,11.92,11.92,0,0,1-4.3-4.68,15.15,15.15,0,0,1,0-13.39,12,12,0,0,1,4.3-4.69,11.41,11.41,0,0,1,6.22-1.72,10.4,10.4,0,0,1,4.8,1.09,9,9,0,0,1,3.43,3,8.37,8.37,0,0,1,1.41,4.43v9.12a8.56,8.56,0,0,1-1.38,4.4,8.77,8.77,0,0,1-3.44,3.05A10.61,10.61,0,0,1,116,198.77Zm1.3-6.3a6,6,0,0,0,4.64-1.93,6.88,6.88,0,0,0,1.77-4.84,7.53,7.53,0,0,0-.83-3.55,6.17,6.17,0,0,0-2.24-2.42,6.31,6.31,0,0,0-3.34-.86,6.19,6.19,0,0,0-3.31.89,6.28,6.28,0,0,0-2.24,2.39,7.42,7.42,0,0,0-.8,3.49,7.53,7.53,0,0,0,.8,3.55,6.14,6.14,0,0,0,2.27,2.39A6.21,6.21,0,0,0,117.32,192.47Zm6,5.78v-6.77l1.14-6.15-1.14-6.09v-6.15h6.87v25.16Z" transform="translate(-103.99 -161.17)"/><path d="M134.05,198.25V173.09h6.82v25.16Zm6.82-13.86-2.65-1.82a13.18,13.18,0,0,1,2.71-7.32,7.92,7.92,0,0,1,6.46-2.68,8.45,8.45,0,0,1,3.3.6,7.19,7.19,0,0,1,2.63,2l-4.27,4.95a3.15,3.15,0,0,0-1.38-1,5.28,5.28,0,0,0-1.85-.29,4.89,4.89,0,0,0-3.57,1.35A5.7,5.7,0,0,0,140.87,184.39Z" transform="translate(-103.99 -161.17)"/><path d="M164.94,198.83a13.68,13.68,0,0,1-6.87-1.75,13.09,13.09,0,0,1,0-22.85,14.79,14.79,0,0,1,12.4-.65,12.52,12.52,0,0,1,4.37,3.16l-4.48,4.48A5.74,5.74,0,0,0,168,179.5a7.88,7.88,0,0,0-3-.58,6.56,6.56,0,0,0-3.36.86,6.07,6.07,0,0,0-2.32,2.37,7.69,7.69,0,0,0,0,7,6.19,6.19,0,0,0,2.32,2.39,6.39,6.39,0,0,0,3.36.89,7.51,7.51,0,0,0,3.07-.6,7.13,7.13,0,0,0,2.4-1.75l4.37,4.43a12.33,12.33,0,0,1-4.35,3.21A13.62,13.62,0,0,1,164.94,198.83Z" transform="translate(-103.99 -161.17)"/><path d="M177,198.25V173.09H184v25.16Z" transform="translate(-103.99 -161.17)"/><path d="M200.11,198.83a13.56,13.56,0,0,1-6.85-1.75,12.94,12.94,0,0,1-6.59-11.49,12.64,12.64,0,0,1,1.77-6.64,13.15,13.15,0,0,1,4.82-4.69,13.55,13.55,0,0,1,6.85-1.74,13.85,13.85,0,0,1,6.9,1.71,13.07,13.07,0,0,1,4.85,4.69,12.63,12.63,0,0,1,1.8,6.67A13,13,0,0,1,207,197.08,13.83,13.83,0,0,1,200.11,198.83Zm0-6.41a6.52,6.52,0,0,0,3.41-.89,6.14,6.14,0,0,0,2.3-2.39,7.43,7.43,0,0,0,.8-3.5,6.9,6.9,0,0,0-.86-3.49,6.66,6.66,0,0,0-9-2.37,6,6,0,0,0-2.27,2.37,7.95,7.95,0,0,0,0,7,6.13,6.13,0,0,0,2.27,2.39A6.28,6.28,0,0,0,200.11,192.42Z" transform="translate(-103.99 -161.17)"/><path d="M216.31,198.25V173.09h6.83v25.16Zm16.36,0V183.4a4.39,4.39,0,0,0-1.35-3.41,4.9,4.9,0,0,0-3.39-1.22,5.29,5.29,0,0,0-2.42.54,4.38,4.38,0,0,0-1.72,1.59,4.79,4.79,0,0,0-.65,2.56l-2.66-1.36a9.67,9.67,0,0,1,1.28-5,8.74,8.74,0,0,1,3.46-3.31,10.34,10.34,0,0,1,4.95-1.17,9.68,9.68,0,0,1,4.74,1.17A8.76,8.76,0,0,1,238.3,177a9.72,9.72,0,0,1,1.25,5v16.2Zm16.42,0V183.4a4.39,4.39,0,0,0-1.36-3.41,4.8,4.8,0,0,0-3.33-1.22,5.42,5.42,0,0,0-2.48.54,4.45,4.45,0,0,0-1.72,1.59,4.79,4.79,0,0,0-.65,2.56l-3.91-1a10.53,10.53,0,0,1,1.59-5.27,10.1,10.1,0,0,1,3.73-3.41,11.4,11.4,0,0,1,10.16,0,9,9,0,0,1,3.57,3.36,10,10,0,0,1,1.32,5.26v15.89Z" transform="translate(-103.99 -161.17)"/></g><circle cx="76.52" cy="3.95" r="3.95" fill="#8EA6FF"/><circle class="wm-ping" cx="76.52" cy="3.95" r="3.95" fill="none" stroke="#8EA6FF" stroke-width="1.1"/></svg>
         <p>judgment, proven.</p>
         <p class="foot-desc">Arciom captures the judgment of your best performance marketers, proves it against the best AI models, and grows it into a digital twin capable of real work.</p>
       </div>
       <div>
-        <h4>Site</h4>
+        <h2 class="foot-h">Site</h2>
         <a href="index.html">Home</a>
         <a href="why-arciom.html">Why Arciom</a>
         <a href="faq.html">FAQ</a>
@@ -558,12 +1255,12 @@ section.alt > .wrap{position:relative;z-index:1}
         <a href="request-a-demo.html">Request Demo</a>
       </div>
       <div>
-        <h4>Legal</h4>
+        <h2 class="foot-h">Legal</h2>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </div>
       <div>
-        <h4>Connect</h4>
+        <h2 class="foot-h">Connect</h2>
         <a href="request-a-demo.html">Request Demo</a>
         <a href="mailto:hello@arciom.com">Contact Us</a>
       </div>
@@ -579,55 +1276,10 @@ section.alt > .wrap{position:relative;z-index:1}
   </div>
 </footer>
 
-<script>
-(function(){
-  var root = document.documentElement;
-  var bd = document.getElementById('btn-dark');
-  var bl = document.getElementById('btn-light');
-  function setTheme(t){
-    root.setAttribute('data-theme', t);
-    bd.classList.toggle('active', t === 'dark');
-    bl.classList.toggle('active', t === 'light');
-    try { localStorage.setItem('arciom-theme', t); } catch(e){}
-  }
-  bd.addEventListener('click', function(){ setTheme('dark'); });
-  bl.addEventListener('click', function(){ setTheme('light'); });
-  var saved = null;
-  try { saved = localStorage.getItem('arciom-theme'); } catch(e){}
-  setTheme(saved === 'light' ? 'light' : 'dark');
-})();
-
-(function(){
-  var nav = document.querySelector('nav');
-  var toggle = document.getElementById('nav-toggle');
-  if (!nav || !toggle) return;
-  toggle.addEventListener('click', function(){
-    var open = nav.classList.toggle('menu-open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  document.querySelectorAll('.mobile-menu a').forEach(function(a){
-    a.addEventListener('click', function(){
-      nav.classList.remove('menu-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-  window.addEventListener('resize', function(){
-    if (window.innerWidth > 900) {
-      nav.classList.remove('menu-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-</script>
-
-<script data-fx-cursor>
-document.querySelectorAll('.btn').forEach(function(b){
-  b.addEventListener('mousemove', function(e){
-    var r = b.getBoundingClientRect();
-    b.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-    b.style.setProperty('--my', (e.clientY - r.top) + 'px');
-  });
-});
-</script>
+<button class="theme-t" id="theme-t" type="button" aria-label="Switch colour theme">
+  <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg>
+  <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.4A8.2 8.2 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4z"/></svg>
+</button>
+<script src="site.js" defer></script>
 </body>
 </html>
