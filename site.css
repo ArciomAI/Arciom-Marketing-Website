@@ -54,7 +54,7 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:'Lexend',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--paper);color:var(--ink);font-family:'Lexend',system-ui,sans-serif;font-weight:300;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 h1,h2,h3{font-family:'Lexend',sans-serif;line-height:1.06;letter-spacing:-.02em}
 .mono{font-family:'Lexend',sans-serif}
@@ -87,7 +87,7 @@ body > nav{position:sticky;top:0;z-index:60;background:rgba(244,246,252,.75);-we
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 .hero-eyebrow{font-family:'Lexend',sans-serif;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--peri-bright);margin-bottom:22px}
 .hero h1 .alt{color:var(--peri-bright)}
-.hero .sub{margin:26px 0 34px;font-size:clamp(17px,1.7vw,19.5px);color:rgba(237,240,251,.72);max-width:640px;line-height:1.55}
+.hero .sub{margin:26px 0 34px;font-size:clamp(17px,1.7vw,19.5px);font-weight:300;color:rgba(237,240,251,.80);max-width:640px;line-height:1.6}
 .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .hero .cta-row .btn.ghost{background:transparent;color:#EEF2F8;border-color:rgba(237,240,251,.4)}
 .hero .cta-row .btn.ghost:hover{border-color:var(--peri-bright);color:var(--peri-bright)}
@@ -439,7 +439,7 @@ footer{border-top:none;padding:70px 0 44px;font-size:13.5px;position:relative;ov
 .qa-sec .h2{font-size:clamp(28px,3.2vw,44px)}
 .loss h3,.d1 h3,.rg h3,.hrow h3,.hd h3,.lp h3,.person.lead h3,.pf h3,.tcard h3{font-size:20px}
 .person.adv h3{font-size:17px}
-.r-media .ch-sub,.pm-viz .ch-sub,.chart .ch-sub{font-family:'Lexend',sans-serif;font-weight:400;
+.r-media .ch-sub,.pm-viz .ch-sub,.chart .ch-sub{font-family:'Lexend',sans-serif;font-weight:300;
   font-size:10px;line-height:1.4;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
   margin-top:5px;margin-bottom:14px}
 
@@ -519,3 +519,11 @@ h1 .ln{display:block}
    ============================================================ */
 .rsum-num,.delta,.pv-bar b,.pv-row span:last-child,.pf .big,.cmp-side .val,
 .ch-lbl,.arow .st,.cats a b,.d1-prev,.report,.stat .n{font-variant-numeric:tabular-nums}
+
+/* ============================================================
+   Intro paragraphs share the hero sub-headline's lighter weight.
+   Body copy stays at 400 — 300 is too thin for sustained reading.
+   ============================================================ */
+.lede2,.gov-lede,.hero .sub-2,.ttv,.commit .cap{font-weight:300;line-height:1.68}
+/* these two already carry 500 to mark them as ledes; ease them one step */
+.pm-copy .lead,.mn-body .lead{font-weight:300}
