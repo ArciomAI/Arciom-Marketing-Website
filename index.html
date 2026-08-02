@@ -25,8 +25,8 @@
 <meta name="twitter:image" content="https://arciom.com/og-image.png">
 <meta name="theme-color" content="#0a0d14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=652a2f3f">
 <style>
 /* ---------- hero ---------- */
 .hero{padding:100px 0 88px;position:relative;color:#EEF2F8;overflow:hidden;min-height:100vh;box-sizing:border-box;display:block;
@@ -56,13 +56,13 @@
 @media (max-width:860px){.day1{grid-template-columns:1fr}}
 .d1{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 14px 34px -20px rgba(16,20,43,.14);transition:transform .2s ease, box-shadow .2s ease;display:flex;flex-direction:column}
 .d1-prev{margin-top:16px;margin-bottom:2px;min-height:132px;background:#0F1420;border:1px solid rgba(156,170,189,.22);border-radius:11px;padding:12px 13px 10px}
-.pv-h{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
+.pv-h{font-family:'Lexend',sans-serif;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
   color:#627084;padding-bottom:8px;border-bottom:1px solid rgba(156,170,189,.14)}
 .pv-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;
   font-size:11.5px;line-height:1.35;color:#C8D4E4;border-bottom:1px solid rgba(156,170,189,.1)}
 .pv-row:last-child{border-bottom:none;padding-bottom:2px}
 .pv-row.dim{color:#7E8CA3}
-.pv-row span:last-child{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;
+.pv-row span:last-child{font-family:'Lexend',sans-serif;font-size:10px;letter-spacing:.06em;
   white-space:nowrap;color:#7E8CA3}
 .pv-row .ok,.pv-row .up{color:var(--aqua-bright)}
 .pv-row .pill{border-radius:5px;padding:3px 7px;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
@@ -77,8 +77,8 @@
   font-size:11px;color:#9CAABD}
 .pv-bar i{height:6px;border-radius:99px;background:var(--aqua-bright);width:var(--w);display:block}
 .pv-bar i.base{background:rgba(156,170,189,.4)}
-.pv-bar b{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C8D4E4;text-align:right;font-weight:500}
-.d1 .tag{margin-top:auto;padding-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+.pv-bar b{font-family:'Lexend',sans-serif;font-size:10.5px;color:#C8D4E4;text-align:right;font-weight:500}
+.d1 .tag{margin-top:auto;padding-top:16px;font-family:'Lexend',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
 @media (max-width:820px){.cmp{grid-template-columns:1fr;gap:16px}}
 @media (max-width:820px){.cmp-vs{padding:4px 0}}
 @media (prefers-reduced-motion:reduce){
@@ -106,7 +106,7 @@ h1 .ln{display:block}
 .stp h4{font-size:15px}
 .qa summary{font-size:18px}
 /* graphic titles must beat .reason p / .premise p on specificity */
-.r-media .ch-title,.pm-viz .ch-title,.chart .ch-title{font-family:'Space Grotesk',sans-serif;font-weight:700;
+.r-media .ch-title,.pm-viz .ch-title,.chart .ch-title{font-family:'Lexend',sans-serif;font-weight:700;
   font-size:17.5px;line-height:1.25;letter-spacing:-.015em;color:var(--ink)}
 
 
@@ -1921,8 +1921,8 @@ h1 .ln{display:block}
 <section>
   <div class="wrap">
     <p class="eyebrow">The current situation</p>
-    <h2 class="h2">AI can copy what your experts know. It can't copy <span class="alt">how they decide.</span></h2>
-    <p class="lede2" style="max-width:660px">Every model available today has already absorbed the general knowledge of your industry. That's not your edge anymore — it's the baseline everyone starts from.</p>
+    <h2 class="h2" style="max-width:880px">AI can copy what your experts know. It can't copy <span class="alt">how they decide.</span></h2>
+    <p class="lede2" style="max-width:880px">Every model available today has already absorbed the general knowledge of your industry. That's not your edge anymore — it's the baseline everyone starts from.</p>
 
     <div class="cmp" data-reveal>
       <div class="cmp-side cmp-a">
@@ -2018,12 +2018,12 @@ h1 .ln{display:block}
           <svg viewBox="0 0 200 92" fill="none">
             <!-- the test gate -->
             <line x1="96" y1="22" x2="96" y2="76" stroke="#B57A1F" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="4 4"/>
-            <text x="96" y="16" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="1" fill="#B57A1F">VS MODEL</text>
+            <text x="96" y="16" text-anchor="middle" font-family="Lexend, sans-serif" font-size="8" letter-spacing="1" fill="#B57A1F">VS MODEL</text>
             <!-- the kept tray -->
             <circle class="kept-ring" cx="170" cy="47" r="15" fill="none" stroke="#0F9D8F" stroke-width="2"/>
             <rect class="kept-tray" x="146" y="34" width="48" height="26" rx="7" fill="rgba(15,157,143,.12)" stroke="#0F9D8F" stroke-opacity=".45" stroke-width="1.3"/>
             <path class="kept-tick" d="M164 47l4 4 8-8" stroke="#0F9D8F" stroke-opacity=".4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="170" y="74" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="1" fill="#0F9D8F">KEPT</text>
+            <text x="170" y="74" text-anchor="middle" font-family="Lexend, sans-serif" font-size="8" letter-spacing="1" fill="#0F9D8F">KEPT</text>
             <!-- most decisions dissolve at the gate; the rare one passes and turns proven -->
             <g class="pv-token" opacity="0">
               <rect x="-11" y="-6.5" width="22" height="13" rx="3.5" fill="#F4C273"/>
@@ -2106,8 +2106,8 @@ h1 .ln{display:block}
     <div class="ladder-sec" style="padding:80px 0" data-reveal>
       <div class="wrap">
         <p class="eyebrow">Our process · the trust ladder</p>
-        <h2 class="h2">Autonomy is <span class="alt">earned.</span> Rung by rung.</h2>
-        <p class="lede2">You don't hand over the account. The digital twin operates through permissions you grant, and every step up is earned by evidence.</p>
+        <h2 class="h2" style="max-width:760px">Autonomy is <span class="alt">earned.</span> Rung by rung.</h2>
+        <p class="lede2" style="max-width:760px">You don't hand over the account. The digital twin operates through permissions you grant, and every step up is earned by evidence.</p>
         <div class="rungs4">
           <div class="rg"><p class="k">RUNG 01</p><h3>Incubate</h3><p>Watches real decisions. Connects cause to effect. Advises no one.</p></div>
           <div class="rg"><p class="k">RUNG 02</p><h3>Recommend</h3><p>Suggests changes. Your expert accepts, rejects, or improves them.</p></div>
@@ -2296,6 +2296,6 @@ h1 .ln{display:block}
   <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg>
   <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.4A8.2 8.2 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4z"/></svg>
 </button>
-<script src="site.js" defer></script>
+<script src="site.js?v=1b60ac41" defer></script>
 </body>
 </html>

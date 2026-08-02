@@ -20,8 +20,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a0d14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=652a2f3f">
 <style>
 /* ---------- hero ---------- */
 .hero{padding:56px 0 40px;position:relative;color:#EEF2F8;overflow:hidden;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;
@@ -47,7 +47,7 @@
 @media (prefers-reduced-motion:reduce){.rg,.rg::before,.gate{transition:none}}
 @media (max-width:860px){.day1{grid-template-columns:1fr}}
 .d1{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 14px 34px -20px rgba(16,20,43,.14);transition:transform .2s ease, box-shadow .2s ease}
-.d1 .tag{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+.d1 .tag{margin-top:16px;font-family:'Lexend',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
 @media (max-width:820px){.cmp{grid-template-columns:1fr;gap:16px}}
 @media (max-width:820px){.cmp-vs{padding:4px 0}}
 @media (prefers-reduced-motion:reduce){
@@ -76,11 +76,11 @@
   padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--line)}
 .pm-viz{border-radius:26px;border:1px solid var(--line);background:var(--surface);padding:28px 26px 24px}
 /* same title treatment as the mission chart on About */
-.ch-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17.5px;letter-spacing:-.015em;color:var(--ink)}
-.ch-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:5px;margin-bottom:14px}
+.ch-title{font-family:'Lexend',sans-serif;font-weight:700;font-size:17.5px;letter-spacing:-.015em;color:var(--ink)}
+.ch-sub{font-family:'Lexend',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:5px;margin-bottom:14px}
 .pm-viz svg{width:100%;height:auto;display:block;overflow:visible}
-.sl-t{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.13em}
-.sl-c{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.17em;font-weight:600}
+.sl-t{font-family:'Lexend',sans-serif;font-size:10px;letter-spacing:.13em}
+.sl-c{font-family:'Lexend',sans-serif;font-size:11px;letter-spacing:.17em;font-weight:600}
 /* the stack assembles from the shared base upward */
 .slab{transform-box:fill-box;transform-origin:bottom}
 .js .pm-viz .slab{opacity:0;transform:scaleY(.25)}
@@ -99,11 +99,11 @@
 /* ---- the comparison: signature element ---- */
 .vsg{display:grid;grid-template-columns:.78fr 1fr 1fr;margin-top:52px;position:relative;
   border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--surface)}
-.vsg-h{padding:24px 26px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;
+.vsg-h{padding:24px 26px;font-family:'Lexend',sans-serif;font-size:11px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--line)}
 .vsg-h.them{color:var(--muted)}
 .vsg-h.us{color:var(--peri);background:var(--peri-soft)}
-.vsg-l{padding:22px 26px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;
+.vsg-l{padding:22px 26px;font-family:'Lexend',sans-serif;font-size:11px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--line-soft);display:flex;align-items:center}
 .vsg-c{padding:22px 26px;font-size:14.5px;line-height:1.55;color:var(--muted);
   border-bottom:1px solid var(--line-soft);display:flex;align-items:flex-start;gap:11px}
@@ -129,7 +129,7 @@
   .vsg-l{border-bottom:none;padding:22px 22px 8px;color:var(--peri)}
   .vsg-c{padding:9px 22px;border-bottom:none}
   .vsg-c:last-child{padding-bottom:22px;border-bottom:1px solid var(--line-soft)}
-  .vsg-c::before{content:attr(data-l);font-family:'IBM Plex Mono',monospace;font-size:10px;
+  .vsg-c::before{content:attr(data-l);font-family:'Lexend',sans-serif;font-size:10px;
     letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-right:2px;flex:none}
 }
 /* ---- reason blocks, alternating ---- */
@@ -137,12 +137,12 @@
 @media (max-width:920px){.reason{grid-template-columns:1fr;gap:34px}}
 .reason.flip .r-media{order:-1}
 @media (max-width:920px){.reason.flip .r-media{order:0}}
-.r-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+.r-num{font-family:'Lexend',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
   color:var(--peri);margin-bottom:14px}
 .reason .h2{margin-bottom:16px}
 .reason p{font-size:15.5px;line-height:1.7;color:var(--muted)}
 .reason p + p{margin-top:14px}
-.r-link{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-family:'Space Grotesk',sans-serif;
+.r-link{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-family:'Lexend',sans-serif;
   font-weight:600;font-size:14.5px;color:var(--peri)}
 .r-link:hover{gap:11px}
 .r-media{border-radius:24px;padding:28px 26px 24px;background:var(--surface);border:1px solid var(--line);
@@ -154,7 +154,7 @@
 @keyframes xtPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 .xt-ring{fill:none;transform-box:fill-box;transform-origin:center;animation:xtRing 3s ease-out infinite}
 @keyframes xtRing{0%{transform:scale(1);stroke-opacity:.5}100%{transform:scale(1.85);stroke-opacity:0}}
-.xt-lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;fill:var(--faint)}
+.xt-lbl{font-family:'Lexend',sans-serif;font-size:9.5px;letter-spacing:.16em;fill:var(--faint)}
 .xt-flow{fill:var(--peri)}
 .xt-back{fill:var(--amber)}
 /* judgment stays */
@@ -163,11 +163,11 @@
 .js .stay.in .js-bar{transform:scaleY(1)}
 .js-person{transition:opacity .7s ease .9s,transform .7s ease .9s}
 .js .stay.in .js-person{opacity:.18;transform:translateX(-18px)}
-.js-lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em}
+.js-lbl{font-family:'Lexend',sans-serif;font-size:9.5px;letter-spacing:.14em}
 /* the ladder is climbed, not shown: each rung lands, then its gate approves */
-.rg-k{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.16em;fill:#8891A3}
-.rg-n{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;font-weight:600;fill:#4A5EDA}
-.rg-f{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;fill:#B57A1F}
+.rg-k{font-family:'Lexend',sans-serif;font-size:8px;letter-spacing:.16em;fill:#8891A3}
+.rg-n{font-family:'Lexend',sans-serif;font-size:10.5px;letter-spacing:.1em;font-weight:600;fill:#4A5EDA}
+.rg-f{font-family:'Lexend',sans-serif;font-size:9px;letter-spacing:.14em;fill:#B57A1F}
 .js .r-media .rg-step{opacity:0;transform:translateY(16px)}
 .js .r-media .rg-gate{opacity:0;transform:scale(.5)}
 .rg-step,.rg-gate{transform-box:fill-box;transform-origin:center}
@@ -204,26 +204,26 @@
 .report{background:#0F1420;border:1px solid rgba(156,170,189,.2);border-radius:16px;padding:22px 24px;
   box-shadow:0 24px 60px -28px rgba(16,20,43,.5)}
 .report .rhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;
-  font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9CAABD}
+  font-family:'Lexend',sans-serif;font-size:11.5px;color:#9CAABD}
 .report .rhead .to{color:#627084;font-size:10.5px}
 .rsummary{display:flex;gap:28px;padding:12px 0 14px;border-top:1px solid rgba(156,170,189,.12)}
-.rsum-num{display:block;font-family:'IBM Plex Mono',monospace;font-size:19px;color:var(--aqua-bright);line-height:1.1}
+.rsum-num{display:block;font-family:'Lexend',sans-serif;font-size:19px;color:var(--aqua-bright);line-height:1.1}
 .rsum-label{display:block;font-size:10.5px;color:#627084;margin-top:3px}
-.rmovers{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+.rmovers{font-family:'Lexend',sans-serif;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
   color:#627084;padding:10px 0 2px;border-top:1px solid rgba(156,170,189,.12)}
 .report .decision{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:11px 0;
   border-top:1px solid rgba(156,170,189,.12);font-size:13px;color:#C8D4E4}
-.report .decision .delta{font-family:'IBM Plex Mono',monospace;font-size:12.5px;white-space:nowrap}
+.report .decision .delta{font-family:'Lexend',sans-serif;font-size:12.5px;white-space:nowrap}
 .delta.up{color:var(--aqua-bright)}
 .delta.flat{color:#627084}
 .delta.warn{color:var(--amber-bright)}
-.report .src{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.06em;
+.report .src{font-style:normal;font-family:'Lexend',sans-serif;font-size:9px;letter-spacing:.06em;
   text-transform:uppercase;color:#7C8AA0;border:1px solid rgba(156,170,189,.25);border-radius:4px;
   padding:1px 5px;margin-left:7px;vertical-align:1px;white-space:nowrap}
-.decision.rmore span{color:#627084;font-family:'IBM Plex Mono',monospace;font-size:11.5px}
-.rfoot{padding-top:13px;border-top:1px solid rgba(156,170,189,.12);font-family:'IBM Plex Mono',monospace;
+.decision.rmore span{color:#627084;font-family:'Lexend',sans-serif;font-size:11.5px}
+.rfoot{padding-top:13px;border-top:1px solid rgba(156,170,189,.12);font-family:'Lexend',sans-serif;
   font-size:10px;letter-spacing:.06em;color:#627084}
-.stylized-note{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+.stylized-note{font-family:'Lexend',sans-serif;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--faint);margin-top:12px;text-align:center}
 .js .report .decision,.js .report .rsummary>div{opacity:0;transform:translateY(6px)}
 .js .report.in .decision,.js .report.in .rsummary>div{opacity:1;transform:none;
@@ -245,7 +245,7 @@
 .arow{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;
   border-top:1px solid rgba(156,170,189,.12);font-size:13px;color:#C8D4E4}
 /* both states share one grid cell, so the pill sizes to the wider label and they cross-fade cleanly */
-.arow .st{display:grid;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;
+.arow .st{display:grid;font-family:'Lexend',sans-serif;font-size:10px;letter-spacing:.08em;
   text-transform:uppercase;white-space:nowrap}
 .arow .st > span{grid-area:1/1;border-radius:5px;padding:3px 9px;display:flex;align-items:center;justify-content:center}
 .arow .was{color:#E0765E;border:1px solid rgba(214,84,61,.4);background:rgba(214,84,61,.12)}
@@ -264,7 +264,7 @@
 /* ---- closing panel: the argument and the ask in one box, not two stacked ---- */
 .cta-panel.close{padding:74px 48px 78px}
 @media (max-width:600px){.cta-panel.close{padding:52px 26px 56px}}
-.cta-panel blockquote{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.03em;
+.cta-panel blockquote{font-family:'Lexend',sans-serif;font-weight:700;letter-spacing:-.02em;
   line-height:1.18;font-size:clamp(24px,3vw,38px);color:var(--ink);max-width:26ch;margin:0 auto 34px;text-wrap:balance}
 .cta-panel blockquote .alt{color:var(--peri)}
 /* ============================================================
@@ -277,7 +277,7 @@
 .stp h4{font-size:15px}
 .qa summary{font-size:18px}
 /* graphic titles must beat .reason p / .premise p on specificity */
-.r-media .ch-title,.pm-viz .ch-title,.chart .ch-title{font-family:'Space Grotesk',sans-serif;font-weight:700;
+.r-media .ch-title,.pm-viz .ch-title,.chart .ch-title{font-family:'Lexend',sans-serif;font-weight:700;
   font-size:17.5px;line-height:1.25;letter-spacing:-.015em;color:var(--ink)}
 /* inner-page hero: shorter measure so the headline doesn't run the full width */
 
@@ -290,7 +290,7 @@
   transform:translate(calc(-50% + min(258px,21vw)), -50%);
   width:min(530px,42vw);height:auto;pointer-events:none;overflow:visible;z-index:1}
 @media (max-width:1140px){.hero-brain{display:none}}
-.cb-label{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.15em;opacity:.85}
+.cb-label{font-family:'Lexend',sans-serif;font-size:8.5px;letter-spacing:.15em;opacity:.85}
 
 /* no JS: everything simply sits in its finished state */
 .js .cb-node,.js .cb-label{opacity:0}
@@ -1280,6 +1280,6 @@
   <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg>
   <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.4A8.2 8.2 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4z"/></svg>
 </button>
-<script src="site.js" defer></script>
+<script src="site.js?v=1b60ac41" defer></script>
 </body>
 </html>
