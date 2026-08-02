@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -267,7 +267,7 @@
 </style>
 </head>
 <body>
-<script>document.documentElement.className+=" js";try{var t=localStorage.getItem("arciom-theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>document.documentElement.className+=" js";var t="dark";try{t=localStorage.getItem("arciom-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)</script>
 <div class="aurora" aria-hidden="true"></div>
 
 <nav>
