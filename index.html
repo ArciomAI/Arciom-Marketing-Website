@@ -113,6 +113,16 @@ h1 .ln{display:block}
 
 /* dissolves toward the headline rather than ending on an edge */
 
+
+/* ============================================================
+   Hero: captured decisions drawn into Arciom, forming the twin.
+   Decisions stream in continuously; the twin appears once at
+   2.1s and then holds, breathing slowly.
+   ============================================================ */
+.hero-twin{position:absolute;inset:0;z-index:0;pointer-events:none;width:100%;height:100%}
+.hero > .wrap{position:relative;z-index:1}
+@media (max-width:1180px){.hero-twin{display:none}}
+.hero::before{display:none}
 </style>
 <script type="application/ld+json">
 {
@@ -176,6 +186,1613 @@ h1 .ln{display:block}
 
 <!-- ================= HERO ================= -->
 <header class="hero">
+  <svg class="hero-twin" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <pattern id="dg" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.3" cy="1.3" r="1.3" fill="#8EA6FF"/>
+    </pattern>
+    <radialGradient id="hole" cx="0.7264" cy="0.4927" r="0.2083">
+      <stop offset="0%" stop-color="#000"/><stop offset="72%" stop-color="#000"/><stop offset="100%" stop-color="#fff"/>
+    </radialGradient>
+    <mask id="dgmask">
+      <rect width="1440" height="820" fill="#fff"/>
+      <rect width="1440" height="820" fill="url(#hole)"/>
+    </mask>
+    <filter id="tg" x="-140%" y="-140%" width="380%" height="380%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1440" height="820" fill="url(#dg)" opacity=".3" mask="url(#dgmask)"/>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.44s" begin="0.71s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M760,326 Q899.1,384.3 992.0,389.3" dur="7.44s" begin="0.71s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.31s" begin="3.68s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M760,352 Q901.5,419.5 990.9,394.0" dur="7.31s" begin="3.68s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.15s" begin="3.31s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M760,378 Q905.1,376.1 990.2,398.9" dur="7.15s" begin="3.31s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.85s" begin="0.48s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M760,404 Q905.3,429.7 990.0,404.0" dur="6.85s" begin="0.48s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.63s" begin="1.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M760,430 Q903.2,389.2 990.2,409.1" dur="6.63s" begin="1.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.38s" begin="4.72s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M760,456 Q914.8,466.5 990.9,414.0" dur="7.38s" begin="4.72s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.27s" begin="4.65s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M760,482 Q909.3,461.3 992.0,418.7" dur="7.27s" begin="4.65s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.24s" begin="0.09s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,274 Q924.8,323.8 995.9,379.0" dur="7.24s" begin="0.09s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.82s" begin="4.68s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,300 Q922.0,339.0 994.0,383.2" dur="6.82s" begin="4.68s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.1s" begin="5.8s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,326 Q911.0,389.6 992.4,387.9" dur="7.1s" begin="5.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.82s" begin="6.51s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,352 Q926.1,347.5 991.1,393.0" dur="6.82s" begin="6.51s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.24s" begin="0.41s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,378 Q916.7,422.8 990.3,398.4" dur="6.24s" begin="0.41s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.57s" begin="3.6s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,404 Q920.4,437.6 990.0,404.0" dur="6.57s" begin="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.03s" begin="5.86s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,430 Q916.8,384.6 990.3,409.6" dur="6.03s" begin="5.86s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.41s" begin="6.34s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,456 Q921.1,448.5 991.1,415.0" dur="6.41s" begin="6.34s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.09s" begin="4.3s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,482 Q910.5,412.0 992.4,420.1" dur="6.09s" begin="4.3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.65s" begin="1.83s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,508 Q928.8,480.7 994.0,424.8" dur="6.65s" begin="1.83s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.12s" begin="2.13s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M786,534 Q924.7,484.1 995.9,429.0" dur="6.12s" begin="2.13s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.98s" begin="2.5s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,222 Q939.3,301.1 1001.8,369.6" dur="6.98s" begin="2.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.66s" begin="0.86s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,248 Q937.8,314.2 999.4,372.9" dur="6.66s" begin="0.86s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.83s" begin="5.83s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,274 Q919.6,359.9 997.0,376.8" dur="6.83s" begin="5.83s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.83s" begin="1.4s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,300 Q939.9,332.3 994.8,381.3" dur="5.83s" begin="1.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.78s" begin="0.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,326 Q923.9,386.7 992.9,386.3" dur="6.78s" begin="0.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.73s" begin="5.35s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,352 Q926.5,394.5 991.3,391.9" dur="6.73s" begin="5.35s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.66s" begin="1.61s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,378 Q929.1,418.2 990.3,397.8" dur="6.66s" begin="1.61s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.6s" begin="0.13s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,404 Q929.7,391.2 990.0,404.0" dur="6.6s" begin="0.13s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.51s" begin="4.45s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,430 Q936.9,448.2 990.3,410.2" dur="6.51s" begin="4.45s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.5s" begin="3.27s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,456 Q939.6,459.1 991.3,416.1" dur="5.5s" begin="3.27s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.93s" begin="1.65s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,482 Q925.3,429.5 992.9,421.7" dur="6.93s" begin="1.65s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.89s" begin="6.21s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,508 Q935.4,468.5 994.8,426.7" dur="6.89s" begin="6.21s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.05s" begin="0.03s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,534 Q953.3,500.5 997.0,431.2" dur="6.05s" begin="0.03s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.91s" begin="2.47s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,560 Q913.4,450.8 999.4,435.1" dur="6.91s" begin="2.47s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.09s" begin="5.06s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M812,586 Q942.9,510.5 1001.8,438.4" dur="7.09s" begin="5.06s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.15s" begin="2.25s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,196 Q969.5,278.4 1006.4,364.4" dur="6.15s" begin="2.25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.97s" begin="3.95s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,222 Q932.8,324.8 1003.9,367.1" dur="5.97s" begin="3.95s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.98s" begin="4.56s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,248 Q956.4,309.8 1001.2,370.4" dur="5.98s" begin="4.56s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.64s" begin="4.7s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,274 Q928.8,368.0 998.5,374.3" dur="5.64s" begin="4.7s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.61s" begin="1.49s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,300 Q931.8,381.9 995.9,379.0" dur="5.61s" begin="1.49s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.79s" begin="3.78s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,326 Q949.5,349.1 993.6,384.3" dur="5.79s" begin="3.78s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.62s" begin="3.17s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,352 Q938.9,398.8 991.7,390.4" dur="5.62s" begin="3.17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.96s" begin="5.7s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,378 Q945.1,375.6 990.4,397.1" dur="5.96s" begin="5.7s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.8s" begin="0.89s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,404 Q945.1,378.9 990.0,404.0" dur="5.8s" begin="0.89s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.19s" begin="1.34s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,430 Q949.8,445.6 990.4,410.9" dur="5.19s" begin="1.34s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.92s" begin="3.74s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,456 Q938.9,408.5 991.7,417.6" dur="5.92s" begin="3.74s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.48s" begin="1.99s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,482 Q949.9,459.7 993.6,423.7" dur="6.48s" begin="1.99s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.4s" begin="2.65s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,508 Q934.2,435.9 995.9,429.0" dur="5.4s" begin="2.65s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.16s" begin="2.3s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,534 Q935.5,457.1 998.5,433.7" dur="6.16s" begin="2.3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.82s" begin="2.5s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,560 Q957.4,499.1 1001.2,437.6" dur="5.82s" begin="2.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.64s" begin="1.31s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,586 Q932.2,482.4 1003.9,440.9" dur="6.64s" begin="1.31s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.38s" begin="4.37s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M838,612 Q960.0,523.3 1006.4,443.6" dur="6.38s" begin="4.37s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.34s" begin="6.44s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,170 Q934.5,306.3 1011.6,359.8" dur="7.34s" begin="6.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.92s" begin="0.19s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,196 Q976.3,284.6 1009.1,361.9" dur="6.92s" begin="0.19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.95s" begin="4.3s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,222 Q940.2,330.8 1006.4,364.4" dur="6.95s" begin="4.3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.19s" begin="0.56s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,248 Q976.2,306.6 1003.5,367.6" dur="6.19s" begin="0.56s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.38s" begin="5.29s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,274 Q941.6,363.9 1000.4,371.5" dur="5.38s" begin="5.29s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.04s" begin="3.28s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,300 Q946.3,371.8 997.4,376.2" dur="6.04s" begin="3.28s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.45s" begin="2.66s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,326 Q949.5,381.7 994.5,381.9" dur="5.45s" begin="2.66s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.03s" begin="0.72s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,352 Q951.4,400.4 992.2,388.6" dur="5.03s" begin="0.72s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.45s" begin="2.71s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,378 Q955.2,418.3 990.6,396.1" dur="5.45s" begin="2.71s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.3s" begin="2.89s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,404 Q955.5,394.8 990.0,404.0" dur="5.3s" begin="2.89s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.45s" begin="4.57s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,430 Q954.6,393.8 990.6,411.9" dur="5.45s" begin="4.57s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.71s" begin="4.31s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,456 Q951.5,408.3 992.2,419.4" dur="5.71s" begin="4.31s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.43s" begin="4.2s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,482 Q949.7,427.0 994.5,426.1" dur="5.43s" begin="4.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.19s" begin="5.8s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,508 Q969.1,475.2 997.4,431.8" dur="6.19s" begin="5.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.0s" begin="4.24s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,534 Q940.1,439.9 1000.4,436.5" dur="6.0s" begin="4.24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.85s" begin="4.79s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,560 Q963.4,490.9 1003.5,440.4" dur="6.85s" begin="4.79s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.31s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,586 Q973.0,510.0 1006.4,443.6" dur="6.31s" begin="0.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.19s" begin="4.97s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,612 Q938.8,491.2 1009.1,446.1" dur="7.19s" begin="4.97s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.41s" begin="0.57s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M864,638 Q935.7,503.1 1011.6,448.2" dur="7.41s" begin="0.57s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.17s" begin="3.82s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,170 Q980.2,279.7 1014.9,357.4" dur="6.17s" begin="3.82s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.1s" begin="2.45s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,196 Q988.7,287.3 1012.4,359.2" dur="7.1s" begin="2.45s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.52s" begin="5.9s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,222 Q947.9,335.1 1009.6,361.5" dur="6.52s" begin="5.9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.47s" begin="3.37s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,248 Q953.6,343.7 1006.4,364.4" dur="5.47s" begin="3.37s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.22s" begin="4.46s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,274 Q960.2,349.7 1003.0,368.1" dur="5.22s" begin="4.46s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.91s" begin="3.88s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,300 Q958.9,369.2 999.4,372.9" dur="5.91s" begin="3.88s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.91s" begin="2.98s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,326 Q962.0,380.5 995.9,379.0" dur="5.91s" begin="2.98s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.0s" begin="3.77s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,352 Q976.6,360.0 992.9,386.3" dur="5.0s" begin="3.77s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.51s" begin="2.77s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,378 Q970.6,380.2 990.8,394.8" dur="5.51s" begin="2.77s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.42s" begin="4.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,404 Q969.2,417.8 990.0,404.0" dur="5.42s" begin="4.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.58s" begin="2.16s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,430 Q966.9,402.4 990.8,413.2" dur="5.58s" begin="2.16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.49s" begin="5.24s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,456 Q973.6,443.0 992.9,421.7" dur="5.49s" begin="5.24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.81s" begin="1.38s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,482 Q976.1,456.1 995.9,429.0" dur="5.81s" begin="1.38s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.24s" begin="4.2s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,508 Q958.4,437.5 999.4,435.1" dur="5.24s" begin="4.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.0s" begin="2.31s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,534 Q986.8,486.5 1003.0,439.9" dur="6.0s" begin="2.31s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.95s" begin="1.09s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,560 Q992.1,500.2 1006.4,443.6" dur="5.95s" begin="1.09s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.78s" begin="5.42s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,586 Q979.4,503.6 1009.6,446.5" dur="6.78s" begin="5.42s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.23s" begin="0.19s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,612 Q952.8,494.6 1012.4,448.8" dur="6.23s" begin="0.19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.27s" begin="4.36s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M890,638 Q998.8,536.5 1014.9,450.6" dur="6.27s" begin="4.36s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.73s" begin="1.94s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,144 Q1001.9,265.5 1021.0,353.9" dur="6.73s" begin="1.94s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.79s" begin="2.16s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,170 Q1008.8,275.4 1018.8,355.0" dur="6.79s" begin="2.16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.69s" begin="4.0s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,196 Q954.8,322.0 1016.3,356.5" dur="6.69s" begin="4.0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.62s" begin="0.89s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,222 Q1007.8,298.9 1013.5,358.4" dur="5.62s" begin="0.89s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.97s" begin="3.73s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,248 Q965.0,342.7 1010.1,361.0" dur="5.97s" begin="3.73s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.96s" begin="5.0s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,274 Q989.7,331.3 1006.4,364.4" dur="5.96s" begin="5.0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.64s" begin="0.59s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,300 Q994.3,338.8 1002.3,369.0" dur="4.64s" begin="0.59s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.35s" begin="3.45s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,326 Q972.5,385.6 998.0,375.2" dur="5.35s" begin="3.45s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.84s" begin="4.25s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,352 Q990.0,361.9 994.0,383.2" dur="4.84s" begin="4.25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.44s" begin="3.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,378 Q979.8,406.9 991.1,393.0" dur="4.44s" begin="3.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.42s" begin="4.81s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,404 Q982.2,391.3 990.0,404.0" dur="5.42s" begin="4.81s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.49s" begin="2.94s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,430 Q980.0,410.1 991.1,415.0" dur="5.49s" begin="2.94s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.66s" begin="5.15s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,456 Q986.0,440.1 994.0,424.8" dur="5.66s" begin="5.15s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.72s" begin="4.18s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,482 Q985.8,450.1 998.0,432.8" dur="5.72s" begin="4.18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.9s" begin="3.03s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,508 Q975.9,448.9 1002.3,439.0" dur="5.9s" begin="3.03s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.97s" begin="4.18s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,534 Q965.4,448.2 1006.4,443.6" dur="5.97s" begin="4.18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.07s" begin="3.16s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,560 Q999.4,494.2 1010.1,447.0" dur="5.07s" begin="3.16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.85s" begin="2.64s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,586 Q993.3,502.7 1013.5,449.6" dur="5.85s" begin="2.64s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.86s" begin="0.69s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,612 Q954.4,485.5 1016.3,451.5" dur="6.86s" begin="0.69s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.11s" begin="3.83s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,638 Q961.1,507.4 1018.8,453.0" dur="7.11s" begin="3.83s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.47s" begin="4.58s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M916,664 Q1006.3,543.8 1021.0,454.1" dur="6.47s" begin="4.58s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.34s" begin="4.45s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,144 Q1008.9,269.0 1025.2,352.0" dur="7.34s" begin="4.45s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.09s" begin="0.97s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,170 Q980.4,294.1 1023.3,352.8" dur="6.09s" begin="0.97s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.33s" begin="5.38s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,196 Q965.7,319.9 1021.0,353.9" dur="6.33s" begin="5.38s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.87s" begin="2.95s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,222 Q983.1,320.1 1018.2,355.4" dur="5.87s" begin="2.95s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.45s" begin="4.29s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,248 Q980.3,337.1 1014.9,357.4" dur="5.45s" begin="4.29s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.83s" begin="2.96s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,274 Q1001.5,333.6 1011.0,360.3" dur="4.83s" begin="2.96s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.92s" begin="1.74s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,300 Q984.7,363.3 1006.4,364.4" dur="4.92s" begin="1.74s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.18s" begin="2.9s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,326 Q1000.5,357.6 1001.2,370.4" dur="5.18s" begin="2.9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.65s" begin="4.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,352 Q1001.4,366.7 995.9,379.0" dur="4.65s" begin="4.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.56s" begin="3.72s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,378 Q992.5,406.6 991.7,390.4" dur="4.56s" begin="3.72s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.02s" begin="1.19s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,404 Q995.8,417.7 990.0,404.0" dur="4.02s" begin="1.19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.91s" begin="0.57s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,430 Q992.6,408.2 991.7,417.6" dur="4.91s" begin="0.57s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.15s" begin="3.54s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,456 Q989.2,416.5 995.9,429.0" dur="5.15s" begin="3.54s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.45s" begin="1.61s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,482 Q985.8,428.4 1001.2,437.6" dur="4.45s" begin="1.61s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.4s" begin="0.57s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,508 Q984.8,444.8 1006.4,443.6" dur="5.4s" begin="0.57s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.34s" begin="4.98s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,534 Q1014.1,480.9 1011.0,447.7" dur="5.34s" begin="4.98s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.54s" begin="4.49s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,560 Q1012.5,491.5 1014.9,450.6" dur="5.54s" begin="4.49s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.49s" begin="0.37s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,586 Q1017.1,504.7 1018.2,452.6" dur="6.49s" begin="0.37s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.49s" begin="5.61s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,612 Q1006.7,513.4 1021.0,454.1" dur="6.49s" begin="5.61s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.13s" begin="6.09s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,638 Q972.9,509.1 1023.3,455.2" dur="6.13s" begin="6.09s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.79s" begin="1.17s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M942,664 Q973.7,523.9 1025.2,456.0" dur="6.79s" begin="1.17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.52s" begin="1.26s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,118 Q990.3,266.6 1031.3,350.0" dur="6.52s" begin="1.26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.77s" begin="0.79s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,144 Q1034.3,268.8 1029.9,350.4" dur="6.77s" begin="0.79s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.79s" begin="1.96s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,170 Q977.6,301.4 1028.3,350.9" dur="5.79s" begin="1.96s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.7s" begin="0.87s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,196 Q986.5,310.2 1026.3,351.6" dur="5.7s" begin="0.87s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.23s" begin="3.26s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,222 Q997.7,317.6 1023.9,352.5" dur="6.23s" begin="3.26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.1s" begin="0.34s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,248 Q1015.1,322.4 1021.0,353.9" dur="5.1s" begin="0.34s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.69s" begin="2.12s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,274 Q1017.3,333.8 1017.2,356.0" dur="4.69s" begin="2.12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.48s" begin="3.26s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,300 Q1013.3,347.8 1012.4,359.2" dur="4.48s" begin="3.26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.31s" begin="2.22s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,326 Q997.4,377.8 1006.4,364.4" dur="4.31s" begin="2.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.03s" begin="0.71s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,352 Q1012.0,371.7 999.4,372.9" dur="5.03s" begin="0.71s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="3.72s" begin="0.65s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,378 Q1004.9,402.1 992.9,386.3" dur="3.72s" begin="0.65s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.12s" begin="1.94s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,404 Q1007.5,410.2 990.0,404.0" dur="4.12s" begin="1.94s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.05s" begin="2.76s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,430 Q1005.1,408.3 992.9,421.7" dur="4.05s" begin="2.76s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.83s" begin="2.12s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,456 Q1010.4,434.5 999.4,435.1" dur="4.83s" begin="2.12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.28s" begin="4.03s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,482 Q1017.3,451.1 1006.4,443.6" dur="4.28s" begin="4.03s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.65s" begin="4.53s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,508 Q1024.0,465.2 1012.4,448.8" dur="4.65s" begin="4.53s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.06s" begin="2.02s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,534 Q1021.9,475.9 1017.2,452.0" dur="5.06s" begin="2.02s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.41s" begin="2.17s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,560 Q1015.7,485.8 1021.0,454.1" dur="5.41s" begin="2.17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.94s" begin="5.49s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,586 Q992.4,487.2 1023.9,455.5" dur="5.94s" begin="5.49s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.65s" begin="0.42s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,612 Q1037.7,514.8 1026.3,456.4" dur="5.65s" begin="0.42s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.62s" begin="5.06s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,638 Q987.8,512.7 1028.3,457.1" dur="5.62s" begin="5.06s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.84s" begin="3.09s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,664 Q993.4,529.1 1029.9,457.6" dur="6.84s" begin="3.09s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.11s" begin="5.77s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M968,690 Q973.2,533.1 1031.3,458.0" dur="7.11s" begin="5.77s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.75s" begin="3.47s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,118 Q1003.6,265.0 1036.0,348.9" dur="6.75s" begin="3.47s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.9s" begin="1.66s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,144 Q1006.9,277.3 1035.0,349.1" dur="6.9s" begin="1.66s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.82s" begin="2.38s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,170 Q1052.7,284.3 1033.9,349.3" dur="5.82s" begin="2.38s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.22s" begin="4.42s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,196 Q995.4,309.5 1032.4,349.7" dur="5.22s" begin="4.42s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.25s" begin="2.85s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,222 Q1045.8,309.4 1030.6,350.2" dur="5.25s" begin="2.85s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.92s" begin="1.49s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,248 Q1006.1,332.1 1028.3,350.9" dur="4.92s" begin="1.49s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.36s" begin="4.25s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,274 Q1002.8,348.9 1025.2,352.0" dur="5.36s" begin="4.25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.43s" begin="0.88s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,300 Q1035.7,346.8 1021.0,353.9" dur="4.43s" begin="0.88s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.12s" begin="0.35s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,326 Q1025.7,361.7 1014.9,357.4" dur="5.12s" begin="0.35s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.66s" begin="0.26s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,482 Q1015.7,439.7 1014.9,450.6" dur="4.66s" begin="0.26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.93s" begin="0.57s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,508 Q1036.1,461.3 1021.0,454.1" dur="4.93s" begin="0.57s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.01s" begin="0.9s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,534 Q1029.7,472.1 1025.2,456.0" dur="5.01s" begin="0.9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.54s" begin="2.25s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,560 Q1030.9,484.8 1028.3,457.1" dur="5.54s" begin="2.25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.06s" begin="2.9s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,586 Q999.4,486.4 1030.6,457.8" dur="6.06s" begin="2.9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.87s" begin="3.47s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,612 Q1000.0,500.8 1032.4,458.3" dur="5.87s" begin="3.47s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.55s" begin="2.49s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,638 Q994.0,512.0 1033.9,458.7" dur="5.55s" begin="2.49s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.01s" begin="2.55s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,664 Q1041.7,536.5 1035.0,458.9" dur="6.01s" begin="2.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.64s" begin="3.6s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M994,690 Q1058.4,548.8 1036.0,459.1" dur="6.64s" begin="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.45s" begin="0.2s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,118 Q1074.2,263.2 1040.9,348.2" dur="6.45s" begin="0.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.15s" begin="3.82s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,144 Q1053.7,273.6 1040.4,348.3" dur="6.15s" begin="3.82s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.32s" begin="4.69s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,170 Q1062.7,287.5 1039.8,348.3" dur="6.32s" begin="4.69s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.41s" begin="1.37s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,196 Q1003.5,308.2 1039.1,348.4" dur="6.41s" begin="1.37s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.62s" begin="2.15s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,222 Q1055.6,312.6 1038.1,348.6" dur="5.62s" begin="2.15s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.71s" begin="3.01s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,248 Q1023.5,328.2 1036.8,348.8" dur="5.71s" begin="3.01s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.41s" begin="0.69s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,274 Q1049.9,337.8 1035.0,349.1" dur="5.41s" begin="0.69s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.13s" begin="1.38s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,300 Q1043.4,350.5 1032.4,349.7" dur="4.13s" begin="1.38s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.08s" begin="3.16s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,326 Q1028.9,366.6 1028.3,350.9" dur="4.08s" begin="3.16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.16s" begin="2.22s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,482 Q1027.7,440.8 1028.3,457.1" dur="4.16s" begin="2.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.05s" begin="0.79s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,508 Q1039.9,457.3 1032.4,458.3" dur="5.05s" begin="0.79s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.96s" begin="2.95s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,534 Q1019.9,464.9 1035.0,458.9" dur="4.96s" begin="2.95s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.74s" begin="4.0s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,560 Q1013.8,476.2 1036.8,459.2" dur="5.74s" begin="4.0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.44s" begin="0.02s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,586 Q1049.3,495.9 1038.1,459.4" dur="5.44s" begin="0.02s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.34s" begin="5.0s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,612 Q1020.2,505.6 1039.1,459.6" dur="6.34s" begin="5.0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.92s" begin="0.37s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,638 Q1058.5,521.1 1039.8,459.7" dur="5.92s" begin="0.37s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.82s" begin="0.43s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,664 Q1067.4,532.9 1040.4,459.7" dur="6.82s" begin="0.43s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.85s" begin="3.24s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1020,690 Q1054.6,547.3 1040.9,459.8" dur="6.85s" begin="3.24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.91s" begin="3.29s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,118 Q1079.3,264.9 1046.0,348.0" dur="6.91s" begin="3.29s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.88s" begin="3.83s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,144 Q1083.2,279.4 1046.0,348.0" dur="5.88s" begin="3.83s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.51s" begin="1.27s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,170 Q1021.4,289.6 1046.0,348.0" dur="6.51s" begin="1.27s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.3s" begin="2.37s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,196 Q1033.7,300.7 1046.0,348.0" dur="5.3s" begin="2.37s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.25s" begin="0.64s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,222 Q1036.2,313.5 1046.0,348.0" dur="5.25s" begin="0.64s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.22s" begin="1.88s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,248 Q1035.6,326.7 1046.0,348.0" dur="5.22s" begin="1.88s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.96s" begin="1.62s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,274 Q1034.7,340.0 1046.0,348.0" dur="4.96s" begin="1.62s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.85s" begin="1.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,300 Q1037.3,352.7 1046.0,348.0" dur="4.85s" begin="1.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.46s" begin="1.45s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,326 Q1056.0,366.3 1046.0,348.0" dur="4.46s" begin="1.45s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.07s" begin="2.01s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,482 Q1035.3,441.5 1046.0,460.0" dur="4.07s" begin="2.01s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.58s" begin="1.76s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,508 Q1030.8,453.7 1046.0,460.0" dur="4.58s" begin="1.76s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.58s" begin="3.4s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,534 Q1056.2,468.2 1046.0,460.0" dur="4.58s" begin="3.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.34s" begin="3.83s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,560 Q1055.6,481.4 1046.0,460.0" dur="5.34s" begin="3.83s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.69s" begin="3.67s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,586 Q1031.0,493.8 1046.0,460.0" dur="5.69s" begin="3.67s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.3s" begin="0.81s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,612 Q1076.4,503.5 1046.0,460.0" dur="5.3s" begin="0.81s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.53s" begin="0.68s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,638 Q1034.2,520.4 1046.0,460.0" dur="5.53s" begin="0.68s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.99s" begin="5.0s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,664 Q1011.4,529.3 1046.0,460.0" dur="5.99s" begin="5.0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.26s" begin="5.05s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1046,690 Q1004.3,540.8 1046.0,460.0" dur="7.26s" begin="5.05s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.74s" begin="3.64s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,118 Q1033.8,260.9 1051.1,348.2" dur="6.74s" begin="3.64s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.54s" begin="1.24s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,144 Q1085.3,279.4 1051.6,348.3" dur="6.54s" begin="1.24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.11s" begin="2.14s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,170 Q1084.6,292.8 1052.2,348.3" dur="6.11s" begin="2.14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.35s" begin="3.71s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,196 Q1044.6,299.2 1052.9,348.4" dur="6.35s" begin="3.71s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.15s" begin="2.71s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,222 Q1072.3,315.9 1053.9,348.6" dur="5.15s" begin="2.71s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.29s" begin="4.38s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,248 Q1047.6,324.9 1055.2,348.8" dur="5.29s" begin="4.38s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.93s" begin="1.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,274 Q1077.3,345.6 1057.0,349.1" dur="4.93s" begin="1.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.07s" begin="2.54s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,300 Q1066.4,354.4 1059.6,349.7" dur="4.07s" begin="2.54s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.08s" begin="0.81s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,326 Q1047.1,362.9 1063.7,350.9" dur="4.08s" begin="0.81s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.32s" begin="1.98s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,482 Q1047.3,445.1 1063.7,457.1" dur="4.32s" begin="1.98s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.0s" begin="1.7s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,508 Q1065.8,453.8 1059.6,458.3" dur="4.0s" begin="1.7s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.28s" begin="0.09s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,534 Q1069.5,466.0 1057.0,458.9" dur="5.28s" begin="0.09s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.29s" begin="5.21s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,560 Q1068.3,479.9 1055.2,459.2" dur="5.29s" begin="5.21s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.02s" begin="1.42s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,586 Q1043.1,495.9 1053.9,459.4" dur="5.02s" begin="1.42s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.88s" begin="1.33s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,612 Q1035.7,508.3 1052.9,459.6" dur="5.88s" begin="1.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.54s" begin="3.84s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,638 Q1024.7,519.8 1052.2,459.7" dur="5.54s" begin="3.84s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.69s" begin="2.9s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,664 Q1088.7,527.5 1051.6,459.7" dur="6.69s" begin="2.9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.12s" begin="5.66s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1072,690 Q1096.2,538.5 1051.1,459.8" dur="6.12s" begin="5.66s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.34s" begin="5.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,118 Q1048.9,258.7 1056.0,348.9" dur="7.34s" begin="5.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.14s" begin="2.16s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,144 Q1034.6,271.9 1057.0,349.1" dur="6.14s" begin="2.16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.69s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,170 Q1088.3,291.9 1058.1,349.3" dur="6.69s" begin="0.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.49s" begin="1.61s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,196 Q1083.1,303.4 1059.6,349.7" dur="5.49s" begin="1.61s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.33s" begin="2.98s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,222 Q1095.0,323.0 1061.4,350.2" dur="5.33s" begin="2.98s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.23s" begin="4.96s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,248 Q1081.9,330.0 1063.7,350.9" dur="5.23s" begin="4.96s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.39s" begin="3.08s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,274 Q1052.8,334.3 1066.8,352.0" dur="5.39s" begin="3.08s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.73s" begin="3.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,300 Q1085.9,361.7 1071.0,353.9" dur="4.73s" begin="3.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.56s" begin="1.19s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,326 Q1060.7,359.5 1077.1,357.4" dur="4.56s" begin="1.19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.07s" begin="3.26s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,482 Q1077.9,438.4 1077.1,450.6" dur="5.07s" begin="3.26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.8s" begin="3.44s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,508 Q1082.4,449.3 1071.0,454.1" dur="4.8s" begin="3.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.82s" begin="2.2s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,534 Q1052.0,473.8 1066.8,456.0" dur="4.82s" begin="2.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.53s" begin="4.3s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,560 Q1081.9,478.0 1063.7,457.1" dur="5.53s" begin="4.3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.38s" begin="3.01s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,586 Q1090.6,487.5 1061.4,457.8" dur="5.38s" begin="3.01s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.38s" begin="0.65s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,612 Q1055.9,510.7 1059.6,458.3" dur="6.38s" begin="0.65s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.83s" begin="5.61s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,638 Q1087.4,516.5 1058.1,458.7" dur="6.83s" begin="5.61s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.42s" begin="3.54s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,664 Q1088.2,529.7 1057.0,458.9" dur="6.42s" begin="3.54s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.66s" begin="1.19s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1098,690 Q1044.8,549.3 1056.0,459.1" dur="6.66s" begin="1.19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.26s" begin="5.14s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,118 Q1113.3,271.9 1060.7,350.0" dur="7.26s" begin="5.14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.23s" begin="5.72s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,144 Q1104.3,281.4 1062.1,350.4" dur="6.23s" begin="5.72s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.22s" begin="1.88s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,170 Q1108.1,297.4 1063.7,350.9" dur="6.22s" begin="1.88s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.84s" begin="2.18s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,196 Q1110.9,313.8 1065.7,351.6" dur="5.84s" begin="2.18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.69s" begin="3.63s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,222 Q1096.7,319.0 1068.1,352.5" dur="5.69s" begin="3.63s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.98s" begin="4.44s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,248 Q1061.9,318.3 1071.0,353.9" dur="4.98s" begin="4.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.93s" begin="2.86s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,274 Q1065.9,330.9 1074.8,356.0" dur="4.93s" begin="2.86s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.4s" begin="1.91s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,300 Q1079.5,348.3 1079.6,359.2" dur="5.4s" begin="1.91s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.82s" begin="3.72s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,326 Q1092.0,373.5 1085.6,364.4" dur="4.82s" begin="3.72s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.63s" begin="1.29s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,352 Q1082.1,374.2 1092.6,372.9" dur="4.63s" begin="1.29s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.94s" begin="0.17s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,378 Q1079.8,380.6 1099.1,386.3" dur="4.94s" begin="0.17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.24s" begin="3.59s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,404 Q1083.4,393.0 1102.0,404.0" dur="4.24s" begin="3.59s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.69s" begin="3.82s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,430 Q1087.0,407.1 1099.1,421.7" dur="4.69s" begin="3.82s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="3.9s" begin="3.03s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,456 Q1082.0,434.0 1092.6,435.1" dur="3.9s" begin="3.03s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.84s" begin="3.11s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,482 Q1077.0,449.6 1085.6,443.6" dur="4.84s" begin="3.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.42s" begin="2.81s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,508 Q1070.5,464.2 1079.6,448.8" dur="5.42s" begin="2.81s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.85s" begin="0.12s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,534 Q1097.4,459.7 1074.8,452.0" dur="4.85s" begin="0.12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.79s" begin="4.59s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,560 Q1066.3,488.8 1071.0,454.1" dur="4.79s" begin="4.59s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.07s" begin="2.39s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,586 Q1067.7,500.6 1068.1,455.5" dur="5.07s" begin="2.39s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.32s" begin="5.3s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,612 Q1106.4,497.2 1065.7,456.4" dur="5.32s" begin="5.3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.92s" begin="3.05s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,638 Q1106.6,511.4 1063.7,457.1" dur="6.92s" begin="3.05s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.29s" begin="4.92s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,664 Q1108.6,524.4 1062.1,457.6" dur="6.29s" begin="4.92s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.38s" begin="4.55s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1124,690 Q1109.2,538.1 1060.7,458.0" dur="7.38s" begin="4.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.08s" begin="0.27s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,144 Q1071.6,266.3 1066.8,352.0" dur="6.08s" begin="0.27s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.93s" begin="0.96s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,170 Q1063.8,277.2 1068.7,352.8" dur="5.93s" begin="0.96s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.14s" begin="2.3s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,196 Q1083.9,294.1 1071.0,353.9" dur="6.14s" begin="2.3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.08s" begin="4.73s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,222 Q1073.0,302.7 1073.8,355.4" dur="6.08s" begin="4.73s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.76s" begin="0.18s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,248 Q1081.5,317.2 1077.1,357.4" dur="5.76s" begin="0.18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.71s" begin="0.24s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,274 Q1109.0,349.5 1081.0,360.3" dur="4.71s" begin="0.24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.09s" begin="4.92s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,300 Q1104.5,359.5 1085.6,364.4" dur="5.09s" begin="4.92s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.34s" begin="0.08s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,326 Q1089.9,356.0 1090.8,370.4" dur="4.34s" begin="0.08s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.19s" begin="0.82s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,352 Q1091.8,368.1 1096.1,379.0" dur="5.19s" begin="0.82s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.1s" begin="3.8s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,378 Q1096.4,385.7 1100.3,390.4" dur="4.1s" begin="3.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.54s" begin="4.14s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,404 Q1096.3,417.1 1102.0,404.0" dur="4.54s" begin="4.14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.5s" begin="0.67s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,430 Q1099.6,403.0 1100.3,417.6" dur="4.5s" begin="0.67s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.08s" begin="1.03s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,456 Q1088.4,443.7 1096.1,429.0" dur="4.08s" begin="1.03s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.38s" begin="4.1s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,482 Q1088.4,453.2 1090.8,437.6" dur="5.38s" begin="4.1s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.42s" begin="5.24s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,508 Q1108.5,442.7 1085.6,443.6" dur="5.42s" begin="5.24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.73s" begin="2.03s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,534 Q1084.7,477.7 1081.0,447.7" dur="5.73s" begin="2.03s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.72s" begin="4.4s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,560 Q1109.7,472.8 1077.1,450.6" dur="5.72s" begin="4.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.32s" begin="0.78s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,586 Q1081.1,502.7 1073.8,452.6" dur="5.32s" begin="0.78s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.4s" begin="3.53s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,612 Q1109.6,501.3 1071.0,454.1" dur="5.4s" begin="3.53s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.06s" begin="2.22s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,638 Q1123.1,506.2 1068.7,455.2" dur="7.06s" begin="2.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.21s" begin="2.61s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1150,664 Q1063.0,543.0 1066.8,456.0" dur="6.21s" begin="2.61s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.24s" begin="7.07s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,144 Q1137.4,291.0 1071.0,353.9" dur="7.24s" begin="7.07s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.16s" begin="1.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,170 Q1128.3,298.5 1073.2,355.0" dur="6.16s" begin="1.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.25s" begin="2.64s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,196 Q1132.6,317.2 1075.7,356.5" dur="6.25s" begin="2.64s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.03s" begin="1.26s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,222 Q1083.5,298.6 1078.5,358.4" dur="6.03s" begin="1.26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.54s" begin="2.86s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,248 Q1098.0,316.8 1081.9,361.0" dur="5.54s" begin="2.86s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.35s" begin="1.35s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,274 Q1127.2,360.9 1085.6,364.4" dur="5.35s" begin="1.35s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.9s" begin="1.31s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,300 Q1119.6,365.0 1089.7,369.0" dur="4.9s" begin="1.31s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.96s" begin="4.43s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,326 Q1104.5,355.8 1094.0,375.2" dur="4.96s" begin="4.43s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.29s" begin="1.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,352 Q1100.9,360.6 1098.0,383.2" dur="4.29s" begin="1.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.76s" begin="2.4s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,378 Q1104.7,373.2 1100.9,393.0" dur="4.76s" begin="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.32s" begin="2.75s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,404 Q1110.2,393.5 1102.0,404.0" dur="5.32s" begin="2.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.14s" begin="4.54s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,430 Q1108.8,425.1 1100.9,415.0" dur="5.14s" begin="4.54s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.31s" begin="0.36s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,456 Q1101.2,447.0 1098.0,424.8" dur="4.31s" begin="0.36s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.22s" begin="3.39s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,482 Q1115.7,433.7 1094.0,432.8" dur="5.22s" begin="3.39s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.42s" begin="0.63s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,508 Q1103.6,464.1 1089.7,439.0" dur="5.42s" begin="0.63s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.39s" begin="4.0s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,534 Q1089.3,485.1 1085.6,443.6" dur="5.39s" begin="4.0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.72s" begin="4.61s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,560 Q1125.9,466.7 1081.9,447.0" dur="5.72s" begin="4.61s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.29s" begin="4.56s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,586 Q1121.4,486.6 1078.5,449.6" dur="6.29s" begin="4.56s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.79s" begin="4.56s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,612 Q1124.7,498.0 1075.7,451.5" dur="6.79s" begin="4.56s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.0s" begin="2.44s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,638 Q1134.6,504.3 1073.2,453.0" dur="7.0s" begin="2.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.33s" begin="1.26s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1176,664 Q1087.7,543.2 1071.0,454.1" dur="7.33s" begin="1.26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.37s" begin="2.8s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,170 Q1092.6,271.3 1077.1,357.4" dur="6.37s" begin="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.01s" begin="0.49s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,196 Q1109.8,290.8 1079.6,359.2" dur="6.01s" begin="0.49s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.6s" begin="1.07s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,222 Q1103.3,298.7 1082.4,361.5" dur="6.6s" begin="1.07s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.32s" begin="2.1s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,248 Q1134.5,338.2 1085.6,364.4" dur="5.32s" begin="2.1s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.27s" begin="1.19s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,274 Q1137.6,360.2 1089.0,368.1" dur="5.27s" begin="1.19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.37s" begin="0.12s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,300 Q1130.7,363.9 1092.6,372.9" dur="5.37s" begin="0.12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.0s" begin="0.96s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,326 Q1130.4,382.0 1096.1,379.0" dur="6.0s" begin="0.96s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.47s" begin="2.55s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,352 Q1127.7,394.3 1099.1,386.3" dur="5.47s" begin="2.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.49s" begin="3.68s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,378 Q1124.9,409.6 1101.2,394.8" dur="5.49s" begin="3.68s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.3s" begin="3.26s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,404 Q1123.3,414.2 1102.0,404.0" dur="5.3s" begin="3.26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.78s" begin="4.54s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,430 Q1120.6,430.3 1101.2,413.2" dur="4.78s" begin="4.54s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.88s" begin="0.29s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,456 Q1127.9,410.8 1099.1,421.7" dur="4.88s" begin="0.29s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="4.93s" begin="0.71s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,482 Q1130.7,424.7 1096.1,429.0" dur="4.93s" begin="0.71s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.4s" begin="5.14s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,508 Q1133.9,436.7 1092.6,435.1" dur="5.4s" begin="5.14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.16s" begin="4.2s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,534 Q1103.2,487.9 1089.0,439.9" dur="6.16s" begin="4.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.52s" begin="2.89s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,560 Q1138.9,463.5 1085.6,443.6" dur="5.52s" begin="2.89s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.4s" begin="4.29s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,586 Q1109.4,505.7 1082.4,446.5" dur="6.4s" begin="4.29s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.61s" begin="0.62s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,612 Q1094.0,524.8 1079.6,448.8" dur="6.61s" begin="0.62s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.66s" begin="0.25s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1202,638 Q1111.3,528.5 1077.1,450.6" dur="6.66s" begin="0.25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.84s" begin="4.58s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,170 Q1156.7,305.5 1080.4,359.8" dur="6.84s" begin="4.58s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.71s" begin="2.18s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,196 Q1149.0,311.9 1082.9,361.9" dur="6.71s" begin="2.18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.57s" begin="4.07s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,222 Q1117.1,296.7 1085.6,364.4" dur="6.57s" begin="4.07s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.03s" begin="3.91s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,248 Q1148.7,342.2 1088.5,367.6" dur="6.03s" begin="3.91s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.27s" begin="5.19s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,274 Q1119.0,319.3 1091.6,371.5" dur="6.27s" begin="5.19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.77s" begin="4.58s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,300 Q1130.0,341.3 1094.6,376.2" dur="5.77s" begin="4.58s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.42s" begin="5.39s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,326 Q1143.8,388.4 1097.5,381.9" dur="5.42s" begin="5.39s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.22s" begin="3.0s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,352 Q1140.6,400.3 1099.8,388.6" dur="5.22s" begin="3.0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.08s" begin="0.43s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,378 Q1137.6,411.2 1101.4,396.1" dur="6.08s" begin="0.43s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.31s" begin="4.02s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,404 Q1135.6,387.9 1102.0,404.0" dur="5.31s" begin="4.02s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.38s" begin="1.09s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,430 Q1130.4,440.4 1101.4,411.9" dur="5.38s" begin="1.09s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.45s" begin="0.91s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,456 Q1133.1,440.9 1099.8,419.4" dur="5.45s" begin="0.91s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.23s" begin="1.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,482 Q1130.8,455.1 1097.5,426.1" dur="6.23s" begin="1.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.16s" begin="1.9s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,508 Q1142.9,443.9 1094.6,431.8" dur="6.16s" begin="1.9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.98s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,534 Q1150.4,444.0 1091.6,436.5" dur="5.98s" begin="1.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.57s" begin="3.19s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,560 Q1145.2,471.3 1088.5,440.4" dur="5.57s" begin="3.19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.06s" begin="4.11s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,586 Q1153.7,474.5 1085.6,443.6" dur="6.06s" begin="4.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.15s" begin="1.63s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,612 Q1152.0,492.7 1082.9,446.1" dur="6.15s" begin="1.63s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.35s" begin="4.81s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1228,638 Q1105.5,539.7 1080.4,448.2" dur="7.35s" begin="4.81s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.45s" begin="4.81s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,196 Q1132.6,285.1 1085.6,364.4" dur="7.45s" begin="4.81s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.36s" begin="1.13s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,222 Q1159.1,324.6 1088.1,367.1" dur="6.36s" begin="1.13s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.03s" begin="1.36s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,248 Q1163.1,347.6 1090.8,370.4" dur="7.03s" begin="1.36s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.91s" begin="0.84s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,274 Q1137.5,322.3 1093.5,374.3" dur="6.91s" begin="0.84s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.83s" begin="5.07s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,300 Q1159.5,378.8 1096.1,379.0" dur="5.83s" begin="5.07s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.42s" begin="4.43s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,326 Q1144.9,353.5 1098.4,384.3" dur="6.42s" begin="4.43s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.96s" begin="3.08s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,352 Q1152.8,395.1 1100.3,390.4" dur="5.96s" begin="3.08s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.27s" begin="3.27s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,378 Q1147.9,379.5 1101.6,397.1" dur="5.27s" begin="3.27s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.53s" begin="1.77s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,404 Q1146.2,431.9 1102.0,404.0" dur="5.53s" begin="1.77s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.21s" begin="1.04s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,430 Q1145.3,437.6 1101.6,410.9" dur="6.21s" begin="1.04s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.31s" begin="4.54s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,456 Q1142.0,451.7 1100.3,417.6" dur="6.31s" begin="4.54s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.56s" begin="3.42s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,482 Q1144.7,454.9 1098.4,423.7" dur="5.56s" begin="3.42s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.44s" begin="2.63s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,508 Q1158.5,433.5 1096.1,429.0" dur="5.44s" begin="2.63s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.2s" begin="4.78s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,534 Q1159.8,449.7 1093.5,433.7" dur="6.2s" begin="4.78s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.86s" begin="0.11s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,560 Q1139.9,493.9 1090.8,437.6" dur="5.86s" begin="0.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.23s" begin="4.55s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,586 Q1134.7,510.0 1088.1,440.9" dur="7.23s" begin="4.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.45s" begin="2.84s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1254,612 Q1138.1,518.6 1085.6,443.6" dur="6.45s" begin="2.84s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.17s" begin="0.46s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,222 Q1142.2,291.2 1090.2,369.6" dur="6.17s" begin="0.46s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.14s" begin="1.28s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,248 Q1174.4,346.7 1092.6,372.9" dur="7.14s" begin="1.28s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.83s" begin="1.59s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,274 Q1144.6,313.4 1095.0,376.8" dur="6.83s" begin="1.59s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.26s" begin="0.86s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,300 Q1154.2,335.5 1097.2,381.3" dur="6.26s" begin="0.86s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.47s" begin="4.99s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,326 Q1153.1,342.8 1099.1,386.3" dur="6.47s" begin="4.99s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.36s" begin="2.1s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,352 Q1153.3,350.7 1100.7,391.9" dur="6.36s" begin="2.1s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.91s" begin="1.32s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,378 Q1155.1,359.8 1101.7,397.8" dur="5.91s" begin="1.32s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.6s" begin="0.24s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,404 Q1162.3,416.9 1102.0,404.0" dur="5.6s" begin="0.24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.72s" begin="5.24s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,430 Q1163.6,397.7 1101.7,410.2" dur="5.72s" begin="5.24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.21s" begin="5.16s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,456 Q1158.0,446.6 1100.7,416.1" dur="6.21s" begin="5.16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.79s" begin="6.25s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,482 Q1155.1,461.5 1099.1,421.7" dur="6.79s" begin="6.25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.69s" begin="3.96s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,508 Q1151.6,476.5 1097.2,426.7" dur="5.69s" begin="3.96s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.58s" begin="3.82s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,534 Q1151.4,486.4 1095.0,431.2" dur="6.58s" begin="3.82s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.18s" begin="1.91s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,560 Q1174.3,461.6 1092.6,435.1" dur="7.18s" begin="1.91s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.52s" begin="0.85s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1280,586 Q1178.8,469.9 1090.2,438.4" dur="6.52s" begin="0.85s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.9s" begin="5.17s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,274 Q1163.0,317.8 1096.1,379.0" dur="6.9s" begin="5.17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.12s" begin="6.4s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,300 Q1162.8,326.9 1098.0,383.2" dur="7.12s" begin="6.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.87s" begin="1.49s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,326 Q1181.6,397.3 1099.6,387.9" dur="6.87s" begin="1.49s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="5.96s" begin="5.07s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,352 Q1178.4,410.4 1100.9,393.0" dur="5.96s" begin="5.07s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.75s" begin="4.38s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,378 Q1172.4,371.1 1101.7,398.4" dur="6.75s" begin="4.38s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.09s" begin="5.27s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,404 Q1172.3,373.1 1102.0,404.0" dur="6.09s" begin="5.27s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.33s" begin="4.52s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,430 Q1176.5,398.8 1101.7,409.6" dur="6.33s" begin="4.52s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.82s" begin="3.22s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,456 Q1171.0,448.1 1100.9,415.0" dur="6.82s" begin="3.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.17s" begin="3.57s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,482 Q1181.7,406.9 1099.6,420.1" dur="6.17s" begin="3.57s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.09s" begin="2.14s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,508 Q1169.8,469.4 1098.0,424.8" dur="6.09s" begin="2.14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.05s" begin="3.02s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1306,534 Q1188.1,434.7 1096.1,429.0" dur="7.05s" begin="3.02s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.4s" begin="1.16s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1332,326 Q1194.2,400.5 1100.0,389.3" dur="6.4s" begin="1.16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.17s" begin="0.36s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1332,352 Q1191.3,407.8 1101.1,394.0" dur="7.17s" begin="0.36s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.95s" begin="4.93s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1332,378 Q1188.7,419.8 1101.8,398.9" dur="6.95s" begin="4.93s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.73s" begin="6.06s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1332,404 Q1186.3,431.7 1102.0,404.0" dur="6.73s" begin="6.06s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.83s" begin="3.42s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1332,430 Q1183.1,446.8 1101.8,409.1" dur="6.83s" begin="3.42s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="6.71s" begin="5.06s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1332,456 Q1180.9,458.0 1101.1,414.0" dur="6.71s" begin="5.06s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <g>
+    <circle r="1.3" fill="#8EA6FF" fill-opacity="0"><animate attributeName="fill-opacity" values=".62;.62;0;0;.62" keyTimes="0;.55;.82;.9;1" dur="7.15s" begin="5.98s" repeatCount="indefinite"/></circle>
+    <animateMotion path="M1332,482 Q1192.5,426.3 1100.0,418.7" dur="7.15s" begin="5.98s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".5 0 .78 .35"/>
+  </g>
+  <circle cx="1046" cy="404" r="62" fill="none" stroke="#8EA6FF" stroke-width="1.6" stroke-opacity=".45"/>
+  <circle cx="1046" cy="404" r="62" fill="none" stroke="#8EA6FF" stroke-width="1.3"><animate attributeName="r" values="62;94" dur="3.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0 0 .25 1"/><animate attributeName="stroke-opacity" values=".4;0" dur="3.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0 0 .25 1"/></circle>
+  <circle cx="1046" cy="404" r="0" fill="#2FE0C9" filter="url(#tg)"><animate attributeName="r" values="0;14;11" keyTimes="0;.7;1" dur="1.6s" begin="2.2s" fill="freeze" calcMode="spline" keySplines=".3 0 .2 1;.4 0 .6 1"/><animate attributeName="fill-opacity" values="1;.66;1" dur="3.6s" begin="3.8s" repeatCount="indefinite"/></circle>
+  <circle cx="1046" cy="404" r="11" fill="none" stroke="#2FE0C9" stroke-width="1.4" stroke-opacity="0"><animate attributeName="r" values="11;30" dur="3.6s" begin="3.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0 0 .3 1"/><animate attributeName="stroke-opacity" values=".48;0" dur="3.6s" begin="3.8s" repeatCount="indefinite"/></circle>
+</svg>
   <div class="wrap">
     <p class="hero-eyebrow">Your company&rsquo;s proprietary paid media AI</p>
     <h1><span class="ln">Your best marketer&rsquo;s</span> <span class="ln">judgment, <span class="alt">captured</span></span> <span class="ln alt">and put to work.</span></h1>
