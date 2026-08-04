@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arciom — Your company's proprietary paid media AI</title>
+<title>Arciom — Your proprietary paid media AI</title>
 <meta name="description" content="Arciom captures how your best marketers actually make decisions, keeps only the calls that beat the frontier AI models, and grows that proven judgment into a digital twin that does real work on your accounts.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -14,13 +14,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://arciom.com/">
 <meta property="og:site_name" content="Arciom">
-<meta property="og:title" content="Arciom — Your company&#39;s proprietary paid media AI">
+<meta property="og:title" content="Arciom — Your proprietary paid media AI">
 <meta property="og:description" content="Not another AI agent running on public knowledge. Arciom keeps only the decisions where your experts beat the frontier AI models, then grows that proven judgment into a digital twin.">
 <meta property="og:image" content="https://arciom.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Arciom — Your company&#39;s proprietary paid media AI">
+<meta name="twitter:title" content="Arciom — Your proprietary paid media AI">
 <meta name="twitter:description" content="Not another AI agent running on public knowledge. Arciom keeps only the decisions where your experts beat the frontier AI models, then grows that proven judgment into a digital twin.">
 <meta name="twitter:image" content="https://arciom.com/og-image.png">
 <meta name="theme-color" content="#0a0d14">
@@ -123,6 +123,29 @@ h1 .ln{display:block}
 .hero > .wrap{position:relative;z-index:1}
 @media (max-width:1180px){.hero-twin{display:none}}
 .hero::before{display:none}
+
+/* ---- the decision crossing from recording to brain ---- */
+.cap-body{grid-template-columns:1fr 62px 1.05fr}
+@media (max-width:900px){.cap-body{grid-template-columns:1fr}.cap-bridge{display:none}}
+.cap-bridge{position:relative;align-self:stretch;display:flex;align-items:center;justify-content:center}
+.cb-track{position:absolute;left:8px;right:8px;top:50%;height:1px;
+  background:linear-gradient(90deg, rgba(142,166,255,.05), rgba(142,166,255,.35), rgba(47,224,201,.35))}
+.cb-chev{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:12px;height:19px;
+  color:rgba(47,224,201,.45)}
+.cb-dot{position:absolute;top:50%;left:6px;width:7px;height:7px;border-radius:50%;
+  background:#8EA6FF;opacity:0;transform:translate(0,-50%);
+  box-shadow:0 0 8px rgba(142,166,255,.9);
+  animation:cbCross 9s linear infinite}
+/* leaves exactly when the toast confirms the change at 56% of the cycle */
+@keyframes cbCross{
+  0%,56%   {opacity:0;left:6px;background:#8EA6FF}
+  58%      {opacity:1;left:6px;background:#8EA6FF}
+  70%      {opacity:1;background:#8EA6FF}
+  76%      {opacity:1;background:#2FE0C9}
+  78%      {opacity:0;left:calc(100% - 8px);background:#2FE0C9}
+  100%     {opacity:0;left:calc(100% - 8px)}
+}
+@media (prefers-reduced-motion:reduce){.cb-dot{animation:none;opacity:0}}
 </style>
 <script type="application/ld+json">
 {
@@ -159,7 +182,7 @@ h1 .ln{display:block}
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "url": "https://arciom.com/",
-      "description": "Your company's proprietary paid media AI. Available today for Google Search."
+      "description": "Your proprietary paid media AI. Available today for Google Search."
     }
   ]
 }
@@ -1794,7 +1817,7 @@ h1 .ln{display:block}
   <circle cx="1046" cy="404" r="11" fill="none" stroke="#2FE0C9" stroke-width="1.4" stroke-opacity="0"><animate attributeName="r" values="11;30" dur="3.6s" begin="3.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0 0 .3 1"/><animate attributeName="stroke-opacity" values=".48;0" dur="3.6s" begin="3.8s" repeatCount="indefinite"/></circle>
 </svg>
   <div class="wrap">
-    <p class="hero-eyebrow">Your company&rsquo;s proprietary paid media AI</p>
+    <p class="hero-eyebrow">Your proprietary paid media AI</p>
     <h1><span class="ln">Your best marketer&rsquo;s</span> <span class="ln">judgment, <span class="alt">captured</span></span> <span class="ln alt">and put to work.</span></h1>
     <p class="sub">Not another AI agent running on public knowledge. Arciom keeps only the decisions where your experts beat the frontier AI models — then grows that proven judgment into a digital twin that does real work on your accounts.</p>
     <div class="cta-row">
@@ -1810,19 +1833,19 @@ h1 .ln{display:block}
     <!-- capture intro -->
     <div class="cap-intro">
       <p class="eyebrow">Capture, in real time</p>
-      <h2 class="h2">Every proven decision feeds <span class="alt">the digital twin's brain.</span></h2>
+      <h2 class="h2">Every proven decision feeds <span class="alt">your digital twin's brain.</span></h2>
       <p class="lede2" style="max-width:680px">Arciom records your marketer working as normal: screen and voice, as they think out loud. A brief conversation after each session captures the unique reasoning behind their decisions. Every decision that holds up against the frontier models is added to the digital twin, so it gets sharper with each session.</p>
     </div>
 
     <!-- capture session graphic -->
-    <div class="capshot" role="img" aria-label="Arciom’s Expert Capture during a Google Ads session: the screen recording of a live bid-strategy change on the left, a brain-shaped map of judgment categories connecting inward to a pulsing digital twin on the right">
+    <div class="capshot" role="img" aria-label="Arciom’s Expert Capture during a Google Ads session. On the left, a screen recording of a live bid-strategy change. A proven decision then travels across to the right, where a brain-shaped map of judgment categories feeds a pulsing digital twin.">
       <div class="cap-bar">
         <span class="cap-title"><svg viewBox="0 0 40 40" width="15" height="15" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="#8EA6FF" stroke-width="4" opacity=".55"/><circle cx="20" cy="20" r="9" fill="#8EA6FF"/></svg>Arciom’s Expert Capture</span>
         <span class="cap-mid mono">session_2f9c · Google Ads</span>
       </div>
           <div class="cap-body">
             <div class="cap-left">
-              <div class="pane-head"><span class="pt">Screen recording</span><span class="chip rec"><i></i>REC 14:32</span></div>
+              <div class="pane-head"><span class="pt">What your expert did</span><span class="chip rec"><i></i>REC 14:32</span></div>
               <div class="ads-mock">
                 <div class="ads-tabs mono"><span class="on">Campaigns</span><span>Ad groups</span><span>Keywords</span><span>Audiences</span></div>
                 <div class="ads-grid">
@@ -1862,8 +1885,13 @@ h1 .ln{display:block}
                 </div>
               </div>
             </div>
+      <div class="cap-bridge" aria-hidden="true">
+        <span class="cb-track"></span>
+        <span class="cb-dot"></span>
+        <svg class="cb-chev" viewBox="0 0 14 22" fill="none"><path d="M3 3l7 8-7 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
             <div class="cap-right">
-              <div class="pane-head"><span class="pt">The twin's brain</span><span class="chip live"><i style="background:var(--aqua)"></i>growing</span></div>
+              <div class="pane-head"><span class="pt">What your twin learned</span><span class="chip live"><i style="background:var(--aqua)"></i>growing</span></div>
               <div class="brain-wrap">
                 <svg class="brain-svg" viewBox="-40 -25 560 520" role="img" aria-label="A brain-shaped map with every captured judgment category connecting inward to a pulsing digital twin at the center">
                   <path class="brain-outline" d="M209.8,62.0 Q240.0,35.0 270.2,62.0 Q300.5,89.0 340.9,91.3 Q381.4,93.6 383.7,134.1 Q386.0,174.5 413.0,204.8 Q440.0,235.0 413.0,265.2 Q386.0,295.5 383.7,335.9 Q381.4,376.4 340.9,378.7 Q300.5,381.0 270.2,408.0 Q240.0,435.0 209.8,408.0 Q179.5,381.0 139.1,378.7 Q98.6,376.4 96.3,335.9 Q94.0,295.5 67.0,265.2 Q40.0,235.0 67.0,204.8 Q94.0,174.5 96.3,134.1 Q98.6,93.6 139.1,91.3 Q179.5,89.0 209.8,62.0 Z"/>
