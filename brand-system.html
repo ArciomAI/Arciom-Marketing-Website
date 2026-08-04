@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arciom — Brand &amp; Design System</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#05070C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css?v=140e0752">
+<style>
+/* the guide's own chrome — everything else is inherited from site.css so the
+   specimens below are the real components, not reproductions */
+body{overflow-x:hidden}
+.sg-shell{display:grid;grid-template-columns:212px 1fr;gap:0;min-height:100vh}
+@media (max-width:900px){.sg-shell{grid-template-columns:1fr}}
+.sg-side{position:sticky;top:0;height:100vh;padding:38px 22px;border-right:1px solid var(--line);
+  background:var(--surface);overflow-y:auto}
+@media (max-width:900px){.sg-side{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}}
+.sg-side .wm{display:block;margin-bottom:6px}
+.sg-side .wm svg{width:104px;height:auto}
+.sg-side .sg-sub{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:26px}
+.sg-side a{display:block;padding:7px 0;font-size:14px;color:var(--muted);border-bottom:1px solid var(--line-soft)}
+.sg-side a:hover{color:var(--peri)}
+.sg-main{padding:56px 44px 120px;max-width:1080px}
+@media (max-width:700px){.sg-main{padding:34px 22px 80px}}
+.sg-sec{padding:44px 0;border-top:1px solid var(--line)}
+.sg-sec:first-of-type{border-top:none;padding-top:0}
+.sg-sec > h2{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--peri);
+  font-weight:600;margin-bottom:26px}
+.sg-lead{font-size:17px;line-height:1.65;color:var(--muted);max-width:62ch;margin-bottom:30px}
+.sg-lead b{color:var(--ink);font-weight:500}
+.sg-demo{border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--surface);margin:18px 0}
+.sg-demo.on-void{background:var(--void);border-color:rgba(156,170,189,.2)}
+.sg-cap{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+.sg-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.sg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.sg-sw{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line-soft)}
+.sg-chip{width:26px;height:26px;border-radius:7px;flex:none;border:1px solid var(--line)}
+.sg-sw code{display:block;font-size:12px;color:var(--ink)}
+.sg-hex{display:block;font-size:11.5px;color:var(--faint);margin-top:1px}
+.sg-note{display:block;font-size:11.5px;color:var(--muted);margin-top:3px;max-width:34ch}
+.sg-spec{display:flex;align-items:baseline;gap:18px;padding:14px 0;border-bottom:1px solid var(--line-soft);flex-wrap:wrap}
+.sg-spec .m{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);
+  min-width:190px;flex:none}
+table.sg{width:100%;border-collapse:collapse;font-size:14.5px}
+table.sg th{text-align:left;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);font-weight:600;padding:0 14px 10px 0;border-bottom:1px solid var(--line)}
+table.sg td{padding:12px 14px 12px 0;border-bottom:1px solid var(--line-soft);
+  color:var(--muted);vertical-align:top}
+table.sg td:first-child{color:var(--ink);white-space:nowrap}
+code.sg-k{background:var(--peri-soft);border:1px solid var(--peri-line);border-radius:5px;
+  padding:1px 6px;font-size:12.5px;color:var(--peri)}
+pre.sg{background:var(--void);color:#C8D4E4;border-radius:12px;padding:18px 20px;overflow-x:auto;
+  font-size:12.5px;line-height:1.6;border:1px solid rgba(156,170,189,.2)}
+.sg-flag{border-left:2px solid var(--amber);padding:2px 0 2px 16px;margin:16px 0;
+  font-size:14.5px;line-height:1.65;color:var(--muted)}
+.sg-flag b{color:var(--ink);font-weight:500}
+.sg-two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:760px){.sg-two{grid-template-columns:1fr}}
+.sg-mini svg{width:100%;height:auto;max-width:340px;display:block}
+</style>
+</head>
+<body>
+<script>document.documentElement.className+=" js"</script>
+
+<div class="sg-shell">
+<aside class="sg-side">
+  <a class="wm" href="index.html">
+    <svg viewBox="0 0 152.03 37.65" aria-label="Arciom">
+      <g fill="currentColor"><path d="M14.6,10.3c-1.8-1-3.8-1.5-6-1.5-2.3,0-4.4.5-6.2,1.6l1.9,3.3c1.3-.8,2.7-1.2,4.3-1.2s2.9.4,3.9,1.1c1,.7,1.5,1.7,1.5,3v.6c-1.5-.8-3.2-1.2-5.2-1.2s-4.5.6-6,1.7c-1.5,1.2-2.3,2.8-2.3,4.9s.7,3.6,2.2,4.8c1.4,1.2,3.3,1.8,5.6,1.8s4.3-.7,5.8-2v1.6h4.2v-11.5c0-1.5-.3-2.8-1-4-.7-1.2-1.6-2.1-2.8-2.8ZM12.5,25c-1,.8-2.2,1.2-3.7,1.2s-2.3-.3-3.1-.9c-.8-.6-1.2-1.4-1.2-2.4s.4-1.8,1.2-2.4c.8-.6,1.9-.9,3.2-.9s3,.4,4.1,1.3v2c-.1.5-.3,1.4-.5,2.1Z"/><path d="M28.3,11.1v-1.9h-4.2v20.2h4.4v-11.5c0-1.6.5-2.9,1.4-3.9.9-1,2.1-1.5,3.6-1.5s1.3,0,1.9.3l.8-4.1c-.6-.2-1.4-.3-2.2-.3-2.4,0-4.3.9-5.6,2.7Z"/><path d="M46.7,12.9c2,0,3.7.7,5,2.1l3-2.8c-2.1-2.3-4.9-3.4-8.2-3.4s-5.6,1-7.6,3c-2,2-3,4.5-3,7.4s1,5.4,3,7.4c2,2,4.6,3,7.6,3s6.1-1.1,8.2-3.4l-3-2.8c-1.3,1.4-3,2.1-5,2.1s-3.2-.6-4.4-1.8c-1.2-1.2-1.8-2.7-1.8-4.5s.6-3.3,1.8-4.5c1.2-1.2,2.7-1.8,4.4-1.8Z"/><path d="M60.6,9.2h4.4v20.2h-4.4V9.2Z"/><path d="M81,8.8c-3,0-5.6,1-7.6,3-2,2-3.1,4.5-3.1,7.4s1,5.4,3.1,7.4c2,2,4.6,3,7.6,3s5.5-1,7.6-3c2-2,3.1-4.5,3.1-7.4s-1-5.4-3.1-7.4c-2-2-4.6-3-7.6-3ZM85.4,23.7c-1.2,1.2-2.6,1.8-4.4,1.8s-3.2-.6-4.4-1.8c-1.2-1.2-1.8-2.7-1.8-4.5s.6-3.3,1.8-4.5c1.2-1.2,2.6-1.8,4.4-1.8s3.2.6,4.4,1.8c1.2,1.2,1.8,2.7,1.8,4.5s-.6,3.3-1.8,4.5Z"/><path d="M120.6,8.8c-2.9,0-5.1,1.1-6.7,3.2-1.3-2.1-3.4-3.2-6.2-3.2s-4.5.9-5.9,2.6v-2.2h-4.2v20.2h4.4v-11.6c0-1.6.4-2.9,1.3-3.8.9-1,2-1.4,3.4-1.4s2.4.4,3.2,1.3c.8.9,1.2,2.1,1.2,3.6v11.9h4.4v-11.6c0-1.6.4-2.9,1.3-3.8.9-1,2-1.4,3.4-1.4s2.4.4,3.2,1.3c.8.9,1.2,2.1,1.2,3.6v11.9h4.4v-12.6c0-2.5-.7-4.5-2.2-6-1.4-1.5-3.4-2.2-5.8-2.2Z"/></g>
+      <circle cx="76.52" cy="3.95" r="3.95" fill="var(--peri)"/>
+    </svg>
+  </a>
+  <p class="sg-sub">Brand &amp; design system</p>
+  <a href="#positioning">Positioning</a>
+<a href="#typography">Typography</a>
+<a href="#colour">Colour</a>
+<a href="#surfaces">Surfaces</a>
+<a href="#field">Field</a>
+<a href="#components">Components</a>
+<a href="#motion">Motion</a>
+<a href="#graphics">Graphics</a>
+<a href="#architecture">Architecture</a>
+<a href="#accessibility">Accessibility</a>
+<a href="#open-items">Open items</a>
+</aside>
+
+<main class="sg-main">
+
+<section class="sg-sec" id="positioning">
+<h2>01 &nbsp;Positioning</h2>
+<p class="sg-lead">The differentiator is <b>ownership, not capability</b>. Every competitor runs
+on the same frontier models, so the argument is never "our AI is better" — it is whose judgment
+sits on top of it.</p>
+<div class="sg-demo on-void">
+  <p class="sg-cap">As it appears in the hero</p>
+  <p class="hero-eyebrow" style="color:var(--peri-bright)">Your company&rsquo;s proprietary paid media AI</p>
+  <h1 style="font-size:clamp(30px,4vw,52px);color:#EEF2F8;max-width:15ch;line-height:1.06;letter-spacing:-.02em;font-weight:700">
+    Your best marketer&rsquo;s judgment, <span style="color:var(--peri-bright)">captured and put to work.</span></h1>
+  <p style="margin-top:20px;font-weight:300;color:rgba(237,240,251,.8);max-width:56ch;line-height:1.6">
+    Not another AI agent running on public knowledge.</p>
+</div>
+<table class="sg">
+<tr><th>Element</th><th>Copy</th><th>Rule</th></tr>
+<tr><td>Tagline</td><td><code class="sg-k">judgment, proven.</code></td><td>Always lowercase, always with the full stop</td></tr>
+<tr><td>Eyebrow</td><td>Your company&rsquo;s proprietary paid media AI</td><td>Sentence case in markup, uppercased by CSS</td></tr>
+<tr><td>Product noun</td><td>digital twin</td><td>In full in body copy. &ldquo;twin&rdquo; only where space is tight</td></tr>
+<tr><td>Punctuation</td><td>&mdash;</td><td>Em-dashes are being removed in favour of commas, colons, full stops</td></tr>
+</table>
+</section>
+
+<section class="sg-sec" id="typography">
+<h2>02 &nbsp;Typography</h2>
+<p class="sg-lead"><b>One family: Lexend.</b> Open source under the SIL Open Font License, free
+for commercial use. Chosen for readability — it was designed to reduce visual stress and improve
+reading performance. It replaced a three-family system of Space Grotesk, IBM Plex Sans and IBM
+Plex Mono.</p>
+<pre class="sg">fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap</pre>
+
+<div class="sg-demo">
+  <p class="sg-cap">Weight scale — live</p>
+  <div class="sg-spec"><span class="m">300 · baseline</span><span style="font-weight:300;font-size:19px">Everything that inherits. Body, ledes, sub-headlines.</span></div>
+  <div class="sg-spec"><span class="m">500 · emphasis</span><span style="font-weight:500;font-size:19px">Lede callouts and the line where an argument turns.</span></div>
+  <div class="sg-spec"><span class="m">600 · labels</span><span style="font-weight:600;font-size:19px">Tags, captions, data labels.</span></div>
+  <div class="sg-spec"><span class="m">700 · headings</span><span style="font-weight:700;font-size:19px">All headings, every level.</span></div>
+</div>
+
+<div class="sg-demo">
+  <p class="sg-cap">Size scale — live specimens</p>
+  <div class="sg-spec"><span class="m">Hero h1 · homepage<br><code>clamp(42px,6.6vw,84px)</code></span>
+    <span style="font-weight:700;font-size:clamp(30px,4vw,54px);letter-spacing:-.02em;line-height:1.06">Judgment, captured</span></div>
+  <div class="sg-spec"><span class="m">Hero h1 · inner<br><code>clamp(30px,3.9vw,48px)</code></span>
+    <span style="font-weight:700;font-size:clamp(24px,3vw,40px);letter-spacing:-.02em;line-height:1.06">Knowledge is becoming a commodity</span></div>
+  <div class="sg-spec"><span class="m">Section h2<br><code>clamp(28px,3.2vw,44px)</code></span>
+    <span style="font-weight:700;font-size:clamp(22px,2.6vw,34px);letter-spacing:-.02em;line-height:1.1">Autonomy is earned</span></div>
+  <div class="sg-spec"><span class="m">Block h3 · 24px</span><span style="font-weight:700;font-size:24px">We only keep what&rsquo;s proven</span></div>
+  <div class="sg-spec"><span class="m">Card h3 · 20px</span><span style="font-weight:700;font-size:20px">The judgment audit</span></div>
+  <div class="sg-spec"><span class="m">Advisor card · 17px</span><span style="font-weight:700;font-size:17px">Chris Babcock</span></div>
+  <div class="sg-spec"><span class="m">Body · 16px / 300</span><span style="font-weight:300;font-size:16px;line-height:1.6">Judgment compounds. Every account a marketer runs teaches them something the last one didn&rsquo;t.</span></div>
+  <div class="sg-spec"><span class="m">Eyebrow · 11px<br>0.2em tracking, caps</span><span class="eyebrow" style="margin:0">The current situation</span></div>
+</div>
+
+<div class="sg-flag"><b>Since mono was retired,</b> labels rely on letter-spacing and uppercase
+alone to read as labels rather than small headings. That is a thinner distinction than a second
+typeface was providing — worth watching where an eyebrow sits directly above a heading.</div>
+
+<table class="sg">
+<tr><th>Property</th><th>Value</th><th>Why</th></tr>
+<tr><td>Heading line-height</td><td><code class="sg-k">1.06</code></td><td>Lexend has a tall x-height; the old 1.02 nearly touched</td></tr>
+<tr><td>Heading tracking</td><td><code class="sg-k">-.02em</code></td><td>Lexend is wider than Space Grotesk; -.03em closed it up</td></tr>
+<tr><td>Body line-height</td><td><code class="sg-k">1.6</code></td><td>&nbsp;</td></tr>
+<tr><td>Lede line-height</td><td><code class="sg-k">1.68</code></td><td>Lighter strokes need more air</td></tr>
+</table>
+</section>
+
+<section class="sg-sec" id="colour">
+<h2>03 &nbsp;Colour</h2>
+<p class="sg-lead"><b>Dark is the default.</b> <code class="sg-k">&lt;html data-theme="dark"&gt;</code>
+is in the markup, so the first paint is dark with no flash. An inline script only overrides it if
+the visitor has previously chosen light. Each swatch below shows <b>light / dark</b>.</p>
+<p class="sg-cap">Accents — each carries a fixed meaning</p>
+<div class="sg-two"><div><div class="sg-sw"><span class="sg-chip" style="background:#4A5EDA"></span><span class="sg-chip" style="background:#8EA6FF"></span><div><code>--peri</code><span class="sg-hex">#4A5EDA &nbsp;/&nbsp; #8EA6FF</span><span class="sg-note">Arciom, capture, the expert</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#8EA6FF"></span><span class="sg-chip" style="background:#8EA6FF"></span><div><code>--peri-bright</code><span class="sg-hex">#8EA6FF</span><span class="sg-note">On dark surfaces</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#0F9D8F"></span><span class="sg-chip" style="background:#74E0D4"></span><div><code>--aqua</code><span class="sg-hex">#0F9D8F &nbsp;/&nbsp; #74E0D4</span><span class="sg-note">The digital twin, proof, growth</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#74E0D4"></span><span class="sg-chip" style="background:#74E0D4"></span><div><code>--aqua-bright</code><span class="sg-hex">#74E0D4</span><span class="sg-note">On dark surfaces</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#B57A1F"></span><span class="sg-chip" style="background:#F4C273"></span><div><code>--amber</code><span class="sg-hex">#B57A1F &nbsp;/&nbsp; #F4C273</span><span class="sg-note">Gates, human approval, value returned</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#F4C273"></span><span class="sg-chip" style="background:#F4C273"></span><div><code>--amber-bright</code><span class="sg-hex">#F4C273</span><span class="sg-note">On dark surfaces</span></div></div></div>
+<div class="sg-demo on-void" style="margin:0">
+  <p class="sg-cap">Meaning in use</p>
+  <p style="color:var(--peri-bright);font-weight:600;font-size:14px;margin-bottom:6px">PERIWINKLE</p>
+  <p style="font-weight:300;color:rgba(237,240,251,.72);font-size:14px;margin-bottom:16px">Arciom itself, the capture act, the expert.</p>
+  <p style="color:var(--aqua-bright);font-weight:600;font-size:14px;margin-bottom:6px">AQUA</p>
+  <p style="font-weight:300;color:rgba(237,240,251,.72);font-size:14px;margin-bottom:16px">The digital twin, anything proven, growth.</p>
+  <p style="color:var(--amber-bright);font-weight:600;font-size:14px;margin-bottom:6px">AMBER</p>
+  <p style="font-weight:300;color:rgba(237,240,251,.72);font-size:14px">Human gates, approval, value returned to the expert.</p>
+</div></div>
+<p class="sg-cap" style="margin-top:30px">Surfaces</p>
+<div class="sg-sw"><span class="sg-chip" style="background:#F4F6FC"></span><span class="sg-chip" style="background:#05070C"></span><div><code>--paper</code><span class="sg-hex">#F4F6FC &nbsp;/&nbsp; #05070C</span><span class="sg-note">Page</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#FFFFFF"></span><span class="sg-chip" style="background:#151B29"></span><div><code>--surface</code><span class="sg-hex">#FFFFFF &nbsp;/&nbsp; #151B29</span><span class="sg-note">Cards, bands</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#0A0D14"></span><span class="sg-chip" style="background:#0A0D14"></span><div><code>--void</code><span class="sg-hex">#0A0D14</span><span class="sg-note">Panels that stay dark in both themes</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#10142B"></span><span class="sg-chip" style="background:#EEF2F8"></span><div><code>--ink</code><span class="sg-hex">#10142B &nbsp;/&nbsp; #EEF2F8</span><span class="sg-note">Primary text</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#5B6478"></span><span class="sg-chip" style="background:#9CAABD"></span><div><code>--muted</code><span class="sg-hex">#5B6478 &nbsp;/&nbsp; #9CAABD</span><span class="sg-note">Body text</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:#8891A3"></span><span class="sg-chip" style="background:#6E7C90"></span><div><code>--faint</code><span class="sg-hex">#8891A3 &nbsp;/&nbsp; #6E7C90</span><span class="sg-note">Labels, axis text</span></div></div><div class="sg-sw"><span class="sg-chip" style="background:rgba(16,20,43,.10)"></span><span class="sg-chip" style="background:rgba(156,170,189,.18)"></span><div><code>--line</code><span class="sg-hex">rgba(16,20,43,.10) &nbsp;/&nbsp; rgba(156,170,189,.18)</span><span class="sg-note">Hairlines</span></div></div>
+</section>
+
+<section class="sg-sec" id="surfaces">
+<h2>04 &nbsp;Surfaces &amp; elevation</h2>
+<p class="sg-lead">In dark mode the page drops to near-black so every panel can sit
+<b>above</b> it. Before this, panels using <code class="sg-k">--void</code> matched the page
+exactly and disappeared.</p>
+<div class="sg-demo" style="background:#05070C;border-color:rgba(156,170,189,.2)">
+  <p class="sg-cap">Dark-mode layering, darkest to lightest</p>
+  <div style="display:grid;gap:10px">
+    <div style="background:#05070C;border:1px solid rgba(156,170,189,.14);border-radius:10px;padding:14px 16px;color:#9CAABD;font-size:13px">
+      <code style="color:#EEF2F8">#05070C</code> &nbsp;page</div>
+    <div style="background:#101623;border:1px solid rgba(156,170,189,.2);border-radius:10px;padding:14px 16px;color:#9CAABD;font-size:13px">
+      <code style="color:#EEF2F8">#101623 / #111826</code> &nbsp;capture window, reports, ad mocks</div>
+    <div style="background:#121826;border:1px solid rgba(156,170,189,.2);border-radius:10px;padding:14px 16px;color:#9CAABD;font-size:13px">
+      <code style="color:#EEF2F8">#121826</code> &nbsp;The Shift, Trust Ladder, The Commitment</div>
+    <div style="background:#151B29;border:1px solid rgba(156,170,189,.2);border-radius:10px;padding:14px 16px;color:#9CAABD;font-size:13px">
+      <code style="color:#EEF2F8">#151B29</code> &nbsp;cards and bands</div>
+  </div>
+</div>
+</section>
+
+<section class="sg-sec" id="field">
+<h2>05 &nbsp;The Aurora field</h2>
+<p class="sg-lead">A three-point radial glow over Void, on every hero and the footer. Over it,
+a <b>26px dot grid</b> at 1.3px and 30% periwinkle, radially masked so it concentrates right of
+centre and dissolves before it reaches the copy.</p>
+<div style="position:relative;height:230px;border-radius:16px;overflow:hidden;border:1px solid rgba(156,170,189,.2);
+  background:radial-gradient(circle at 18% 20%, rgba(142,166,255,.22), transparent 42%),
+             radial-gradient(circle at 88% 90%, rgba(116,224,212,.16), transparent 46%),
+             radial-gradient(circle at 60% 120%, rgba(244,194,115,.10), transparent 44%), #05070C">
+  <div style="position:absolute;inset:0;
+    background-image:radial-gradient(rgba(142,166,255,.28) 1.15px, transparent 1.15px);
+    background-size:24px 24px;
+    -webkit-mask-image:radial-gradient(78% 78% at 68% 46%, #000 0%, rgba(0,0,0,.55) 42%, transparent 76%);
+    mask-image:radial-gradient(78% 78% at 68% 46%, #000 0%, rgba(0,0,0,.55) 42%, transparent 76%)"></div>
+</div>
+<pre class="sg">radial-gradient(circle at 18% 20%, rgba(142,166,255,.22), transparent 42%),
+radial-gradient(circle at 88% 90%, rgba(116,224,212,.16), transparent 46%),
+radial-gradient(circle at 60% 120%, rgba(244,194,115,.10), transparent 44%),
+#05070C</pre>
+</section>
+
+<section class="sg-sec" id="components">
+<h2>06 &nbsp;Components</h2>
+<p class="sg-lead">Every specimen below is the <b>live component</b>, styled by
+<code class="sg-k">site.css</code> — not a reproduction. If the site changes, this page changes
+with it.</p>
+
+<div class="sg-demo">
+  <p class="sg-cap">Buttons</p>
+  <div class="sg-row">
+    <a class="btn primary" href="#components">Request Demo</a>
+    <a class="btn ghost" href="#components">See how it works</a>
+  </div>
+</div>
+
+<div class="sg-demo">
+  <p class="sg-cap">Eyebrow, heading, lede — the standard section opening</p>
+  <p class="eyebrow">Our process &middot; the trust ladder</p>
+  <h2 class="h2" style="max-width:640px">Autonomy is <span class="alt">earned.</span> Rung by rung.</h2>
+  <p class="lede2" style="max-width:640px">You don&rsquo;t hand over the account. The digital twin
+  operates through permissions you grant, and every step up is earned by evidence.</p>
+</div>
+
+<div class="sg-demo">
+  <p class="sg-cap">Card</p>
+  <div class="sg-grid">
+    <div class="d1">
+      <h3>The judgment audit</h3>
+      <p>Every strategic decision your team made last year, pulled from the account,
+      reconstructed, and scored against the results it drove.</p>
+      <p class="tag" style="color:var(--peri)">Renders within the hour</p>
+    </div>
+    <div class="d1">
+      <h3>The scoreboard</h3>
+      <p>Your experts benchmarked head-to-head against the frontier models on identical tasks,
+      showing where they win and where they don&rsquo;t.</p>
+      <p class="tag" style="color:var(--aqua)">Proof, not promises</p>
+    </div>
+  </div>
+</div>
+
+<div class="sg-demo">
+  <p class="sg-cap">Governance report — the densest data component</p>
+  <div class="report" style="max-width:420px">
+    <div class="rhead"><span>Week of Jul 13</span><span class="to">&rarr; sent to leadership</span></div>
+    <div class="rsummary">
+      <div><span class="rsum-num">+9.4%</span><span class="rsum-label">net ROI impact</span></div>
+      <div><span class="rsum-num" style="color:#C8D4E4">27</span><span class="rsum-label">decisions tracked</span></div>
+    </div>
+    <p class="rmovers">Top movers</p>
+    <div class="decision"><span>Budget shifted to brand campaigns <em class="src">twin</em></span><span class="delta up">+6.2%</span></div>
+    <div class="decision"><span>Bid strategy: target ROAS raised <em class="src">in-house</em></span><span class="delta up">+3.8%</span></div>
+    <div class="decision"><span>Landing page swap, promo LP <em class="src">in-house</em></span><span class="delta warn">&minus;1.2% flagged</span></div>
+    <div class="rfoot">Delivered every Monday &middot; no dashboard required</div>
+  </div>
+</div>
+
+<div class="sg-demo">
+  <p class="sg-cap">Accordion — FAQ</p>
+  <details class="qa" open>
+    <summary>What is the judgment audit?</summary>
+    <div class="a"><p>The first thing Arciom produces, usually within an hour of connecting your
+    accounts. Your ad account already holds years of strategic changes.</p></div>
+  </details>
+  <details class="qa">
+    <summary>What is the scoreboard?</summary>
+    <div class="a"><p>A head-to-head comparison of your experts against the frontier model you
+    choose, blind-judged on identical past decisions.</p></div>
+  </details>
+</div>
+
+<div class="sg-demo">
+  <p class="sg-cap">Form field</p>
+  <div class="fld" style="max-width:400px">
+    <label for="sg-e">Work email</label>
+    <input id="sg-e" type="email" placeholder="you@company.com">
+  </div>
+</div>
+
+<div class="sg-demo on-void">
+  <p class="sg-cap" style="color:rgba(237,240,251,.5)">Dark panel — used for the Shift, Trust Ladder and Commitment</p>
+  <p class="eyebrow" style="color:var(--peri-bright)">The shift</p>
+  <h2 style="font-size:clamp(22px,2.6vw,34px);color:#fff;max-width:22ch;font-weight:700;line-height:1.1;letter-spacing:-.02em">
+    Every time a new AI model ships, what your team knows gets more common,
+    <span style="color:var(--peri-bright)">and how they decide gets more valuable.</span></h2>
+</div>
+</section>
+
+<section class="sg-sec" id="motion">
+<h2>07 &nbsp;Motion</h2>
+<p class="sg-lead"><b>The rule: motion resolves, it does not loop.</b> Graphics form once on
+arrival, settle within about 2.5 seconds, then either rest or drift slowly enough to read as
+atmosphere. Looping motion competes with reading the headline — that was learned the hard way.</p>
+<table class="sg">
+<tr><th>Concern</th><th>Approach</th></tr>
+<tr><td>Formation</td><td>CSS transitions triggered by an IntersectionObserver: <code class="sg-k">[data-reveal]</code> gains <code class="sg-k">.in</code>, then the observer stops watching it</td></tr>
+<tr><td>Continuous motion</td><td><b>SMIL</b>, never CSS transforms on <code class="sg-k">&lt;g&gt;</code>. CSS transforms on SVG groups proved unreliable and silently failed twice</td></tr>
+<tr><td>Transform conflicts</td><td>Every <code class="sg-k">animateTransform</code> sits alone on a bare group with no competing transform attribute</td></tr>
+<tr><td>Centring</td><td>Scale and rotate wrap in a static <code class="sg-k">translate</code> pair, or they pivot on the SVG origin</td></tr>
+<tr><td>Reduced motion</td><td><code class="sg-k">site.js</code> removes every SMIL node, since CSS cannot switch it off</td></tr>
+</table>
+<div class="sg-flag"><b>The one exception:</b> the FAQ waveform runs continuously. A still
+waveform reads as broken, so voice is the one place where looping is correct.</div>
+</section>
+
+<section class="sg-sec" id="graphics">
+<h2>08 &nbsp;Signature graphics</h2>
+<p class="sg-lead">Each one makes an argument. None is decoration — that was the test every
+graphic had to pass, and several were removed for failing it.</p>
+
+<div class="sg-two">
+  <div class="sg-demo on-void">
+    <p class="sg-cap" style="color:rgba(237,240,251,.5)">About hero — the headline, drawn</p>
+    <div class="sg-mini"><svg class="sg-live" viewBox="0 0 420 292" role="img" aria-label="Two bar groups: knowledge as a flat uniform wall that every model already has, and judgment as an irregular line with one decisive peak">
+      <line x1="18" y1="226" x2="402" y2="226" stroke="#EDF0FB" stroke-opacity=".16" stroke-width="1"/>
+      <rect class="ab-bar" style="--d:0.15s;--h:163.8px" x="24" y="62.2" width="15" height="163.8" rx="3" fill="#8891A3" fill-opacity=".42"/>
+      <rect class="ab-bar" style="--d:0.21s;--h:174.7px" x="46" y="51.3" width="15" height="174.7" rx="3" fill="#8891A3" fill-opacity=".42"/>
+      <rect class="ab-bar" style="--d:0.27s;--h:160.2px" x="68" y="65.8" width="15" height="160.2" rx="3" fill="#8891A3" fill-opacity=".42"/>
+      <rect class="ab-bar" style="--d:0.33s;--h:169.3px" x="90" y="56.7" width="15" height="169.3" rx="3" fill="#8891A3" fill-opacity=".42"/>
+      <rect class="ab-bar" style="--d:0.39s;--h:165.6px" x="112" y="60.4" width="15" height="165.6" rx="3" fill="#8891A3" fill-opacity=".42"/>
+      <rect class="ab-bar" style="--d:0.45s;--h:174.7px" x="134" y="51.3" width="15" height="174.7" rx="3" fill="#8891A3" fill-opacity=".42"/>
+      <rect class="ab-bar" style="--d:0.51s;--h:162.0px" x="156" y="64.0" width="15" height="162.0" rx="3" fill="#8891A3" fill-opacity=".42"/>
+      <rect class="ab-bar" style="--d:0.57s;--h:171.1px" x="178" y="54.9" width="15" height="171.1" rx="3" fill="#8891A3" fill-opacity=".42"/>
+      <rect class="ab-bar" style="--d:0.15s;--h:29.1px" x="238" y="196.9" width="15" height="29.1" rx="3" fill="#8EA6FF" fill-opacity=".34"/>
+      <rect class="ab-bar" style="--d:0.21s;--h:54.6px" x="260" y="171.4" width="15" height="54.6" rx="3" fill="#8EA6FF" fill-opacity=".34"/>
+      <rect class="ab-bar" style="--d:0.27s;--h:40.0px" x="282" y="186.0" width="15" height="40.0" rx="3" fill="#8EA6FF" fill-opacity=".34"/>
+      <rect class="ab-bar" style="--d:0.33s;--h:21.8px" x="304" y="204.2" width="15" height="21.8" rx="3" fill="#8EA6FF" fill-opacity=".34"/>
+      <rect class="ab-bar ab-spike" style="--d:0.39s;--h:176.5px" x="326" y="49.5" width="15" height="176.5" rx="3" fill="#2FE0C9" fill-opacity="1"/>
+      <rect class="ab-bar" style="--d:0.45s;--h:47.3px" x="348" y="178.7" width="15" height="47.3" rx="3" fill="#8EA6FF" fill-opacity=".34"/>
+      <rect class="ab-bar" style="--d:0.51s;--h:69.2px" x="370" y="156.8" width="15" height="69.2" rx="3" fill="#8EA6FF" fill-opacity=".34"/>
+      <rect class="ab-bar" style="--d:0.57s;--h:32.8px" x="392" y="193.2" width="15" height="32.8" rx="3" fill="#8EA6FF" fill-opacity=".34"/>
+      <text class="ab-l" x="24" y="252" fill="#9CA6BA">KNOWLEDGE</text>
+      <text class="ab-v" x="24" y="272" fill="#8891A3">COMMODITY</text>
+      <text class="ab-l" x="238" y="252" fill="#8EA6FF">JUDGMENT</text>
+      <text class="ab-v" x="238" y="272" fill="#2FE0C9">SCARCE</text>
+      <circle class="ab-dot" cx="333.5" cy="36.5" r="3.5" fill="#2FE0C9"/>
+    </svg></div>
+  </div>
+  <div class="sg-demo on-void">
+    <p class="sg-cap" style="color:rgba(237,240,251,.5)">FAQ hero — the capture conversation</p>
+    <div class="sg-mini"><svg class="sg-live" viewBox="0 0 400 230" role="img" aria-label="A voice waveform with a question from the expert and a reply from Arciom, as captured during a session">
+      <g class="cv-wave"><rect class="cv-b" style="--d:0.08s" x="18.0" y="62.0" width="5" height="16" rx="2.5" fill="#8EA6FF" fill-opacity="0.41"><animate attributeName="height" values="16;5.6;16" dur="3.3s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="y" values="62.0;67.0;62.0" dur="2.9s" begin="1.6s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.1s" x="29.5" y="53.0" width="5" height="34" rx="2.5" fill="#8EA6FF" fill-opacity="0.52"><animate attributeName="height" values="34;21.2;34" dur="2.9s" begin="1.64s" repeatCount="indefinite"/><animate attributeName="y" values="53.0;62.7;53.0" dur="2.2s" begin="1.64s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.12s" x="41.0" y="41.0" width="5" height="58" rx="2.5" fill="#8EA6FF" fill-opacity="0.66"><animate attributeName="height" values="58;33.6;58" dur="3.3s" begin="1.68s" repeatCount="indefinite"/><animate attributeName="y" values="41.0;53.8;41.0" dur="2.6s" begin="1.68s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.15s" x="52.5" y="56.0" width="5" height="28" rx="2.5" fill="#8EA6FF" fill-opacity="0.48"><animate attributeName="height" values="28;12.9;28" dur="2.3s" begin="1.72s" repeatCount="indefinite"/><animate attributeName="y" values="56.0;61.9;56.0" dur="2.4s" begin="1.72s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.17s" x="64.0" y="33.0" width="5" height="74" rx="2.5" fill="#8EA6FF" fill-opacity="0.75"><animate attributeName="height" values="74;37.9;74" dur="2.7s" begin="1.76s" repeatCount="indefinite"/><animate attributeName="y" values="33.0;49.7;33.0" dur="1.7s" begin="1.76s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.19s" x="75.5" y="48.0" width="5" height="44" rx="2.5" fill="#8EA6FF" fill-opacity="0.58"><animate attributeName="height" values="44;17.7;44" dur="2.9s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="y" values="48.0;58.4;48.0" dur="3.1s" begin="1.8s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.21s" x="87.0" y="27.0" width="5" height="86" rx="2.5" fill="#8EA6FF" fill-opacity="0.82"><animate attributeName="height" values="86;29.1;86" dur="2.0s" begin="1.84s" repeatCount="indefinite"/><animate attributeName="y" values="27.0;48.5;27.0" dur="2.9s" begin="1.84s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.23s" x="98.5" y="51.0" width="5" height="38" rx="2.5" fill="#8EA6FF" fill-opacity="0.54"><animate attributeName="height" values="38;14.8;38" dur="3.0s" begin="1.88s" repeatCount="indefinite"/><animate attributeName="y" values="51.0;61.1;51.0" dur="2.2s" begin="1.88s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.26s" x="110.0" y="38.0" width="5" height="64" rx="2.5" fill="#8EA6FF" fill-opacity="0.69"><animate attributeName="height" values="64;39.6;64" dur="1.8s" begin="1.92s" repeatCount="indefinite"/><animate attributeName="y" values="38.0;49.0;38.0" dur="2.2s" begin="1.92s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.28s" x="121.5" y="58.0" width="5" height="24" rx="2.5" fill="#8EA6FF" fill-opacity="0.46"><animate attributeName="height" values="24;10.8;24" dur="2.0s" begin="1.96s" repeatCount="indefinite"/><animate attributeName="y" values="58.0;64.1;58.0" dur="3.1s" begin="1.96s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.3s" x="133.0" y="44.0" width="5" height="52" rx="2.5" fill="#8EA6FF" fill-opacity="0.62"><animate attributeName="height" values="52;20.8;52" dur="2.6s" begin="2.0s" repeatCount="indefinite"/><animate attributeName="y" values="44.0;57.6;44.0" dur="2.1s" begin="2.0s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.32s" x="144.5" y="35.0" width="5" height="70" rx="2.5" fill="#8EA6FF" fill-opacity="0.73"><animate attributeName="height" values="70;25.7;70" dur="2.9s" begin="2.04s" repeatCount="indefinite"/><animate attributeName="y" values="35.0;53.6;35.0" dur="2.4s" begin="2.04s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.34s" x="156.0" y="54.0" width="5" height="32" rx="2.5" fill="#8EA6FF" fill-opacity="0.51"><animate attributeName="height" values="32;17.2;32" dur="1.8s" begin="2.08s" repeatCount="indefinite"/><animate attributeName="y" values="54.0;60.2;54.0" dur="3.2s" begin="2.08s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.37s" x="167.5" y="42.0" width="5" height="56" rx="2.5" fill="#8EA6FF" fill-opacity="0.65"><animate attributeName="height" values="56;23.0;56" dur="3.1s" begin="2.12s" repeatCount="indefinite"/><animate attributeName="y" values="42.0;54.0;42.0" dur="2.1s" begin="2.12s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.39s" x="179.0" y="60.0" width="5" height="20" rx="2.5" fill="#8EA6FF" fill-opacity="0.44"><animate attributeName="height" values="20;8.3;20" dur="1.8s" begin="2.16s" repeatCount="indefinite"/><animate attributeName="y" values="60.0;65.3;60.0" dur="2.4s" begin="2.16s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.41s" x="190.5" y="49.0" width="5" height="42" rx="2.5" fill="#8EA6FF" fill-opacity="0.56"><animate attributeName="height" values="42;20.8;42" dur="2.5s" begin="2.2s" repeatCount="indefinite"/><animate attributeName="y" values="49.0;59.1;49.0" dur="1.8s" begin="2.2s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.43s" x="202.0" y="31.0" width="5" height="78" rx="2.5" fill="#8EA6FF" fill-opacity="0.77"><animate attributeName="height" values="78;31.3;78" dur="2.6s" begin="2.24s" repeatCount="indefinite"/><animate attributeName="y" values="31.0;50.9;31.0" dur="1.9s" begin="2.24s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.45s" x="213.5" y="56.0" width="5" height="28" rx="2.5" fill="#8EA6FF" fill-opacity="0.48"><animate attributeName="height" values="28;11.8;28" dur="3.4s" begin="2.28s" repeatCount="indefinite"/><animate attributeName="y" values="56.0;61.5;56.0" dur="2.9s" begin="2.28s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.48s" x="225.0" y="46.0" width="5" height="48" rx="2.5" fill="#8EA6FF" fill-opacity="0.6"><animate attributeName="height" values="48;21.5;48" dur="2.4s" begin="2.32s" repeatCount="indefinite"/><animate attributeName="y" values="46.0;56.2;46.0" dur="2.6s" begin="2.32s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.5s" x="236.5" y="61.0" width="5" height="18" rx="2.5" fill="#8EA6FF" fill-opacity="0.42"><animate attributeName="height" values="18;9.9;18" dur="1.7s" begin="2.36s" repeatCount="indefinite"/><animate attributeName="y" values="61.0;64.8;61.0" dur="2.0s" begin="2.36s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.52s" x="248.0" y="39.0" width="5" height="62" rx="2.5" fill="#8EA6FF" fill-opacity="0.68"><animate attributeName="height" values="62;27.1;62" dur="2.6s" begin="2.4s" repeatCount="indefinite"/><animate attributeName="y" values="39.0;49.5;39.0" dur="2.3s" begin="2.4s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.54s" x="259.5" y="52.0" width="5" height="36" rx="2.5" fill="#8EA6FF" fill-opacity="0.53"><animate attributeName="height" values="36;19.9;36" dur="2.0s" begin="2.44s" repeatCount="indefinite"/><animate attributeName="y" values="52.0;58.2;52.0" dur="2.0s" begin="2.44s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.56s" x="271.0" y="30.0" width="5" height="80" rx="2.5" fill="#8EA6FF" fill-opacity="0.79"><animate attributeName="height" values="80;41.2;80" dur="2.8s" begin="2.48s" repeatCount="indefinite"/><animate attributeName="y" values="30.0;47.1;30.0" dur="2.4s" begin="2.48s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.59s" x="282.5" y="57.0" width="5" height="26" rx="2.5" fill="#8EA6FF" fill-opacity="0.47"><animate attributeName="height" values="26;14.4;26" dur="1.6s" begin="2.52s" repeatCount="indefinite"/><animate attributeName="y" values="57.0;61.2;57.0" dur="2.6s" begin="2.52s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.61s" x="294.0" y="43.0" width="5" height="54" rx="2.5" fill="#8EA6FF" fill-opacity="0.63"><animate attributeName="height" values="54;28.8;54" dur="2.1s" begin="2.56s" repeatCount="indefinite"/><animate attributeName="y" values="43.0;56.7;43.0" dur="2.8s" begin="2.56s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.63s" x="305.5" y="49.0" width="5" height="42" rx="2.5" fill="#8EA6FF" fill-opacity="0.56"><animate attributeName="height" values="42;19.7;42" dur="1.8s" begin="2.6s" repeatCount="indefinite"/><animate attributeName="y" values="49.0;61.8;49.0" dur="3.2s" begin="2.6s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.65s" x="317.0" y="36.0" width="5" height="68" rx="2.5" fill="#8EA6FF" fill-opacity="0.72"><animate attributeName="height" values="68;26.8;68" dur="2.5s" begin="2.64s" repeatCount="indefinite"/><animate attributeName="y" values="36.0;50.4;36.0" dur="2.0s" begin="2.64s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.67s" x="328.5" y="59.0" width="5" height="22" rx="2.5" fill="#8EA6FF" fill-opacity="0.45"><animate attributeName="height" values="22;13.4;22" dur="2.5s" begin="2.68s" repeatCount="indefinite"/><animate attributeName="y" values="59.0;62.7;59.0" dur="2.0s" begin="2.68s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.7s" x="340.0" y="47.0" width="5" height="46" rx="2.5" fill="#8EA6FF" fill-opacity="0.59"><animate attributeName="height" values="46;21.8;46" dur="2.3s" begin="2.72s" repeatCount="indefinite"/><animate attributeName="y" values="47.0;60.4;47.0" dur="2.4s" begin="2.72s" repeatCount="indefinite"/></rect><rect class="cv-b" style="--d:0.72s" x="351.5" y="55.0" width="5" height="30" rx="2.5" fill="#8EA6FF" fill-opacity="0.49"><animate attributeName="height" values="30;14.2;30" dur="2.3s" begin="2.76s" repeatCount="indefinite"/><animate attributeName="y" values="55.0;60.5;55.0" dur="2.2s" begin="2.76s" repeatCount="indefinite"/></rect></g>
+      <g class="cv-line cv-1">
+        <circle cx="21" cy="132" r="3.8" fill="#2FE0C9"/>
+        <text class="cv-who" x="33" y="136" fill="#2FE0C9">EXPERT</text>
+        <rect x="33" y="147" width="298" height="6" rx="3" fill="#EDF0FB" fill-opacity=".22"/>
+        <rect x="33" y="160" width="212" height="6" rx="3" fill="#EDF0FB" fill-opacity=".16"/>
+      </g>
+      <g class="cv-line cv-2">
+        <circle cx="21" cy="192" r="3.8" fill="#8EA6FF"/>
+        <text class="cv-who" x="33" y="196" fill="#8EA6FF">ARCIOM</text>
+        <rect x="33" y="207" width="256" height="6" rx="3" fill="#EDF0FB" fill-opacity=".22"/>
+      </g>
+    </svg></div>
+  </div>
+</div>
+
+<table class="sg">
+<tr><th>Where</th><th>Graphic</th><th>The argument it makes</th></tr>
+<tr><td>Homepage hero</td><td>Dot grid drawn into a ring, twin forms at centre</td><td>Captured decisions feed the digital twin</td></tr>
+<tr><td>Homepage</td><td>Capture window: brain map, Google Ads UI, voice strip</td><td>What a session actually looks like</td></tr>
+<tr><td>Homepage</td><td>Commodity vs scarce bars</td><td>Knowledge flattens, judgment spikes</td></tr>
+<tr><td>Homepage</td><td>Prove card: tokens filtered at a gate</td><td>Most decisions are discarded</td></tr>
+<tr><td>Why Arciom hero</td><td>Clustered constellation, labelled by judgment category</td><td>What the brain becomes after hundreds of sessions</td></tr>
+<tr><td>Why Arciom</td><td>Foundation stack with a &ldquo;your edge&rdquo; bracket</td><td>Same base model, different layer on top</td></tr>
+<tr><td>About hero</td><td>Flat wall vs irregular peak</td><td>The headline, drawn</td></tr>
+<tr><td>About</td><td>Accumulated judgment over time</td><td>Turnover resets; Arciom compounds</td></tr>
+<tr><td>About</td><td>Arch, keystone landing last</td><td>The name</td></tr>
+<tr><td>FAQ hero</td><td>Waveform, expert question, Arciom reply</td><td>Callback to voice capture</td></tr>
+<tr><td>Demo hero</td><td>One cluster, dots connected in sequence</td><td>Your account, mapped</td></tr>
+</table>
+</section>
+
+<section class="sg-sec" id="architecture">
+<h2>09 &nbsp;Architecture</h2>
+<pre class="sg">site.css     shared — tokens, reset, nav, buttons, sections, footer, focus, type scale
+site.js      shared — reveal observer, reduced-motion SMIL strip, theme toggle
+*.html       page-specific CSS in a &lt;style&gt; block, loaded after site.css</pre>
+<p class="sg-lead" style="margin-top:22px">CSS went from <b>350 KB duplicated across eight pages</b>
+to about 30 KB cached once, plus page-specific blocks.</p>
+<div class="sg-flag"><b>Cache busting is not optional here.</b> Both shared files carry a content
+hash — <code class="sg-k">site.css?v=&hellip;</code>. While the CSS was inlined, editing a style
+also changed the HTML, so caches invalidated themselves. Extracting the stylesheet removed that
+safety net: the HTML can be identical while <code class="sg-k">site.css</code> has changed
+underneath it. Regenerate the hash with <code class="sg-k">md5sum</code> after any edit.</div>
+</section>
+
+<section class="sg-sec" id="accessibility">
+<h2>10 &nbsp;Accessibility</h2>
+<table class="sg">
+<tr><th>Area</th><th>State</th></tr>
+<tr><td>Heading order</td><td>Runs in sequence on every page, no skipped levels</td></tr>
+<tr><td>Focus</td><td>One <code class="sg-k">:focus-visible</code> ring across links, buttons, summaries and form controls, with a brighter variant for dark surfaces</td></tr>
+<tr><td>Reduced motion</td><td>All CSS animation disabled; SMIL nodes removed by <code class="sg-k">site.js</code></td></tr>
+<tr><td>Graphics</td><td><code class="sg-k">role="img"</code> with a descriptive label, or <code class="sg-k">aria-hidden</code> when decorative</td></tr>
+<tr><td>Eyebrows</td><td>Sentence case in markup, uppercased by CSS, so screen readers do not spell them out</td></tr>
+<tr><td>Colour</td><td>Accents shift to their bright variants in dark mode to hold contrast</td></tr>
+</table>
+<div class="sg-demo" style="margin-top:22px">
+  <p class="sg-cap">Focus ring — tab into these</p>
+  <div class="sg-row">
+    <a class="btn primary" href="#accessibility">Primary</a>
+    <a class="btn ghost" href="#accessibility">Ghost</a>
+    <a href="#accessibility" style="color:var(--peri)">A text link</a>
+  </div>
+</div>
+</section>
+
+<section class="sg-sec" id="open-items">
+<h2>11 &nbsp;Open items</h2>
+<table class="sg">
+<tr><th>Area</th><th>Outstanding</th></tr>
+<tr><td><b>Legal &mdash; blocking</b></td><td>Six FAQ answers flagged <code class="sg-k">LEGAL REVIEW REQUIRED</code>. Privacy and Terms are structural placeholders carrying a do-not-publish notice.</td></tr>
+<tr><td><b>Legal &mdash; strategic</b></td><td>Do not grant perpetual exclusive rights to the judgment layer, or a future marketplace is foreclosed. The instance/judgment split is now written into the ownership answers.</td></tr>
+<tr><td><b>Tracking</b></td><td>The demo form posts nowhere. No analytics anywhere on the site. No spam honeypot on the form.</td></tr>
+<tr><td><b>Content</b></td><td>No pricing signal outside one FAQ answer. No lighter CTA than &ldquo;Request Demo&rdquo;.</td></tr>
+<tr><td><b>Copy</b></td><td>Roughly 45 em-dashes remain in body copy.</td></tr>
+<tr><td><b>People</b></td><td>Doug and Jason need surnames, bios and headshots. LinkedIn URLs are placeholders.</td></tr>
+<tr><td><b>Detail</b></td><td>Vectra trademark conflict flagged. The &ldquo;certified team&rdquo; credential is unnamed.</td></tr>
+<tr><td><b>FAQ</b></td><td>Session cadence and debrief length still unspecified &mdash; marked in the source.</td></tr>
+</table>
+</section>
+
+</main>
+</div>
+
+<button class="theme-t" id="theme-t" type="button" aria-label="Switch colour theme">
+  <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg>
+  <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.4A8.2 8.2 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4z"/></svg>
+</button>
+<script>
+(function(){
+  var root=document.documentElement, b=document.getElementById('theme-t');
+  try{var t=localStorage.getItem('arciom-theme'); if(t) root.setAttribute('data-theme',t);}catch(e){}
+  b.addEventListener('click',function(){
+    var n=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',n);
+    try{localStorage.setItem('arciom-theme',n);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

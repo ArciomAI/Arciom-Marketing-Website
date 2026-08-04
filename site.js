@@ -40,3 +40,40 @@
     label();
   });
 })();
+
+/* mobile navigation */
+(function () {
+  var nav = document.querySelector('body > nav');
+  if (!nav) return;
+  var btn = nav.querySelector('.nav-burger');
+  var menu = nav.querySelector('.nav-menu');
+  if (!btn || !menu) return;
+
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+
+  btn.addEventListener('click', function () {
+    setOpen(nav.classList.contains('open') === false);
+  });
+
+  // a tap on any destination closes it
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setOpen(false);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setOpen(false); btn.focus(); }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (nav.classList.contains('open') && !nav.contains(e.target)) setOpen(false);
+  });
+
+  // if the viewport grows past the breakpoint while open, reset state
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 760 && nav.classList.contains('open')) setOpen(false);
+  });
+})();

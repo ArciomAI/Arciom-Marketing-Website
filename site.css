@@ -80,7 +80,7 @@ body > nav{position:sticky;top:0;z-index:60;background:rgba(244,246,252,.75);-we
 .btn.ghost{background:var(--surface);color:var(--ink);border-color:var(--line)}
 .btn.ghost:hover{border-color:var(--peri);color:var(--peri);transform:translateY(-2px)}
 .btn.small{padding:9px 18px;font-size:14px}
-@media (max-width:760px){.nav-links a.pg{display:none}}
+
 .hero > .wrap{width:100%}
 .kicker{display:inline-flex;align-items:center;gap:9px;font-family:'Lexend',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--peri);background:var(--surface);border:1px solid var(--peri-line);border-radius:999px;padding:8px 16px;margin-bottom:30px}
 .kicker i{width:7px;height:7px;border-radius:50%;background:var(--peri);font-style:normal;animation:blink 2.4s ease-in-out infinite}
@@ -527,3 +527,36 @@ h1 .ln{display:block}
 .lede2,.gov-lede,.hero .sub-2,.ttv,.commit .cap{font-weight:300;line-height:1.68}
 /* these two already carry 500 to mark them as ledes; ease them one step */
 .pm-copy .lead,.mn-body .lead{font-weight:300}
+
+/* ============================================================
+   Mobile navigation. Below 760px the inline links and the CTA
+   are replaced by a hamburger; everything moves into a dropdown
+   with Request Demo at the foot of it.
+   ============================================================ */
+.nav-burger{display:none;width:40px;height:40px;margin-right:-8px;border:none;background:none;
+  cursor:pointer;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.nav-burger span{display:block;width:20px;height:1.8px;border-radius:2px;background:var(--ink);
+  transition:transform .26s cubic-bezier(.2,.9,.3,1), opacity .18s ease}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.8px) rotate(45deg)}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.8px) rotate(-45deg)}
+
+.nav-menu{display:none}
+
+@media (max-width:760px){
+  .nav-links{display:none}
+  .nav-burger{display:flex}
+  .nav-menu{display:block;overflow:hidden;max-height:0;
+    border-top:1px solid transparent;
+    transition:max-height .3s cubic-bezier(.2,.9,.3,1), border-color .3s ease}
+  body > nav.open .nav-menu{max-height:420px;border-top-color:var(--line)}
+  .nav-menu > a{display:block;padding:15px 28px;font-size:16px;font-weight:500;
+    color:var(--muted);border-bottom:1px solid var(--line-soft)}
+  .nav-menu > a.current{color:var(--peri)}
+  .nav-menu > a:active{background:var(--peri-soft)}
+  .nav-menu > a.btn{margin:16px 28px 22px;padding:14px 22px;text-align:center;
+    border-bottom:none;font-size:15px;font-weight:600}
+}
+@media (prefers-reduced-motion:reduce){
+  .nav-menu,.nav-burger span{transition:none}
+}
