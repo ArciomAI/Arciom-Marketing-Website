@@ -332,9 +332,10 @@ h1 .ln{display:block}
                so the flow can be reviewed. -->
           <!-- Set action to your form endpoint. Formspree, Basin and Formspark all work with this markup.
      Netlify: replace action with  data-netlify="true"  and drop the _next field.
-     The _next field is what redirects to thank-you.html after a successful post. -->
+     Set the post-submit redirect in your provider's dashboard, not in this markup. -->
     <form id="demo-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" novalidate>
-      <input type="hidden" name="_next" value="https://arciom.com/thank-you.html">
+      <!-- The redirect to thank-you.html is set in the Formspree dashboard under
+           Settings > redirect. The legacy _next field no longer drives it. -->
       <input type="hidden" name="_subject" value="New demo request from arciom.com">
       <!-- honeypot: real people never fill this in -->
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
