@@ -115,6 +115,7 @@ h1 .ln{display:block}
 .ready .ic svg{width:17px;height:17px}
 .ready p{font-size:14px;line-height:1.6;color:var(--muted)}
 .ready b{color:var(--ink);font-weight:600}
+.form-error{margin-bottom:14px;font-size:14.5px;color:#D6543D;line-height:1.55}
 .fm-foot{margin-top:28px;padding-top:26px;border-top:1px solid var(--line-soft);
   display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .fm-foot .promise{font-family:'Lexend',sans-serif;font-size:12px;line-height:1.5;color:var(--muted)}
@@ -326,17 +327,10 @@ h1 .ln{display:block}
       <!-- ---------- form ---------- -->
       <div class="fm" id="fm">
         <div class="fm-body">
-          <!-- NOTE: action="#" is a placeholder. Point it at a real endpoint
-               (Formspree, HubSpot, custom handler) before launch. While it stays
-               "#", the script below intercepts submit and shows the success state
-               so the flow can be reviewed. -->
-          <!-- Set action to your form endpoint. Formspree, Basin and Formspark all work with this markup.
-     Netlify: replace action with  data-netlify="true"  and drop the _next field.
-     Set the post-submit redirect in your provider's dashboard, not in this markup. -->
-    <form id="demo-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" novalidate>
-      <!-- The redirect to thank-you.html is set in the Formspree dashboard under
-           Settings > redirect. The legacy _next field no longer drives it. -->
-      <input type="hidden" name="_subject" value="New demo request from arciom.com">
+        <!-- Submission is handled by the script at the foot of this page, which POSTs
+             JSON to the Vercel endpoint and then redirects to thank-you.html.
+             Set ENDPOINT in that script to your deployed URL. -->
+        <form id="demo-form">
       <!-- honeypot: real people never fill this in -->
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
              style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
@@ -499,5 +493,60 @@ h1 .ln{display:block}
   <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.4A8.2 8.2 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4z"/></svg>
 </button>
 <script src="site.js?v=261a2853" defer></script>
+
+<script>
+(function () {
+  var form = document.getElementById('demo-form');
+  if (!form) return;
+  var btn = form.querySelector('button[type="submit"]');
+  var ENDPOINT = 'https://YOUR-VERCEL-PROJECT.vercel.app/api/request-demo';
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // honeypot: only bots fill this in
+    if (form.querySelector('[name="_gotcha"]').value) return;
+
+    var label = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    var fd = new FormData(form);
+    var payload = {
+      name:       fd.get('name'),
+      email:      fd.get('email'),
+      company:    fd.get('company'),
+      role:       fd.get('role'),
+      spend:      fd.get('spend'),
+      managed_by: fd.get('managed_by'),
+      interest:   fd.getAll('interest'),   // four checkboxes, so getAll not get
+      notes:      fd.get('notes')
+    };
+
+    try {
+      var res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      var result = await res.json().catch(function () { return {}; });
+      if (!res.ok) throw new Error(result.error || 'The form could not be sent.');
+      window.location.href = 'thank-you.html';
+    } catch (err) {
+      console.error(err);
+      btn.disabled = false;
+      btn.textContent = label;
+      var msg = form.querySelector('.form-error');
+      if (!msg) {
+        msg = document.createElement('p');
+        msg.className = 'form-error';
+        msg.setAttribute('role', 'alert');
+        btn.parentNode.insertBefore(msg, btn);
+      }
+      msg.textContent = 'Something went wrong sending your request. Please try again, or email Ryan@arciom.com.';
+    }
+  });
+})();
+</script>
 </body>
 </html>

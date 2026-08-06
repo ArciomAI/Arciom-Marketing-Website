@@ -195,6 +195,54 @@ h1 .ln{display:block}
 .hold .ic svg{width:17px;height:17px}
 .hold p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
 .hold b{color:var(--ink);font-weight:600}
+
+/* ================= LEGAL PAGES ================= */
+.legal{max-width:none}
+.lg-grid{display:grid;grid-template-columns:236px 1fr;gap:56px;align-items:start}
+@media (max-width:940px){.lg-grid{grid-template-columns:1fr;gap:30px}}
+.lg-toc{position:sticky;top:calc(var(--navh) + 30px);font-size:13.5px;line-height:1.45}
+@media (max-width:940px){.lg-toc{position:static;border:1px solid var(--line);border-radius:16px;
+  padding:20px 22px;background:var(--surface)}}
+.lg-toc p.k{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);
+  margin-bottom:14px}
+.lg-toc a{display:flex;gap:10px;padding:7px 0;color:var(--muted);border-bottom:1px solid var(--line-soft)}
+.lg-toc a:last-child{border-bottom:none}
+.lg-toc a:hover{color:var(--peri)}
+.lg-toc a b{color:var(--faint);font-weight:500;flex:none;font-size:11.5px;padding-top:1px}
+.lg-body{max-width:74ch;font-size:15.5px;line-height:1.72;color:var(--muted)}
+.lg-body p{margin-bottom:16px}
+.lg-body strong{color:var(--ink);font-weight:500}
+.lg-body a{color:var(--peri);border-bottom:1px solid var(--peri-line)}
+.lg-body code{font-size:13.5px;background:var(--peri-soft);border:1px solid var(--peri-line);
+  border-radius:5px;padding:1px 6px;color:var(--peri)}
+.lg-h{display:flex;gap:14px;align-items:baseline;font-size:20px;font-weight:700;color:var(--ink);
+  margin:44px 0 16px;padding-top:26px;border-top:1px solid var(--line);scroll-margin-top:110px}
+.lg-h:first-child{margin-top:0;padding-top:0;border-top:none}
+.lg-n{font-family:inherit;font-size:12px;font-weight:600;color:var(--peri);flex:none;
+  letter-spacing:.1em;padding-top:3px}
+.lg-h3{font-size:16px;font-weight:600;color:var(--ink);margin:26px 0 10px}
+.lg-ul{margin:0 0 18px 2px}
+.lg-ul li{list-style:none;position:relative;padding-left:20px;margin-bottom:9px}
+.lg-ul li::before{content:"";position:absolute;left:2px;top:10px;width:5px;height:5px;
+  border-radius:50%;background:var(--peri);opacity:.5}
+.lg-tw{overflow-x:auto;margin:6px 0 22px;border:1px solid var(--line);border-radius:14px}
+.lg-t{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.lg-t th{text-align:left;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);font-weight:600;padding:14px 16px;background:var(--paper);
+  border-bottom:1px solid var(--line)}
+.lg-t td{padding:14px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.lg-t tr:last-child td{border-bottom:none}
+.lg-t td:first-child{color:var(--ink)}
+.eff{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:24px}
+.ph{background:var(--amber-soft);border:1px solid var(--amber-line);border-radius:5px;
+  padding:1px 6px;color:var(--amber);font-size:13.5px;white-space:nowrap}
+.hold{display:flex;gap:16px;align-items:flex-start;border-radius:16px;padding:20px 22px;
+  margin-bottom:36px;background:var(--amber-soft);border:1px solid var(--amber-line)}
+.hold .ic{width:34px;height:34px;flex:none;border-radius:10px;background:var(--amber-bright);
+  color:#3A2B00;display:flex;align-items:center;justify-content:center}
+.hold .ic svg{width:17px;height:17px}
+.hold p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.hold b{color:var(--ink);font-weight:600}
 </style>
 </head>
 <body>
@@ -238,8 +286,8 @@ h1 .ln{display:block}
     <div class="legal">
       <div class="hold">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5"/><path d="M12 16.5h.01"/><path d="M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20.2h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
-        <p><b>Not ready to publish.</b> The highlighted fields below still need filling in, and this
-        document has not been reviewed by counsel. Remove this notice once both are done.</p>
+        <p><b>Pending legal review.</b> This document is complete but has not yet been reviewed by
+        counsel. Remove this notice once it has.</p>
       </div>
 
       <div class="lg-grid">
@@ -259,16 +307,16 @@ h1 .ln{display:block}
           <a href="terms.html" style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px"><b>&rarr;</b>Terms of Service</a>
         </aside>
         <div class="lg-body">
-          <p class="eff">Last updated: <span class="ph">[EFFECTIVE DATE]</span></p>
-      <p><strong>Last Updated: <span class="ph">[EFFECTIVE DATE]</span></strong></p>
-      <p>This Privacy Policy explains how <strong><span class="ph">[COMPANY LEGAL NAME]</span></strong> ("<strong>Arciom</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") collects, uses, discloses, and protects information in connection with the Arciom platform, including its web application, browser extension, and desktop capture agent (collectively, the "<strong>Service</strong>").</p>
+          <p class="eff">Last updated: August 5, 2026</p>
+      <p><strong>Last Updated: August 5, 2026</strong></p>
+      <p>This Privacy Policy explains how <strong>Arciom, Inc.</strong> ("<strong>Arciom</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") collects, uses, discloses, and protects information in connection with the Arciom platform, including its web application, browser extension, and desktop capture agent (collectively, the "<strong>Service</strong>").</p>
       <p>Arciom is a business-to-business (B2B) platform used by advertising agencies and their client organizations. This Policy is written for individuals who use Arciom on behalf of an agency or client account (each, a "<strong>user</strong>," "<strong>you</strong>"). If you are an individual whose voice, screen activity, or likeness is captured by a user of the Service in a working session, see Section 8 ("If You Were Recorded By an Arciom User").</p>
       <p>By using the Service, you agree to the collection and use of information as described in this Policy. If you do not agree, do not use the Service.</p>
       <h2 class="lg-h" id="s1-information-we-collect"><span class="lg-n">01</span>Information We Collect</h2>
       <h3 class="lg-h3">1.1 Account information</h3>
       <p>When you register, we collect your email address, display name, hashed password, and your agency/account membership and role. Registration is restricted to email domains that your agency administrator has authorized.</p>
       <h3 class="lg-h3">1.2 Connected Google account data</h3>
-      <p>If you or your agency authorizes the Service to connect to a Google Ads, Google Analytics, and/or Google Tag Manager account, we access that data via Google OAuth, using only the following scopes: your Google account's email/profile identifiers, and read (Analytics, Tag Manager) or read/write (Ads) access to the connected advertising and analytics data itself. This connection is used solely to detect changes, retrieve performance data, and power the governance features of the Service. Google account credentials themselves are never seen or stored by Arciom — only the OAuth tokens Google issues, which you can revoke at any time in your Google Account settings.</p>
+      <p>If you or your agency authorizes the Service to connect to a Google Ads, Google Analytics, and/or Google Tag Manager account, we access that data via Google OAuth, using only the following scopes: your Google account's email/profile identifiers, and <strong>read-only</strong> access to the connected advertising and analytics data itself. <strong>During the Beta Period the Service does not write to your Google Ads account.</strong> If write functionality is introduced, it will require separate, explicit enablement by the account owner and a corresponding update to this Policy. This connection is used solely to detect changes, retrieve performance data, and power the governance features of the Service. Google account credentials themselves are never seen or stored by Arciom — only the OAuth tokens Google issues, which you can revoke at any time in your Google Account settings.</p>
       <h3 class="lg-h3">1.3 Capture and digital twin data</h3>
       <p>If the capture feature is enabled for your account, the Service may record:</p>
       <ul class="lg-ul"><li>Screen video and click-level screenshots;</li><li>Audio narration you provide during a session;</li><li>Window and application titles active during the session;</li><li>Typed context notes you enter.</li></ul>
@@ -281,11 +329,11 @@ h1 .ln{display:block}
       <p>If you contact support, submit a bug report, or otherwise communicate with us, we retain the content of that communication and any diagnostic information you provide.</p>
       <h2 class="lg-h" id="s2-how-we-use-information"><span class="lg-n">02</span>How We Use Information</h2>
       <p>We use the information described above to:</p>
-      <ul class="lg-ul"><li>Provide, operate, and maintain the Service, including authentication and role-based access control;</li><li>Generate AI-assisted governance summaries, decision reconstructions, and digital twin content;</li><li>Detect and alert on changes to connected Google Ads/Analytics/Tag Manager accounts;</li><li>Maintain security, detect and prevent fraud or abuse, and enforce our Terms of Service;</li><li>Respond to support requests and communicate with you about the Service;</li><li>Improve and develop the Service, including its AI models and workflows.</li></ul>
-      <p>We do not sell your personal information, and we do not use your data to serve third-party advertising.</p>
+      <ul class="lg-ul"><li>Provide, operate, and maintain the Service, including authentication and role-based access control;</li><li>Generate AI-assisted governance summaries, decision reconstructions, and digital twin content;</li><li>Detect and alert on changes to connected Google Ads/Analytics/Tag Manager accounts;</li><li>Maintain security, detect and prevent fraud or abuse, and enforce our Terms of Service;</li><li>Respond to support requests and communicate with you about the Service;</li><li>Monitor and improve the reliability and performance of the Service, using aggregated, de-identified operational metrics that cannot reasonably be associated with you or your organization.</li></ul>
+      <p><strong>We do not use your recordings, captured decisions, or digital twin content to train general-purpose AI models, or to form or improve any other customer's digital twin.</strong> We do not sell your personal information, and we do not use your data to serve third-party advertising.</p>
       <h2 class="lg-h" id="s3-how-we-share-information-ai-proc"><span class="lg-n">03</span>How We Share Information — AI Processing and Sub-processors</h2>
-      <p>To provide the Service, we share information with the following categories of third-party service providers ("<strong>sub-processors</strong>"), each acting under its own terms of service:</p>
-      <div class="lg-tw"><table class="lg-t"><thead><tr><th>Sub-processor</th><th>What it receives</th><th>Purpose</th></tr></thead><tbody><tr><td><strong>AI model providers</strong> (Anthropic; and/or OpenRouter as an intermediary, pinned to a specific Anthropic model)</td><td>Session transcripts, click-screenshots, window/app titles, and your typed context notes</td><td>Reconstruct decision points, generate summaries and digital twin content</td></tr><tr><td><strong>Speech-to-text provider</strong> (OpenAI-compatible transcription endpoint)</td><td>Raw narration audio</td><td>Transcribe capture and voice debrief audio</td></tr><tr><td><strong>Embeddings provider</strong> (OpenAI-compatible endpoint, optional)</td><td>Rationale/decision text</td><td>Score similarity between stated reasoning and outcomes</td></tr><tr><td><strong>Backblaze B2</strong> (cloud object storage)</td><td>Recorded media (audio, screenshots)</td><td>Store capture recordings, encrypted at rest</td></tr><tr><td><strong>Google</strong> (Ads, Analytics, Tag Manager APIs)</td><td>OAuth-authorized access to your connected advertising/analytics accounts</td><td>Retrieve and monitor your own connected account data</td></tr><tr><td><strong>Resend</strong> (transactional email)</td><td>Your email address, verification/notification content</td><td>Send account verification and notification emails</td></tr><tr><td><strong>Slack</strong> (optional, only if your agency configures a webhook)</td><td>Buyer email address and a description of a detected change</td><td>Deliver change alerts to your agency's own Slack workspace</td></tr></tbody></table></div>
+      <p>To provide the Service, we share information with the following categories of third-party service providers ("<strong>sub-processors</strong>"), each acting under its own terms of service. Providers marked <em>(planned)</em> are not yet in use and will not receive data until they are:</p>
+      <div class="lg-tw"><table class="lg-t"><thead><tr><th>Sub-processor</th><th>What it receives</th><th>Purpose</th></tr></thead><tbody><tr><td><strong>AI model providers</strong> (Anthropic; and/or OpenRouter as an intermediary, pinned to a specific Anthropic model)</td><td>Session transcripts, click-screenshots, window/app titles, and your typed context notes</td><td>Reconstruct decision points, generate summaries and digital twin content</td></tr><tr><td><strong>Speech-to-text provider</strong> (OpenAI-compatible transcription endpoint)</td><td>Raw narration audio</td><td>Transcribe capture and voice debrief audio</td></tr><tr><td><strong>Embeddings provider</strong> (OpenAI-compatible endpoint, optional)</td><td>Rationale/decision text</td><td>Score similarity between stated reasoning and outcomes</td></tr><tr><td><strong>Backblaze B2</strong> (cloud object storage)</td><td>Recorded media (audio, screenshots)</td><td>Store capture recordings, encrypted at rest</td></tr><tr><td><strong>Google</strong> (Ads, Analytics, Tag Manager APIs)</td><td>OAuth-authorized access to your connected advertising/analytics accounts</td><td>Retrieve and monitor your own connected account data</td></tr><tr><td><strong>Resend</strong> (transactional email) <em>(planned)</em></td><td>Your email address, verification/notification content</td><td>Send account verification and notification emails</td></tr><tr><td><strong>Slack</strong> (optional, only if your agency configures a webhook)</td><td>Buyer email address and a description of a detected change</td><td>Deliver change alerts to your agency's own Slack workspace</td></tr></tbody></table></div>
       <p><strong>AI processing disclosure.</strong> Because capture and voice debrief features send audio, screenshots, and text to third-party AI model and transcription providers for analysis, that content leaves Arciom's own infrastructure as part of normal operation of these features. We select vendors that publicly state they do not use API inputs to train their models by default, and we are working to formalize written data-processing and no-training agreements with each of these providers during the Beta Period. Until those agreements are fully executed, you should treat this as a known limitation of the beta service. If this is a concern for a particular session, do not enable capture or voice debrief for that session.</p>
       <p>We may also disclose information: to comply with law, legal process, or governmental request; to protect the rights, property, or safety of Arciom, our users, or others; or in connection with a merger, acquisition, financing, or sale of assets (subject to this Policy continuing to apply to previously collected information).</p>
       <h2 class="lg-h" id="s4-data-retention"><span class="lg-n">04</span>Data Retention</h2>
@@ -305,7 +353,7 @@ h1 .ln{display:block}
       <h2 class="lg-h" id="s11-contact-us"><span class="lg-n">11</span>Contact Us</h2>
       <p>Questions or requests regarding this Privacy Policy can be directed to:</p>
       <p><strong><a href="mailto:Ryan@arciom.com">Ryan@arciom.com</a></strong></p>
-      <p><span class="ph">[COMPANY LEGAL NAME]</span> <span class="ph">[ADDRESS]</span></p>
+      <p>Arciom, Inc. 2810 N Church St, PMB 740352, Wilmington, Delaware 19802-4447, US</p>
         </div>
       </div>
     </div>

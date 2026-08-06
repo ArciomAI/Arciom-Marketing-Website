@@ -195,6 +195,54 @@ h1 .ln{display:block}
 .hold .ic svg{width:17px;height:17px}
 .hold p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
 .hold b{color:var(--ink);font-weight:600}
+
+/* ================= LEGAL PAGES ================= */
+.legal{max-width:none}
+.lg-grid{display:grid;grid-template-columns:236px 1fr;gap:56px;align-items:start}
+@media (max-width:940px){.lg-grid{grid-template-columns:1fr;gap:30px}}
+.lg-toc{position:sticky;top:calc(var(--navh) + 30px);font-size:13.5px;line-height:1.45}
+@media (max-width:940px){.lg-toc{position:static;border:1px solid var(--line);border-radius:16px;
+  padding:20px 22px;background:var(--surface)}}
+.lg-toc p.k{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);
+  margin-bottom:14px}
+.lg-toc a{display:flex;gap:10px;padding:7px 0;color:var(--muted);border-bottom:1px solid var(--line-soft)}
+.lg-toc a:last-child{border-bottom:none}
+.lg-toc a:hover{color:var(--peri)}
+.lg-toc a b{color:var(--faint);font-weight:500;flex:none;font-size:11.5px;padding-top:1px}
+.lg-body{max-width:74ch;font-size:15.5px;line-height:1.72;color:var(--muted)}
+.lg-body p{margin-bottom:16px}
+.lg-body strong{color:var(--ink);font-weight:500}
+.lg-body a{color:var(--peri);border-bottom:1px solid var(--peri-line)}
+.lg-body code{font-size:13.5px;background:var(--peri-soft);border:1px solid var(--peri-line);
+  border-radius:5px;padding:1px 6px;color:var(--peri)}
+.lg-h{display:flex;gap:14px;align-items:baseline;font-size:20px;font-weight:700;color:var(--ink);
+  margin:44px 0 16px;padding-top:26px;border-top:1px solid var(--line);scroll-margin-top:110px}
+.lg-h:first-child{margin-top:0;padding-top:0;border-top:none}
+.lg-n{font-family:inherit;font-size:12px;font-weight:600;color:var(--peri);flex:none;
+  letter-spacing:.1em;padding-top:3px}
+.lg-h3{font-size:16px;font-weight:600;color:var(--ink);margin:26px 0 10px}
+.lg-ul{margin:0 0 18px 2px}
+.lg-ul li{list-style:none;position:relative;padding-left:20px;margin-bottom:9px}
+.lg-ul li::before{content:"";position:absolute;left:2px;top:10px;width:5px;height:5px;
+  border-radius:50%;background:var(--peri);opacity:.5}
+.lg-tw{overflow-x:auto;margin:6px 0 22px;border:1px solid var(--line);border-radius:14px}
+.lg-t{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.lg-t th{text-align:left;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);font-weight:600;padding:14px 16px;background:var(--paper);
+  border-bottom:1px solid var(--line)}
+.lg-t td{padding:14px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.lg-t tr:last-child td{border-bottom:none}
+.lg-t td:first-child{color:var(--ink)}
+.eff{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:24px}
+.ph{background:var(--amber-soft);border:1px solid var(--amber-line);border-radius:5px;
+  padding:1px 6px;color:var(--amber);font-size:13.5px;white-space:nowrap}
+.hold{display:flex;gap:16px;align-items:flex-start;border-radius:16px;padding:20px 22px;
+  margin-bottom:36px;background:var(--amber-soft);border:1px solid var(--amber-line)}
+.hold .ic{width:34px;height:34px;flex:none;border-radius:10px;background:var(--amber-bright);
+  color:#3A2B00;display:flex;align-items:center;justify-content:center}
+.hold .ic svg{width:17px;height:17px}
+.hold p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.hold b{color:var(--ink);font-weight:600}
 </style>
 </head>
 <body>
@@ -238,8 +286,8 @@ h1 .ln{display:block}
     <div class="legal">
       <div class="hold">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5"/><path d="M12 16.5h.01"/><path d="M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20.2h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
-        <p><b>Not ready to publish.</b> The highlighted fields below still need filling in, and this
-        document has not been reviewed by counsel. Remove this notice once both are done.</p>
+        <p><b>Pending legal review.</b> This document is complete but has not yet been reviewed by
+        counsel. Remove this notice once it has.</p>
       </div>
 
       <div class="lg-grid">
@@ -265,9 +313,9 @@ h1 .ln{display:block}
           <a href="privacy.html" style="margin-top:14px;border-top:1px solid var(--line);padding-top:12px"><b>&rarr;</b>Privacy Policy</a>
         </aside>
         <div class="lg-body">
-          <p class="eff">Last updated: <span class="ph">[EFFECTIVE DATE]</span></p>
-      <p><strong>Last Updated: <span class="ph">[EFFECTIVE DATE]</span></strong></p>
-      <p>These Terms of Service ("<strong>Terms</strong>") are a binding agreement between <strong><span class="ph">[COMPANY LEGAL NAME]</span></strong>, a <span class="ph">[STATE/COUNTRY OF FORMATION]</span> <span class="ph">[entity type, e.g. corporation]</span> with a principal place of business at <strong><span class="ph">[ADDRESS]</span></strong> ("<strong>Arciom</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), and the agency, company, or organization identified on the applicable order or registration ("<strong>Customer</strong>," "<strong>you</strong>," or "<strong>your</strong>") that accesses or uses the Arciom platform, including any associated websites, applications, browser extensions, and desktop capture agent (collectively, the "<strong>Service</strong>").</p>
+          <p class="eff">Last updated: August 5, 2026</p>
+      <p><strong>Last Updated: August 5, 2026</strong></p>
+      <p>These Terms of Service ("<strong>Terms</strong>") are a binding agreement between <strong>Arciom, Inc.</strong>, a Delaware, USA C-corporation with a principal place of business at <strong>2810 N Church St, PMB 740352, Wilmington, Delaware 19802-4447, US</strong> ("<strong>Arciom</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), and the agency, company, or organization identified on the applicable order or registration ("<strong>Customer</strong>," "<strong>you</strong>," or "<strong>your</strong>") that accesses or uses the Arciom platform, including any associated websites, applications, browser extensions, and desktop capture agent (collectively, the "<strong>Service</strong>").</p>
       <p>BY CREATING AN ACCOUNT, CLICKING "I AGREE," OR OTHERWISE ACCESSING OR USING THE SERVICE, YOU REPRESENT THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS ON BEHALF OF YOURSELF AND, IF APPLICABLE, THE ORGANIZATION YOU REPRESENT. IF YOU DO NOT AGREE, DO NOT USE THE SERVICE.</p>
       <h2 class="lg-h" id="s1-description-of-the-service"><span class="lg-n">01</span>Description of the Service</h2>
       <p>Arciom is a paid-media governance and expertise-capture platform built for advertising agencies and the client accounts they manage. The Service operates on a multi-tenant "agency model": an <strong>agency</strong> deployment hosts one or more <strong>accounts</strong> (the agency's clients), and each account has one or more <strong>users</strong> with defined roles.</p>
@@ -286,14 +334,18 @@ h1 .ln{display:block}
       <h2 class="lg-h" id="s4-recording-and-capture-features-y"><span class="lg-n">04</span>Recording and Capture Features — Your Consent Obligations</h2>
       <p><strong>4.1 What is recorded.</strong> The capture and voice debrief features can record screen video, audio narration, click-level screenshots, window and application titles, and typed notes, and can transcribe spoken conversation. This data is processed by third-party AI providers as described in our <a href="privacy.html">Privacy Policy</a>.</p>
       <p><strong>4.2 Your obligation to obtain consent.</strong> <strong>You are solely responsible for ensuring that any recording, capture, or transcription initiated through the Service complies with applicable law and the rights of the individuals being recorded</strong>, including obtaining any consent required under wiretapping, two-party-consent, or similar recording laws in your jurisdiction and the jurisdiction of any participant. Before enabling capture or voice debrief for any employee, contractor, or other individual, you must inform them that their screen, audio, and/or voice may be recorded and processed by AI systems, and obtain any consent required by law.</p>
-      <p><strong>4.3 No monitoring of unrelated activity.</strong> Capture is intended to record work sessions related to the Service. You agree not to use capture features to record individuals without a lawful basis, or to capture categories of data (e.g., sensitive personal information unrelated to the work session) beyond what is necessary for the intended use.</p>
+      <p><strong>4.3 Recorded individuals are not parties to these Terms.</strong> These Terms are between Arciom and Customer. An individual whose work is recorded is not a party to them, and nothing here creates obligations owed by Arciom directly to that individual. Where Arciom offers a recorded individual rights in, or a share of value derived from, their judgment layer, those rights are set out in a separate agreement between Arciom and that individual. Customer agrees not to represent otherwise.</p>
+      <p><strong>4.4 No monitoring of unrelated activity.</strong> Capture is intended to record work sessions related to the Service. You agree not to use capture features to record individuals without a lawful basis, or to capture categories of data (e.g., sensitive personal information unrelated to the work session) beyond what is necessary for the intended use.</p>
       <h2 class="lg-h" id="s5-acceptable-use"><span class="lg-n">05</span>Acceptable Use</h2>
       <p>You agree not to:</p>
       <ul class="lg-ul"><li>Use the Service to violate any law or third party's rights, including privacy, intellectual property, or consumer protection laws;</li><li>Reverse engineer, decompile, or attempt to extract source code or underlying models from the Service, except as permitted by law;</li><li>Use the Service to build a competing product or to train a competing AI model;</li><li>Circumvent role-based access controls, allow-listing, or authentication mechanisms;</li><li>Upload or transmit malicious code, or attempt to gain unauthorized access to the Service or other customers' data;</li><li>Use the Service to record or capture individuals without the consent required under Section 4;</li><li>Resell, sublicense, or provide the Service to third parties outside your organization without our written consent.</li></ul>
       <p>We may suspend or terminate access for any account reasonably believed to violate this Section.</p>
       <h2 class="lg-h" id="s6-customer-data-license-ai-process"><span class="lg-n">06</span>Customer Data; License; AI Processing</h2>
-      <p><strong>6.1 Ownership.</strong> As between the parties, Customer retains all right, title, and interest in the data it or its users submit to, or that is generated about it through, the Service, including connected Google Ads/Analytics/GTM data, capture recordings, transcripts, notes, and digital twin content ("<strong>Customer Data</strong>"). Arciom acquires no ownership rights in Customer Data.</p>
-      <p><strong>6.2 License to Arciom.</strong> Customer grants Arciom a non-exclusive, worldwide license to host, copy, transmit, and process Customer Data solely as necessary to (a) provide, maintain, and improve the Service, (b) generate the AI-assisted analysis, summaries, and digital twin content the Service is designed to produce, and (c) comply with law.</p>
+      <p><strong>6.1 Ownership.</strong> As between the parties, Customer retains all right, title, and interest in the data it or its users submit to, or that is generated about it through, the Service, including connected Google Ads/Analytics/GTM data, capture recordings, transcripts, notes, and the digital twin instance deployed against Customer's accounts ("<strong>Customer Data</strong>"). Arciom acquires no ownership rights in Customer Data.</p>
+      <p><strong>6.1.1 The digital twin instance.</strong> The digital twin instance is the deployment configured against Customer's own accounts, containing Customer's campaign data, spend history, and business context. It is Customer Data. It is not portable, and it is not made available to any other customer under any circumstances.</p>
+      <p><strong>6.1.2 The underlying judgment layer.</strong> Separately from the instance, the Service derives a representation of the reasoning and decision patterns of the individual whose work was recorded, stripped of Customer-specific data (the "<strong>judgment layer</strong>"). Nothing in these Terms grants Customer perpetual or exclusive rights in the judgment layer as it relates to that individual, or restricts that individual from applying their own expertise elsewhere. Arciom will not make a judgment layer available to any third party without the separate, explicit, and revocable consent of both Customer and the individual concerned.</p>
+      <p><strong>6.2 License to Arciom.</strong> Customer grants Arciom a non-exclusive, worldwide license to host, copy, transmit, and process Customer Data solely as necessary to (a) provide, operate, and maintain the Service for Customer, (b) generate the AI-assisted analysis, summaries, and digital twin content the Service is designed to produce for Customer, and (c) comply with law.</p>
+      <p><strong>6.2.1 Limits on use.</strong> Arciom will not use Customer Data to train or fine-tune any general-purpose or shared AI model, to form or improve any other customer's digital twin, or for any purpose other than delivering the Service to Customer. Arciom may use aggregated, de-identified operational metrics that cannot reasonably be associated with Customer or any individual to monitor and improve the reliability of the Service.</p>
       <p><strong>6.3 AI-generated output disclaimer.</strong> The Service uses large language models and related AI systems to generate summaries, reconstructed decision points, digital twin content, and other output ("<strong>AI Output</strong>"). <strong>AI Output may be inaccurate, incomplete, or unreliable and does not constitute professional, financial, legal, or advertising advice.</strong> You are responsible for independently reviewing and validating AI Output before relying on it for business decisions.</p>
       <p><strong>6.4 Sub-processors.</strong> Arciom uses third-party service providers (including AI model providers, transcription providers, and cloud storage providers) to process Customer Data, as described in our <a href="privacy.html">Privacy Policy</a>. Arciom is responsible for its sub-processors' handling of Customer Data to the same extent Arciom would be responsible if performing the services directly, subject to the limitations in these Terms.</p>
       <h2 class="lg-h" id="s7-fees"><span class="lg-n">07</span>Fees</h2>
@@ -306,7 +358,7 @@ h1 .ln{display:block}
       <p><strong>10.1 Term.</strong> These Terms remain in effect until terminated as described below.</p>
       <p><strong>10.2 Termination for convenience.</strong> Either party may terminate access to the Service at any time, with or without cause, by written notice (email is sufficient).</p>
       <p><strong>10.3 Termination for cause.</strong> Arciom may suspend or terminate an account immediately if Customer materially breaches these Terms, including the Acceptable Use provisions in Section 5, and fails to cure within a reasonable period after notice (where cure is possible).</p>
-      <p><strong>10.4 Effect of termination.</strong> Upon termination, Customer's right to access the Service ends. Sections that by their nature should survive termination (including Sections 6.1, 6.3, 8, 9, 12, 13, 14, and 16–19) will survive.</p>
+      <p><strong>10.4 Effect of termination.</strong> Upon termination, Customer's right to access the Service ends. Sections that by their nature should survive termination (including Sections 4.3, 6.1, 6.1.1, 6.1.2, 6.2.1, 6.3, 8, 9, 12, 13, 14, and 16–17) will survive.</p>
       <h2 class="lg-h" id="s11-disclaimers"><span class="lg-n">11</span>Disclaimers</h2>
       <p>EXCEPT AS EXPRESSLY STATED IN THESE TERMS, THE SERVICE AND ALL AI OUTPUT ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, OR UNINTERRUPTED OR ERROR-FREE OPERATION. ARCIOM DOES NOT WARRANT THAT THE SERVICE WILL BE FREE OF VULNERABILITIES, OR THAT AI OUTPUT WILL BE ACCURATE OR SUITABLE FOR ANY PARTICULAR PURPOSE.</p>
       <h2 class="lg-h" id="s12-limitation-of-liability"><span class="lg-n">12</span>Limitation of Liability</h2>
@@ -325,7 +377,7 @@ h1 .ln{display:block}
       <p><strong>16.5 Force majeure.</strong> Neither party is liable for delays or failures in performance resulting from causes beyond its reasonable control.</p>
       <h2 class="lg-h" id="s17-contact-us"><span class="lg-n">17</span>Contact Us</h2>
       <p>Questions about these Terms can be directed to: <strong><a href="mailto:Ryan@arciom.com">Ryan@arciom.com</a></strong></p>
-      <p><span class="ph">[COMPANY LEGAL NAME]</span> <span class="ph">[ADDRESS]</span></p>
+      <p>Arciom, Inc. 2810 N Church St, PMB 740352, Wilmington, Delaware 19802-4447, US</p>
         </div>
       </div>
     </div>
