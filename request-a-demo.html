@@ -514,15 +514,25 @@ h1 .ln{display:block}
     btn.textContent = 'Sending...';
 
     var fd = new FormData(form);
+
+    // The Vercel function expects: name, email, company, phone, message.
+    // The form collects more than that, so the extra answers are folded into
+    // message rather than dropped. If the function is later updated to accept
+    // the fuller shape, send them as separate keys instead.
+    var extra = [
+      'Role: '           + (fd.get('role') || '\u2014'),
+      'Monthly spend: '  + (fd.get('spend') || '\u2014'),
+      'Managed by: '     + (fd.get('managed_by') || '\u2014'),
+      'Interested in: '  + (fd.getAll('interest').join(', ') || '\u2014')
+    ].join('\n');
+
+    var notes = fd.get('notes');
     var payload = {
-      name:       fd.get('name'),
-      email:      fd.get('email'),
-      company:    fd.get('company'),
-      role:       fd.get('role'),
-      spend:      fd.get('spend'),
-      managed_by: fd.get('managed_by'),
-      interest:   fd.getAll('interest'),   // four checkboxes, so getAll not get
-      notes:      fd.get('notes')
+      name:    fd.get('name'),
+      email:   fd.get('email'),
+      company: fd.get('company'),
+      phone:   '',
+      message: extra + (notes ? '\n\nNotes:\n' + notes : '')
     };
 
     try {
@@ -545,7 +555,7 @@ h1 .ln{display:block}
         msg.setAttribute('role', 'alert');
         btn.parentNode.insertBefore(msg, btn);
       }
-      msg.textContent = 'Something went wrong sending your request. Please try again, or email Ryan@arciom.com.';
+      msg.textContent = 'Something went wrong sending your request. Please try again, or email Ryan@arciom.com.' + (err && err.message ? ' (' + err.message + ')' : '');
     }
   });
 })();
