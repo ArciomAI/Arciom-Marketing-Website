@@ -515,7 +515,7 @@ h1 .ln{display:block}
 
     var fd = new FormData(form);
 
-    // The Vercel function expects: name, email, company, phone, message.
+    // The Vercel function expects: name, email, company, message.
     // The form collects more than that, so the extra answers are folded into
     // message rather than dropped. If the function is later updated to accept
     // the fuller shape, send them as separate keys instead.
@@ -531,7 +531,6 @@ h1 .ln{display:block}
       name:    fd.get('name'),
       email:   fd.get('email'),
       company: fd.get('company'),
-      phone:   '',
       message: extra + (notes ? '\n\nNotes:\n' + notes : '')
     };
 
