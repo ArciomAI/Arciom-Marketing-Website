@@ -1,11 +1,11 @@
 // This tells browsers which website is allowed to use this form.
-const ALLOWED_WEBSITE = "https://YOUR-GITHUB-NAME.github.io";
+const ALLOWED_WEBSITE = "https://www.arciom.com";
 
-// Change this to an address using your verified Resend domain.
-const FROM_EMAIL = "Website Demo Form <website@YOURDOMAIN.com>";
+// This address uses your verified Resend domain.
+const FROM_EMAIL = "Arciom Website <website@arciom.com>";
 
-// Change this to the address that should receive demo requests.
-const TO_EMAIL = "sales@YOURDOMAIN.com";
+// Demo requests will be delivered here.
+const TO_EMAIL = "ryan@arciom.com";
 
 function clean(value) {
   return String(value || "").trim();
