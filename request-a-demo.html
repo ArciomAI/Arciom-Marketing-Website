@@ -499,7 +499,9 @@ h1 .ln{display:block}
   var form = document.getElementById('demo-form');
   if (!form) return;
   var btn = form.querySelector('button[type="submit"]');
-  var ENDPOINT = 'https://YOUR-VERCEL-PROJECT.vercel.app/api/request-demo';
+  // same-site path: the form and the API are both on this Vercel deployment,
+  // so no full URL is needed and there is no cross-origin issue
+  var ENDPOINT = '/api/request-demo';
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
