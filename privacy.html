@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJG1ZTS69Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PJG1ZTS69Y');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Arciom</title>
@@ -243,6 +251,54 @@ h1 .ln{display:block}
 .hold .ic svg{width:17px;height:17px}
 .hold p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
 .hold b{color:var(--ink);font-weight:600}
+
+/* ================= LEGAL PAGES ================= */
+.legal{max-width:none}
+.lg-grid{display:grid;grid-template-columns:236px 1fr;gap:56px;align-items:start}
+@media (max-width:940px){.lg-grid{grid-template-columns:1fr;gap:30px}}
+.lg-toc{position:sticky;top:calc(var(--navh) + 30px);font-size:13.5px;line-height:1.45}
+@media (max-width:940px){.lg-toc{position:static;border:1px solid var(--line);border-radius:16px;
+  padding:20px 22px;background:var(--surface)}}
+.lg-toc p.k{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);
+  margin-bottom:14px}
+.lg-toc a{display:flex;gap:10px;padding:7px 0;color:var(--muted);border-bottom:1px solid var(--line-soft)}
+.lg-toc a:last-child{border-bottom:none}
+.lg-toc a:hover{color:var(--peri)}
+.lg-toc a b{color:var(--faint);font-weight:500;flex:none;font-size:11.5px;padding-top:1px}
+.lg-body{max-width:74ch;font-size:15.5px;line-height:1.72;color:var(--muted)}
+.lg-body p{margin-bottom:16px}
+.lg-body strong{color:var(--ink);font-weight:500}
+.lg-body a{color:var(--peri);border-bottom:1px solid var(--peri-line)}
+.lg-body code{font-size:13.5px;background:var(--peri-soft);border:1px solid var(--peri-line);
+  border-radius:5px;padding:1px 6px;color:var(--peri)}
+.lg-h{display:flex;gap:14px;align-items:baseline;font-size:20px;font-weight:700;color:var(--ink);
+  margin:44px 0 16px;padding-top:26px;border-top:1px solid var(--line);scroll-margin-top:110px}
+.lg-h:first-child{margin-top:0;padding-top:0;border-top:none}
+.lg-n{font-family:inherit;font-size:12px;font-weight:600;color:var(--peri);flex:none;
+  letter-spacing:.1em;padding-top:3px}
+.lg-h3{font-size:16px;font-weight:600;color:var(--ink);margin:26px 0 10px}
+.lg-ul{margin:0 0 18px 2px}
+.lg-ul li{list-style:none;position:relative;padding-left:20px;margin-bottom:9px}
+.lg-ul li::before{content:"";position:absolute;left:2px;top:10px;width:5px;height:5px;
+  border-radius:50%;background:var(--peri);opacity:.5}
+.lg-tw{overflow-x:auto;margin:6px 0 22px;border:1px solid var(--line);border-radius:14px}
+.lg-t{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.lg-t th{text-align:left;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);font-weight:600;padding:14px 16px;background:var(--paper);
+  border-bottom:1px solid var(--line)}
+.lg-t td{padding:14px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.lg-t tr:last-child td{border-bottom:none}
+.lg-t td:first-child{color:var(--ink)}
+.eff{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:24px}
+.ph{background:var(--amber-soft);border:1px solid var(--amber-line);border-radius:5px;
+  padding:1px 6px;color:var(--amber);font-size:13.5px;white-space:nowrap}
+.hold{display:flex;gap:16px;align-items:flex-start;border-radius:16px;padding:20px 22px;
+  margin-bottom:36px;background:var(--amber-soft);border:1px solid var(--amber-line)}
+.hold .ic{width:34px;height:34px;flex:none;border-radius:10px;background:var(--amber-bright);
+  color:#3A2B00;display:flex;align-items:center;justify-content:center}
+.hold .ic svg{width:17px;height:17px}
+.hold p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.hold b{color:var(--ink);font-weight:600}
 </style>
 </head>
 <body>
@@ -324,7 +380,10 @@ h1 .ln{display:block}
       <h3 class="lg-h3">1.4 Voice debrief data</h3>
       <p>If the voice debrief feature is enabled, we record and transcribe conversational debrief sessions (audio and derived transcript). Voice debrief recordings and transcripts are retained for <strong>90 days</strong> by default, after which they are automatically marked for deletion. Sessions are capped in length and size (approximately 30 minutes / 200 conversational turns / 200MB per session).</p>
       <h3 class="lg-h3">1.5 Usage and session data</h3>
-      <p>We use functional cookies to operate the Service, including a session cookie (<code>arciom-session</code>) that keeps you logged in, and a short-lived cookie used to protect the Google OAuth connection flow from cross-site request forgery. We also log session metadata such as IP address (stored in hashed form) and browser/user-agent string, for security and fraud-prevention purposes. <strong>We do not use advertising, marketing, or third-party tracking cookies.</strong></p>
+      <p>We use functional cookies to operate the Service, including a session cookie (<code>arciom-session</code>) that keeps you logged in, and a short-lived cookie used to protect the Google OAuth connection flow from cross-site request forgery. We also log session metadata such as IP address (stored in hashed form) and browser/user-agent string, for security and fraud-prevention purposes. <strong>Within the Service itself we do not use advertising, marketing, or third-party tracking cookies.</strong></p>
+      <h3 class="lg-h3">1.5.1 Our public website</h3>
+      <p>Separately from the Service, our public marketing website at arciom.com uses <strong>Google Analytics</strong> to understand how visitors find and move through the site. This sets cookies from Google and collects standard analytics data including pages viewed, referring source, approximate location derived from IP address, and device and browser type. We use it to measure which pages and channels bring us enquiries.</p>
+      <p>We do not use it to build advertising audiences, and we do not combine website analytics data with anything inside the Service. You can opt out using Google's browser add-on at tools.google.com/dlpage/gaoptout, or through your browser's cookie settings, without any loss of functionality.</p>
       <h3 class="lg-h3">1.6 Communications</h3>
       <p>If you contact support, submit a bug report, or otherwise communicate with us, we retain the content of that communication and any diagnostic information you provide.</p>
       <h2 class="lg-h" id="s2-how-we-use-information"><span class="lg-n">02</span>How We Use Information</h2>

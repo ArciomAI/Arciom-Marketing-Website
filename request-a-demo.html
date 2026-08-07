@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJG1ZTS69Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PJG1ZTS69Y');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Request a demo — Arciom</title>
@@ -550,6 +558,15 @@ h1 .ln{display:block}
       if (!res.ok) {
         var detail = result.error || result.message || raw.slice(0, 160) || 'no detail returned';
         throw new Error('HTTP ' + res.status + ' \u2014 ' + detail);
+      }
+      // record the conversion before navigating away
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          form: 'request_a_demo',
+          spend_band: fd.get('spend') || '',
+          role: fd.get('role') || '',
+          managed_by: fd.get('managed_by') || ''
+        });
       }
       window.location.href = 'thank-you.html';
     } catch (err) {
