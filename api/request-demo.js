@@ -65,8 +65,10 @@ export default async function handler(req, res) {
     });
   }
 
-  const FROM = process.env.MAIL_FROM || 'onboarding@resend.dev';
-  const TO   = process.env.MAIL_TO   || 'Ryan@arciom.com';
+  // Resend compares the recipient literally while an account is unverified,
+  // so normalise the case or it refuses a perfectly valid address.
+  const FROM = (process.env.MAIL_FROM || 'onboarding@resend.dev').trim();
+  const TO   = (process.env.MAIL_TO   || 'ryan@arciom.com').trim().toLowerCase();
 
   const text =
     'New demo request from arciom.com\n\n' +
@@ -99,6 +101,13 @@ export default async function handler(req, res) {
       let detail = raw;
       try { detail = JSON.parse(raw).message || raw; } catch (e) {}
       console.error('Resend rejected the send:', send.status, raw);
+
+      if (/verify a domain|testing emails/i.test(detail)) {
+        detail = 'Resend has not verified a sending domain yet, so it will only '
+               + 'deliver to the address the account was created with. Verify '
+               + 'arciom.com at resend.com/domains, then set MAIL_FROM to an '
+               + 'address on that domain. Original message: ' + detail;
+      }
       return res.status(500).json({ error: 'Email service error: ' + detail });
     }
 
