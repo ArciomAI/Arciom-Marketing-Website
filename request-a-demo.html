@@ -515,7 +515,7 @@ h1 .ln{display:block}
 
     var fd = new FormData(form);
 
-    // The Vercel function expects: name, email, company, message.
+    // The Vercel function expects: name, email, company, phone, message.
     // The form collects more than that, so the extra answers are folded into
     // message rather than dropped. If the function is later updated to accept
     // the fuller shape, send them as separate keys instead.
@@ -531,6 +531,9 @@ h1 .ln{display:block}
       name:    fd.get('name'),
       email:   fd.get('email'),
       company: fd.get('company'),
+      // sent whether or not the function still expects it. harmless if unused,
+      // and satisfies a required-field check if the function was not edited.
+      phone:   'Not provided',
       message: extra + (notes ? '\n\nNotes:\n' + notes : '')
     };
 
@@ -540,8 +543,14 @@ h1 .ln{display:block}
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-      var result = await res.json().catch(function () { return {}; });
-      if (!res.ok) throw new Error(result.error || 'The form could not be sent.');
+      // read the body as text first, so a non-JSON error page is still readable
+      var raw = await res.text();
+      var result = {};
+      try { result = JSON.parse(raw); } catch (e) { /* not JSON */ }
+      if (!res.ok) {
+        var detail = result.error || result.message || raw.slice(0, 160) || 'no detail returned';
+        throw new Error('HTTP ' + res.status + ' \u2014 ' + detail);
+      }
       window.location.href = 'thank-you.html';
     } catch (err) {
       console.error(err);

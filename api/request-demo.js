@@ -1,118 +1,112 @@
-// This tells browsers which website is allowed to use this form.
-const ALLOWED_WEBSITE = "https://www.arciom.com";
+// api/request-demo.js
+//
+// Receives the demo request form and emails it.
+// Always returns JSON, so the page can show a real reason when something fails.
 
-// This address uses your verified Resend domain.
-const FROM_EMAIL = "Arciom Website <website@arciom.com>";
+export default async function handler(req, res) {
+  // ---- always answer with JSON ----
+  res.setHeader('Content-Type', 'application/json');
 
-// Demo requests will be delivered here.
-const TO_EMAIL = "ryan@arciom.com";
+  // ---- which sites may use this form ----
+  // Every address the site is reachable at, plus Vercel preview deploys.
+  // Add any new domain here or the browser will be refused.
+  const ALLOWED = [
+    'https://arciom.com',
+    'https://www.arciom.com',
+    'https://arciom-marketing-website.vercel.app'
+  ];
+  const origin = req.headers.origin || '';
+  const ok = ALLOWED.includes(origin) || /^https:\/\/arciom-marketing-website-.*\.vercel\.app$/.test(origin);
 
-function clean(value) {
-  return String(value || "").trim();
-}
+  res.setHeader('Access-Control-Allow-Origin', ok ? origin : ALLOWED[0]);
+  res.setHeader('Vary', 'Origin');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.status(200).end();
 
-function escapeHtml(value) {
-  return clean(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
+  // requests with no Origin header (curl, server-to-server) are allowed through;
+  // only reject a browser that names an origin we do not recognise
+  if (origin && !ok) {
+    return res.status(403).json({
+      error: 'Origin not allowed: ' + origin + '. Add it to the ALLOWED list in api/request-demo.js.'
+    });
+  }
 
-function corsHeaders(request) {
-  const origin = request.headers.get("origin");
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed. Use POST.' });
+  }
 
-  return {
-    "Access-Control-Allow-Origin":
-      origin === ALLOWED_WEBSITE ? origin : ALLOWED_WEBSITE,
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Content-Type": "application/json",
-  };
-}
+  // ---- read the body, whether Vercel parsed it or not ----
+  let body = req.body;
+  if (typeof body === 'string') {
+    try { body = JSON.parse(body); } catch (e) {
+      return res.status(400).json({ error: 'Body was not valid JSON.' });
+    }
+  }
+  if (!body || typeof body !== 'object') {
+    return res.status(400).json({ error: 'No form data received.' });
+  }
 
-export async function OPTIONS(request) {
-  return new Response(null, {
-    status: 204,
-    headers: corsHeaders(request),
-  });
-}
+  const name    = (body.name    || '').toString().trim();
+  const email   = (body.email   || '').toString().trim();
+  const company = (body.company || '').toString().trim();
+  const phone   = (body.phone   || '').toString().trim();
+  const message = (body.message || '').toString().trim();
 
-export async function POST(request) {
-  const headers = corsHeaders(request);
+  if (!name || !email) {
+    return res.status(400).json({ error: 'Name and email are required.' });
+  }
+
+  // ---- check configuration before trying to send ----
+  const KEY = process.env.RESEND_API_KEY;
+  if (!KEY) {
+    return res.status(500).json({
+      error: 'RESEND_API_KEY is not set in Vercel environment variables. Add it, then redeploy.'
+    });
+  }
+
+  const FROM = process.env.MAIL_FROM || 'onboarding@resend.dev';
+  const TO   = process.env.MAIL_TO   || 'Ryan@arciom.com';
+
+  const text =
+    'New demo request from arciom.com\n\n' +
+    'Name:    ' + name + '\n' +
+    'Email:   ' + email + '\n' +
+    'Company: ' + (company || '—') + '\n' +
+    (phone && phone !== 'Not provided' ? 'Phone:   ' + phone + '\n' : '') +
+    '\n' + message;
 
   try {
-    const origin = request.headers.get("origin");
-
-    if (origin && origin !== ALLOWED_WEBSITE) {
-      return Response.json(
-        { error: "This website is not allowed to use the form." },
-        { status: 403, headers }
-      );
-    }
-
-    const form = await request.json();
-
-    const name = clean(form.name);
-    const email = clean(form.email);
-    const company = clean(form.company);
-    const phone = clean(form.phone);
-    const message = clean(form.message);
-
-    if (!name || !email) {
-      return Response.json(
-        { error: "Name and email are required." },
-        { status: 400, headers }
-      );
-    }
-
-    const resendResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
+    const send = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
       headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
+        'Authorization': 'Bearer ' + KEY,
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: FROM_EMAIL,
-        to: [TO_EMAIL],
+        from: FROM,
+        to: [TO],
         reply_to: email,
-        subject: `New demo request from ${name}`,
-        html: `
-          <h2>New Website Demo Request</h2>
-
-          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-          <p><strong>Company:</strong> ${escapeHtml(company || "Not provided")}</p>
-          <p><strong>Phone:</strong> ${escapeHtml(phone || "Not provided")}</p>
-
-          <p><strong>Message:</strong></p>
-          <p>${escapeHtml(message || "No message provided").replaceAll("\n", "<br>")}</p>
-        `,
-      }),
+        subject: 'Demo request — ' + name + (company ? ' (' + company + ')' : ''),
+        text: text
+      })
     });
 
-    const resendResult = await resendResponse.json();
+    const raw = await send.text();
 
-    if (!resendResponse.ok) {
-      console.error("Resend error:", resendResult);
-
-      return Response.json(
-        { error: "The email could not be sent." },
-        { status: 500, headers }
-      );
+    if (!send.ok) {
+      // pass Resend's own reason back so it shows on the page
+      let detail = raw;
+      try { detail = JSON.parse(raw).message || raw; } catch (e) {}
+      console.error('Resend rejected the send:', send.status, raw);
+      return res.status(500).json({ error: 'Email service error: ' + detail });
     }
 
-    return Response.json(
-      { success: true, message: "Your demo request was sent." },
-      { status: 200, headers }
-    );
-  } catch (error) {
-    console.error("Request error:", error);
+    console.log('Demo request sent for', email);
+    return res.status(200).json({ ok: true });
 
-    return Response.json(
-      { error: "Something went wrong while sending the request." },
-      { status: 500, headers }
-    );
+  } catch (err) {
+    console.error('Unexpected failure:', err);
+    return res.status(500).json({ error: 'Server error: ' + (err.message || 'unknown') });
   }
 }
