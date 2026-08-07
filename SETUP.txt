@@ -1,0 +1,77 @@
+SETTING UP THE DEMO FORM EMAIL
+==============================
+
+STEP 1 — put the file in the right place
+----------------------------------------
+In your GitHub repo, the file must be at:
+
+    api/request-demo.js
+
+That means a folder called "api" at the top level of the repo, alongside
+index.html, with request-demo.js inside it. Vercel turns any file in /api
+into a working web address automatically. The path has to match exactly or
+you get a 404.
+
+
+STEP 2 — get a Resend API key
+------------------------------
+1. Sign up at resend.com (free tier covers 3,000 emails a month)
+2. Go to API Keys, create one
+3. Copy it. It starts with re_
+
+
+STEP 3 — add the key to Vercel
+-------------------------------
+1. vercel.com -> your project -> Settings -> Environment Variables
+2. Add:
+
+     Name   RESEND_API_KEY
+     Value  re_xxxxxxxxxxxx
+
+3. Tick all three environments (Production, Preview, Development)
+4. Save
+
+IMPORTANT: Vercel only reads environment variables when it builds. After
+adding the key you MUST redeploy, or nothing changes. Go to Deployments,
+click the most recent one, and choose Redeploy.
+
+
+STEP 4 — test it before verifying a domain
+-------------------------------------------
+Resend gives every account a sending address that works immediately:
+
+    onboarding@resend.dev
+
+The function uses that by default, so you can test straight away. Emails
+sent from it can only be delivered to the address you signed up with, which
+is fine for a first test.
+
+
+STEP 5 — send from your own domain
+-----------------------------------
+Once it works, switch to your own address:
+
+1. In Resend, go to Domains, add arciom.com
+2. Resend gives you DNS records to add wherever your domain is managed
+3. Wait for it to show Verified
+4. Back in Vercel, add two more environment variables:
+
+     MAIL_FROM   demo@arciom.com
+     MAIL_TO     Ryan@arciom.com
+
+5. Redeploy again
+
+Until arciom.com is verified, Resend will refuse to send from it. That
+failure now shows up on the page rather than silently.
+
+
+IF IT STILL FAILS
+-----------------
+The page will show the reason in brackets. This function returns plain
+English for the common cases:
+
+  "RESEND_API_KEY is not set..."   the key is missing, or you did not redeploy
+  "Email service error: ..."        Resend refused it, usually an unverified domain
+  "Name and email are required."    the form sent incomplete data
+
+You can also see everything in vercel.com -> your project -> Logs.
