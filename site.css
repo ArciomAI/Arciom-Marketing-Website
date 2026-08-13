@@ -560,3 +560,6 @@ h1 .ln{display:block}
 @media (prefers-reduced-motion:reduce){
   .nav-menu,.nav-burger span{transition:none}
 }
+
+/* set by site.js on anything scrolled out of view */
+.anim-off, .anim-off *{animation-play-state:paused !important}

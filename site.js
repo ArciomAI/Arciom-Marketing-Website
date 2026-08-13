@@ -77,3 +77,33 @@
     if (window.innerWidth > 760 && nav.classList.contains('open')) setOpen(false);
   });
 })();
+
+/* Pause animation that is off-screen.
+   SMIL and CSS animations keep running whether or not you can see them, so a hero
+   full of them stays on the compositor for the whole page. That competes with
+   whatever you are actually scrolled to, and shows up as repaint flicker. */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var all = document.querySelectorAll('svg'), animated = [];
+  for (var i = 0; i < all.length; i++) {
+    if (all[i].querySelector('animate, animateTransform, animateMotion')) animated.push(all[i]);
+  }
+  var css = document.querySelectorAll('.cbrain, .hero-brain, .hero-twin, .wave, .capshot, .report');
+  if (!animated.length && !css.length) return;
+
+  var io = new IntersectionObserver(function (entries) {
+    for (var k = 0; k < entries.length; k++) {
+      var e = entries[k], el = e.target;
+      if (el.tagName && el.tagName.toLowerCase() === 'svg') {
+        try { e.isIntersecting ? el.unpauseAnimations() : el.pauseAnimations(); } catch (err) {}
+      } else {
+        el.classList.toggle('anim-off', !e.isIntersecting);
+      }
+    }
+  }, { rootMargin: '200px 0px' });   // resume slightly before it scrolls into view
+
+  for (var a = 0; a < animated.length; a++) io.observe(animated[a]);
+  for (var c = 0; c < css.length; c++) io.observe(css[c]);
+})();
